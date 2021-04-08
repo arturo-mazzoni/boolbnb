@@ -9,4 +9,8 @@
 Homestead.json
 Homestead.yaml
 npm-debug.log
+<<<<<<< Updated upstream
 yarn-error.log
+=======
+yarn-error.log
+>>>>>>> Stashed changes
