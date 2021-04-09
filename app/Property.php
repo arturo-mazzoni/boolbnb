@@ -17,4 +17,20 @@ class Property extends Model
     {
     return $this->belongsToMany('App\Sponsor');
     }
+
+    protected $fillable = [
+      'title',
+      'rooms_number',
+      'beds_number',
+      'bathrooms_number',
+      'sqm_number',
+      'address',
+      'longitude',
+      'latitude',
+      'image',
+      'visible',
+      'price_per_night',
+      'floor',
+      'description'
+    ];
 }

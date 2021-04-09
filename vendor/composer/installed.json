@@ -57,7 +57,7 @@
                 "issues": "https://github.com/asm89/stack-cors/issues",
                 "source": "https://github.com/asm89/stack-cors/tree/1.3.0"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/asm89/stack-cors"
+            "install-path": "../asm89/stack-cors"
         },
         {
             "name": "brick/math",
@@ -116,7 +116,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/brick/math"
+            "install-path": "../brick/math"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -156,7 +156,7 @@
                 "issues": "https://github.com/dnoegel/php-xdg-base-dir/issues",
                 "source": "https://github.com/dnoegel/php-xdg-base-dir/tree/v0.1.1"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/dnoegel/php-xdg-base-dir"
+            "install-path": "../dnoegel/php-xdg-base-dir"
         },
         {
             "name": "doctrine/inflector",
@@ -254,7 +254,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/doctrine/inflector"
+            "install-path": "../doctrine/inflector"
         },
         {
             "name": "doctrine/instantiator",
@@ -326,7 +326,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/doctrine/instantiator"
+            "install-path": "../doctrine/instantiator"
         },
         {
             "name": "doctrine/lexer",
@@ -409,7 +409,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/doctrine/lexer"
+            "install-path": "../doctrine/lexer"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -476,7 +476,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/dragonmantank/cron-expression"
+            "install-path": "../dragonmantank/cron-expression"
         },
         {
             "name": "egulias/email-validator",
@@ -547,7 +547,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/egulias/email-validator"
+            "install-path": "../egulias/email-validator"
         },
         {
             "name": "facade/flare-client-php",
@@ -615,7 +615,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/facade/flare-client-php"
+            "install-path": "../facade/flare-client-php"
         },
         {
             "name": "facade/ignition",
@@ -695,7 +695,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/facade/ignition"
+            "install-path": "../facade/ignition"
         },
         {
             "name": "facade/ignition-contracts",
@@ -751,7 +751,75 @@
                 "issues": "https://github.com/facade/ignition-contracts/issues",
                 "source": "https://github.com/facade/ignition-contracts/tree/1.0.2"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/facade/ignition-contracts"
+            "install-path": "../facade/ignition-contracts"
+        },
+        {
+            "name": "fakerphp/faker",
+            "version": "v1.14.1",
+            "version_normalized": "1.14.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FakerPHP/Faker.git",
+                "reference": "ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1",
+                "reference": "ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0",
+                "psr/container": "^1.0",
+                "symfony/deprecation-contracts": "^2.2"
+            },
+            "conflict": {
+                "fzaninotto/faker": "*"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4.1",
+                "ext-intl": "*",
+                "symfony/phpunit-bridge": "^4.4 || ^5.2"
+            },
+            "suggest": {
+                "ext-curl": "Required by Faker\\Provider\\Image to download images.",
+                "ext-dom": "Required by Faker\\Provider\\HtmlLorem for generating random HTML.",
+                "ext-iconv": "Required by Faker\\Provider\\ru_RU\\Text::realText() for generating real Russian text.",
+                "ext-mbstring": "Required for multibyte Unicode string functionality."
+            },
+            "time": "2021-03-30T06:27:33+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "v1.15-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Faker\\": "src/Faker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "support": {
+                "issues": "https://github.com/FakerPHP/Faker/issues",
+                "source": "https://github.com/FakerPHP/Faker/tree/v.1.14.1"
+            },
+            "install-path": "../fakerphp/faker"
         },
         {
             "name": "fideloper/proxy",
@@ -812,7 +880,7 @@
                 "issues": "https://github.com/fideloper/TrustedProxy/issues",
                 "source": "https://github.com/fideloper/TrustedProxy/tree/4.4.1"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/fideloper/proxy"
+            "install-path": "../fideloper/proxy"
         },
         {
             "name": "filp/whoops",
@@ -886,7 +954,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/filp/whoops"
+            "install-path": "../filp/whoops"
         },
         {
             "name": "fruitcake/laravel-cors",
@@ -967,65 +1035,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/fruitcake/laravel-cors"
-        },
-        {
-            "name": "fzaninotto/faker",
-            "version": "v1.9.2",
-            "version_normalized": "1.9.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
-                "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.3 || ^7.0"
-            },
-            "require-dev": {
-                "ext-intl": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7",
-                "squizlabs/php_codesniffer": "^2.9.2"
-            },
-            "time": "2020-12-11T09:56:16+00:00",
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.9-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Faker\\": "src/Faker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "François Zaninotto"
-                }
-            ],
-            "description": "Faker is a PHP library that generates fake data for you.",
-            "keywords": [
-                "data",
-                "faker",
-                "fixtures"
-            ],
-            "support": {
-                "issues": "https://github.com/fzaninotto/Faker/issues",
-                "source": "https://github.com/fzaninotto/Faker/tree/v1.9.2"
-            },
-            "abandoned": true,
-            "install-path": "../../../../Corso/boolbnb/vendor/fzaninotto/faker"
+            "install-path": "../fruitcake/laravel-cors"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1099,7 +1109,7 @@
                 "issues": "https://github.com/guzzle/guzzle/issues",
                 "source": "https://github.com/guzzle/guzzle/tree/6.5"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/guzzlehttp/guzzle"
+            "install-path": "../guzzlehttp/guzzle"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1157,7 +1167,7 @@
                 "issues": "https://github.com/guzzle/promises/issues",
                 "source": "https://github.com/guzzle/promises/tree/1.4.1"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/guzzlehttp/promises"
+            "install-path": "../guzzlehttp/promises"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -1235,7 +1245,7 @@
                 "issues": "https://github.com/guzzle/psr7/issues",
                 "source": "https://github.com/guzzle/psr7/tree/1.8.1"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/guzzlehttp/psr7"
+            "install-path": "../guzzlehttp/psr7"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -1289,7 +1299,7 @@
                 "issues": "https://github.com/hamcrest/hamcrest-php/issues",
                 "source": "https://github.com/hamcrest/hamcrest-php/tree/v2.0.1"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/hamcrest/hamcrest-php"
+            "install-path": "../hamcrest/hamcrest-php"
         },
         {
             "name": "laravel/framework",
@@ -1454,7 +1464,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/laravel/framework"
+            "install-path": "../laravel/framework"
         },
         {
             "name": "laravel/tinker",
@@ -1525,7 +1535,7 @@
                 "issues": "https://github.com/laravel/tinker/issues",
                 "source": "https://github.com/laravel/tinker/tree/v2.6.1"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/laravel/tinker"
+            "install-path": "../laravel/tinker"
         },
         {
             "name": "laravel/ui",
@@ -1587,7 +1597,7 @@
                 "issues": "https://github.com/laravel/ui/issues",
                 "source": "https://github.com/laravel/ui/tree/v2.4.0"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/laravel/ui"
+            "install-path": "../laravel/ui"
         },
         {
             "name": "league/commonmark",
@@ -1691,7 +1701,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/league/commonmark"
+            "install-path": "../league/commonmark"
         },
         {
             "name": "league/flysystem",
@@ -1789,7 +1799,7 @@
                     "type": "other"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/league/flysystem"
+            "install-path": "../league/flysystem"
         },
         {
             "name": "league/mime-type-detection",
@@ -1848,7 +1858,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/league/mime-type-detection"
+            "install-path": "../league/mime-type-detection"
         },
         {
             "name": "mockery/mockery",
@@ -1923,7 +1933,7 @@
                 "issues": "https://github.com/mockery/mockery/issues",
                 "source": "https://github.com/mockery/mockery/tree/1.4.3"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/mockery/mockery"
+            "install-path": "../mockery/mockery"
         },
         {
             "name": "monolog/monolog",
@@ -2022,7 +2032,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/monolog/monolog"
+            "install-path": "../monolog/monolog"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2083,7 +2093,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/myclabs/deep-copy"
+            "install-path": "../myclabs/deep-copy"
         },
         {
             "name": "nesbot/carbon",
@@ -2179,7 +2189,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/nesbot/carbon"
+            "install-path": "../nesbot/carbon"
         },
         {
             "name": "nikic/php-parser",
@@ -2238,7 +2248,7 @@
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.4"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/nikic/php-parser"
+            "install-path": "../nikic/php-parser"
         },
         {
             "name": "nunomaduro/collision",
@@ -2329,7 +2339,7 @@
                     "type": "patreon"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/nunomaduro/collision"
+            "install-path": "../nunomaduro/collision"
         },
         {
             "name": "opis/closure",
@@ -2397,7 +2407,7 @@
                 "issues": "https://github.com/opis/closure/issues",
                 "source": "https://github.com/opis/closure/tree/3.6.1"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/opis/closure"
+            "install-path": "../opis/closure"
         },
         {
             "name": "phar-io/manifest",
@@ -2460,7 +2470,7 @@
                 "issues": "https://github.com/phar-io/manifest/issues",
                 "source": "https://github.com/phar-io/manifest/tree/master"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/phar-io/manifest"
+            "install-path": "../phar-io/manifest"
         },
         {
             "name": "phar-io/version",
@@ -2514,7 +2524,7 @@
                 "issues": "https://github.com/phar-io/version/issues",
                 "source": "https://github.com/phar-io/version/tree/3.1.0"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/phar-io/version"
+            "install-path": "../phar-io/version"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -2570,7 +2580,7 @@
                 "issues": "https://github.com/phpDocumentor/ReflectionCommon/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionCommon/tree/2.x"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/phpdocumentor/reflection-common"
+            "install-path": "../phpdocumentor/reflection-common"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -2629,7 +2639,7 @@
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/master"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/phpdocumentor/reflection-docblock"
+            "install-path": "../phpdocumentor/reflection-docblock"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -2681,7 +2691,7 @@
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.4.0"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/phpdocumentor/type-resolver"
+            "install-path": "../phpdocumentor/type-resolver"
         },
         {
             "name": "phpoption/phpoption",
@@ -2753,7 +2763,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/phpoption/phpoption"
+            "install-path": "../phpoption/phpoption"
         },
         {
             "name": "phpspec/prophecy",
@@ -2823,7 +2833,7 @@
                 "issues": "https://github.com/phpspec/prophecy/issues",
                 "source": "https://github.com/phpspec/prophecy/tree/1.13.0"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/phpspec/prophecy"
+            "install-path": "../phpspec/prophecy"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2899,7 +2909,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/phpunit/php-code-coverage"
+            "install-path": "../phpunit/php-code-coverage"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2962,7 +2972,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/phpunit/php-file-iterator"
+            "install-path": "../phpunit/php-file-iterator"
         },
         {
             "name": "phpunit/php-text-template",
@@ -3010,7 +3020,7 @@
                 "issues": "https://github.com/sebastianbergmann/php-text-template/issues",
                 "source": "https://github.com/sebastianbergmann/php-text-template/tree/1.2.1"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/phpunit/php-text-template"
+            "install-path": "../phpunit/php-text-template"
         },
         {
             "name": "phpunit/php-timer",
@@ -3072,7 +3082,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/phpunit/php-timer"
+            "install-path": "../phpunit/php-timer"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -3135,7 +3145,7 @@
                 }
             ],
             "abandoned": true,
-            "install-path": "../../../../Corso/boolbnb/vendor/phpunit/php-token-stream"
+            "install-path": "../phpunit/php-token-stream"
         },
         {
             "name": "phpunit/phpunit",
@@ -3235,7 +3245,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/phpunit/phpunit"
+            "install-path": "../phpunit/phpunit"
         },
         {
             "name": "psr/container",
@@ -3286,7 +3296,7 @@
                 "issues": "https://github.com/php-fig/container/issues",
                 "source": "https://github.com/php-fig/container/tree/1.1.1"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/psr/container"
+            "install-path": "../psr/container"
         },
         {
             "name": "psr/event-dispatcher",
@@ -3339,7 +3349,7 @@
                 "issues": "https://github.com/php-fig/event-dispatcher/issues",
                 "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/psr/event-dispatcher"
+            "install-path": "../psr/event-dispatcher"
         },
         {
             "name": "psr/http-message",
@@ -3395,7 +3405,7 @@
             "support": {
                 "source": "https://github.com/php-fig/http-message/tree/master"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/psr/http-message"
+            "install-path": "../psr/http-message"
         },
         {
             "name": "psr/log",
@@ -3448,7 +3458,7 @@
             "support": {
                 "source": "https://github.com/php-fig/log/tree/1.1.3"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/psr/log"
+            "install-path": "../psr/log"
         },
         {
             "name": "psr/simple-cache",
@@ -3502,7 +3512,7 @@
             "support": {
                 "source": "https://github.com/php-fig/simple-cache/tree/master"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/psr/simple-cache"
+            "install-path": "../psr/simple-cache"
         },
         {
             "name": "psy/psysh",
@@ -3581,7 +3591,7 @@
                 "issues": "https://github.com/bobthecow/psysh/issues",
                 "source": "https://github.com/bobthecow/psysh/tree/v0.10.7"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/psy/psysh"
+            "install-path": "../psy/psysh"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -3628,7 +3638,7 @@
                 "issues": "https://github.com/ralouphie/getallheaders/issues",
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/ralouphie/getallheaders"
+            "install-path": "../ralouphie/getallheaders"
         },
         {
             "name": "ramsey/collection",
@@ -3708,7 +3718,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/ramsey/collection"
+            "install-path": "../ramsey/collection"
         },
         {
             "name": "ramsey/uuid",
@@ -3803,7 +3813,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/ramsey/uuid"
+            "install-path": "../ramsey/uuid"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -3861,7 +3871,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/code-unit-reverse-lookup"
+            "install-path": "../sebastian/code-unit-reverse-lookup"
         },
         {
             "name": "sebastian/comparator",
@@ -3938,7 +3948,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/comparator"
+            "install-path": "../sebastian/comparator"
         },
         {
             "name": "sebastian/diff",
@@ -4007,7 +4017,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/diff"
+            "install-path": "../sebastian/diff"
         },
         {
             "name": "sebastian/environment",
@@ -4073,7 +4083,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/environment"
+            "install-path": "../sebastian/environment"
         },
         {
             "name": "sebastian/exporter",
@@ -4153,7 +4163,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/exporter"
+            "install-path": "../sebastian/exporter"
         },
         {
             "name": "sebastian/global-state",
@@ -4220,7 +4230,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/global-state"
+            "install-path": "../sebastian/global-state"
         },
         {
             "name": "sebastian/object-enumerator",
@@ -4280,7 +4290,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/object-enumerator"
+            "install-path": "../sebastian/object-enumerator"
         },
         {
             "name": "sebastian/object-reflector",
@@ -4338,7 +4348,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/object-reflector"
+            "install-path": "../sebastian/object-reflector"
         },
         {
             "name": "sebastian/recursion-context",
@@ -4404,7 +4414,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/recursion-context"
+            "install-path": "../sebastian/recursion-context"
         },
         {
             "name": "sebastian/resource-operations",
@@ -4459,7 +4469,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/resource-operations"
+            "install-path": "../sebastian/resource-operations"
         },
         {
             "name": "sebastian/type",
@@ -4518,7 +4528,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/type"
+            "install-path": "../sebastian/type"
         },
         {
             "name": "sebastian/version",
@@ -4568,7 +4578,7 @@
                 "issues": "https://github.com/sebastianbergmann/version/issues",
                 "source": "https://github.com/sebastianbergmann/version/tree/master"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/sebastian/version"
+            "install-path": "../sebastian/version"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4646,7 +4656,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/swiftmailer/swiftmailer"
+            "install-path": "../swiftmailer/swiftmailer"
         },
         {
             "name": "symfony/console",
@@ -4746,7 +4756,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/console"
+            "install-path": "../symfony/console"
         },
         {
             "name": "symfony/css-selector",
@@ -4814,7 +4824,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/css-selector"
+            "install-path": "../symfony/css-selector"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -4884,7 +4894,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/deprecation-contracts"
+            "install-path": "../symfony/deprecation-contracts"
         },
         {
             "name": "symfony/error-handler",
@@ -4956,7 +4966,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/error-handler"
+            "install-path": "../symfony/error-handler"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -5044,7 +5054,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/event-dispatcher"
+            "install-path": "../symfony/event-dispatcher"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -5126,7 +5136,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/event-dispatcher-contracts"
+            "install-path": "../symfony/event-dispatcher-contracts"
         },
         {
             "name": "symfony/finder",
@@ -5190,7 +5200,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/finder"
+            "install-path": "../symfony/finder"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -5272,7 +5282,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/http-client-contracts"
+            "install-path": "../symfony/http-client-contracts"
         },
         {
             "name": "symfony/http-foundation",
@@ -5348,7 +5358,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/http-foundation"
+            "install-path": "../symfony/http-foundation"
         },
         {
             "name": "symfony/http-kernel",
@@ -5463,7 +5473,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/http-kernel"
+            "install-path": "../symfony/http-kernel"
         },
         {
             "name": "symfony/mime",
@@ -5549,7 +5559,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/mime"
+            "install-path": "../symfony/mime"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -5631,7 +5641,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/polyfill-ctype"
+            "install-path": "../symfony/polyfill-ctype"
         },
         {
             "name": "symfony/polyfill-iconv",
@@ -5714,7 +5724,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/polyfill-iconv"
+            "install-path": "../symfony/polyfill-iconv"
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
@@ -5798,7 +5808,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/polyfill-intl-grapheme"
+            "install-path": "../symfony/polyfill-intl-grapheme"
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -5888,7 +5898,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/polyfill-intl-idn"
+            "install-path": "../symfony/polyfill-intl-idn"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
@@ -5975,7 +5985,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/polyfill-intl-normalizer"
+            "install-path": "../symfony/polyfill-intl-normalizer"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -6058,7 +6068,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/polyfill-mbstring"
+            "install-path": "../symfony/polyfill-mbstring"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -6137,7 +6147,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/polyfill-php72"
+            "install-path": "../symfony/polyfill-php72"
         },
         {
             "name": "symfony/polyfill-php73",
@@ -6219,7 +6229,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/polyfill-php73"
+            "install-path": "../symfony/polyfill-php73"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -6305,7 +6315,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/polyfill-php80"
+            "install-path": "../symfony/polyfill-php80"
         },
         {
             "name": "symfony/process",
@@ -6370,7 +6380,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/process"
+            "install-path": "../symfony/process"
         },
         {
             "name": "symfony/routing",
@@ -6463,7 +6473,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/routing"
+            "install-path": "../symfony/routing"
         },
         {
             "name": "symfony/service-contracts",
@@ -6545,7 +6555,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/service-contracts"
+            "install-path": "../symfony/service-contracts"
         },
         {
             "name": "symfony/string",
@@ -6631,7 +6641,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/string"
+            "install-path": "../symfony/string"
         },
         {
             "name": "symfony/translation",
@@ -6727,7 +6737,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/translation"
+            "install-path": "../symfony/translation"
         },
         {
             "name": "symfony/translation-contracts",
@@ -6808,7 +6818,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/translation-contracts"
+            "install-path": "../symfony/translation-contracts"
         },
         {
             "name": "symfony/var-dumper",
@@ -6899,7 +6909,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/symfony/var-dumper"
+            "install-path": "../symfony/var-dumper"
         },
         {
             "name": "theseer/tokenizer",
@@ -6952,7 +6962,7 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/theseer/tokenizer"
+            "install-path": "../theseer/tokenizer"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7008,7 +7018,7 @@
                 "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.3"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/tijsverkoyen/css-to-inline-styles"
+            "install-path": "../tijsverkoyen/css-to-inline-styles"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -7089,7 +7099,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/vlucas/phpdotenv"
+            "install-path": "../vlucas/phpdotenv"
         },
         {
             "name": "voku/portable-ascii",
@@ -7166,7 +7176,7 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../../../../Corso/boolbnb/vendor/voku/portable-ascii"
+            "install-path": "../voku/portable-ascii"
         },
         {
             "name": "webmozart/assert",
@@ -7227,7 +7237,7 @@
                 "issues": "https://github.com/webmozarts/assert/issues",
                 "source": "https://github.com/webmozarts/assert/tree/1.10.0"
             },
-            "install-path": "../../../../Corso/boolbnb/vendor/webmozart/assert"
+            "install-path": "../webmozart/assert"
         }
     ],
     "dev": true,
@@ -7237,7 +7247,6 @@
         "facade/ignition",
         "facade/ignition-contracts",
         "filp/whoops",
-        "fzaninotto/faker",
         "hamcrest/hamcrest-php",
         "mockery/mockery",
         "myclabs/deep-copy",

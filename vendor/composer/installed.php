@@ -124,6 +124,15 @@
       ),
       'reference' => '3c921a1cdba35b68a7f0ccffc6dffc1995b18267',
     ),
+    'fakerphp/faker' => 
+    array (
+      'pretty_version' => 'v1.14.1',
+      'version' => '1.14.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1',
+    ),
     'fideloper/proxy' => 
     array (
       'pretty_version' => '4.4.1',
@@ -150,15 +159,6 @@
       array (
       ),
       'reference' => '1d127dbec313e2e227d65e0c483765d8d7559bf6',
-    ),
-    'fzaninotto/faker' => 
-    array (
-      'pretty_version' => 'v1.9.2',
-      'version' => '1.9.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '848d8125239d7dbf8ab25cb7f054f1a630e68c2e',
     ),
     'guzzlehttp/guzzle' => 
     array (
