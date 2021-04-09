@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Property;
+/* use App\Property; */
 use Illuminate\Database\Eloquent\Model;
 
 class Amenity extends Model
