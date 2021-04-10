@@ -11090,13 +11090,10 @@ header .header-form ul li .button-search {
 }
 
 main {
-  height: 500px;
+  background-color: brown;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   background-color: #000000;
   color: #ffffff;
   padding: 20px 0;
