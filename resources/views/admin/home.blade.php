@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header">{{ __('nome tabella') }}</div>
+                        <div class="card-header">{{ __('Proprietà') }}</div>
 
                         <div class="card-body">
                             @if (session('status'))
@@ -32,6 +32,8 @@
                                             <td>NOME</td>
                                             <td>IMMAGINE</td>
                                             <td class="operations-button">
+                                                
+                                                <a href="" class="btn btn-info">Dettagli</a>
                                                 <a href="" class="btn btn-info">Modifica</a>
                                                 <form action="" class="d-inline-block" method="post">
                                                     @method('DELETE')
