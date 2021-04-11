@@ -1,16 +1,21 @@
-<div class="dashboard-left">
-    <ul class="nav flex-column">
+
+<nav class="col-2 navbar-light">
+    <ul class="navbar-nav mr-auto flex-column vertical-nav">
         <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
+            <a class="nav-link" href="#">Area Personale</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Appartamenti</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Messaggi</a>
+        </li>
         </li>
         <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="#">Collegamenti</a>
         </li>
-    </ul> 
-</div>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Impostazioni</a>
+        </li>
+    </ul>
+</nav>
