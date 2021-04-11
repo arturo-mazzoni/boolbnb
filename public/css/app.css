@@ -10957,16 +10957,12 @@ ul {
   list-style-type: none;
 }
 
-button {
+.button-search {
   font-size: 20px;
-  padding: 10px 20px;
   text-transform: uppercase;
   outline: none;
   border: 1px solid black;
   margin: 18px 24px 0 0;
-}
-
-.button-search {
   flex-direction: row;
   display: flex;
   justify-content: center;
@@ -11089,14 +11085,11 @@ header .header-form ul li .button-search {
   right: -5%;
 }
 
-main {
-  height: 500px;
+.dashboard-table {
+  padding: 80px 0;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   background-color: #000000;
   color: #ffffff;
   padding: 20px 0;

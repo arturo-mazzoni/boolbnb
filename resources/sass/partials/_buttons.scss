@@ -1,12 +1,10 @@
-button{
+
+.button-search{
     font-size: 20px;
-    padding: 10px 20px;
     text-transform: uppercase;
     outline: none;
     border: 1px solid black;
     margin:18px 24px 0 0;
-}
-.button-search{
     @include flex;
     width: 60px;
     height: 60px;
