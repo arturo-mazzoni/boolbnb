@@ -3,5 +3,17 @@
 // }
 .dashboard-table{
     padding: 80px 0;
+        nav{
+            ul{
+                li{
+                    #my-create{
+                        color:green;
+                        &:hover{
+                            background-color: lightgrey;
+                        }
+                    }
+                }
+            }
+        }
 
 }

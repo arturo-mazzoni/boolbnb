@@ -12,7 +12,7 @@
         </li>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Collegamenti</a>
+            <a id="my-create" class="nav-link" href="#">Crea nuovo</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Impostazioni</a>
