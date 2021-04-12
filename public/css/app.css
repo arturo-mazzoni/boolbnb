@@ -11097,6 +11097,77 @@ header .header-form ul li .button-search {
   background-color: lightgrey;
 }
 
+.add {
+  margin: 20px;
+}
+
+.wrapp2 {
+  width: 100%;
+  display: flex;
+}
+
+.wrapp2 .left {
+  min-height: 100vh;
+  max-width: 200px;
+  background-color: #264c6f;
+}
+
+.wrapp2 .left ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: start;
+  color: white;
+  padding: 0;
+  padding: 10px;
+}
+
+.wrapp2 .left ul li {
+  margin: 20px 0;
+}
+
+.wrapp2 .left ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.wrapp2 .left ul li a i {
+  padding-right: 10px;
+  font-size: 20px;
+  color: #a9d273;
+}
+
+.wrapp2 .left ul li a:hover {
+  color: #e4d8d8;
+}
+
+.wrapp2 .right {
+  width: calc(100% - 200px);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.wrapp2 .right .tool {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.succes {
+  color: white;
+  font-weight: bold;
+  border: 1px solid;
+  padding: 4px;
+  background-color: #41af4178;
+  border-radius: 6px;
+}
+
+.img-card {
+  max-width: 80%;
+  min-width: 30%;
+}
+
 footer {
   background-color: #000000;
   color: #ffffff;
@@ -11173,76 +11244,5 @@ footer .footer-bottom ul li i.icon-size {
   padding: 5px;
   font-size: 28px;
   color: #808080;
-}
-
-.add {
-  margin: 20px;
-}
-
-.wrapp2 {
-  width: 100%;
-  display: flex;
-}
-
-.wrapp2 .left {
-  min-height: 100vh;
-  max-width: 200px;
-  background-color: #264c6f;
-}
-
-.wrapp2 .left ul {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  align-items: start;
-  color: white;
-  padding: 0;
-  padding: 10px;
-}
-
-.wrapp2 .left ul li {
-  margin: 20px 0;
-}
-
-.wrapp2 .left ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.wrapp2 .left ul li a i {
-  padding-right: 10px;
-  font-size: 20px;
-  color: #a9d273;
-}
-
-.wrapp2 .left ul li a:hover {
-  color: #e4d8d8;
-}
-
-.wrapp2 .right {
-  width: calc(100% - 200px);
-  padding: 20px;
-  min-height: 100vh;
-}
-
-.wrapp2 .right .tool {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.succes {
-  color: white;
-  font-weight: bold;
-  border: 1px solid;
-  padding: 4px;
-  background-color: #41af4178;
-  border-radius: 6px;
-}
-
-.img-card {
-  max-width: 80%;
-  min-width: 30%;
 }
 
