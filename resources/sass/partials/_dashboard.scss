@@ -1,15 +1,9 @@
-// .dashboard-left {
-//     @include flex;
-// }
-.add {
-  margin: 20px;
-}
-
-  display: flex;
-  .left{
+.container-dashboard-content {
+    display: flex;
+    .left{
       min-height: 100vh;
       max-width: 200px;
-      background-color: #264c6f;;
+      background-color: #264c6f;
 
       ul{
           width: 100%;
@@ -42,14 +36,13 @@
   }
   .right{
       width: calc(100% - 200px);
-       padding:20px ;
        min-height: 100vh;
        .tool{
            display: flex;
            justify-content: flex-end;
        }
   }
-}
+
 .succes{
   color: white;
   font-weight: bold;
@@ -66,4 +59,5 @@
       max-width: 80%;
       min-width: 30%;
   }
+}
 

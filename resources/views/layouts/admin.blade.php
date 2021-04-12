@@ -23,7 +23,10 @@
 <body>
     <div id="app">
         @include('layouts.admin-partials.navbar')
-        @include('layouts.admin-partials.dashboard')
+        <div class="container-dashboard-content">
+            @include('layouts.admin-partials.dashboard')
+            @include('layouts.admin-partials.content')
+        </div>
     </div>
 </body>
 </html>

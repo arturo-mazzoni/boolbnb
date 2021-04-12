@@ -11085,34 +11085,17 @@ header .header-form ul li .button-search {
   right: -5%;
 }
 
-.dashboard-table {
-  padding: 80px 0;
-}
-
-.dashboard-table nav ul li #my-create {
-  color: green;
-}
-
-.dashboard-table nav ul li #my-create:hover {
-  background-color: lightgrey;
-}
-
-.add {
-  margin: 20px;
-}
-
-.wrapp2 {
-  width: 100%;
+.container-dashboard-content {
   display: flex;
 }
 
-.wrapp2 .left {
+.container-dashboard-content .left {
   min-height: 100vh;
   max-width: 200px;
   background-color: #264c6f;
 }
 
-.wrapp2 .left ul {
+.container-dashboard-content .left ul {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11123,38 +11106,37 @@ header .header-form ul li .button-search {
   padding: 10px;
 }
 
-.wrapp2 .left ul li {
+.container-dashboard-content .left ul li {
   margin: 20px 0;
 }
 
-.wrapp2 .left ul li a {
+.container-dashboard-content .left ul li a {
   color: white;
   text-decoration: none;
   font-size: 20px;
 }
 
-.wrapp2 .left ul li a i {
+.container-dashboard-content .left ul li a i {
   padding-right: 10px;
   font-size: 20px;
   color: #a9d273;
 }
 
-.wrapp2 .left ul li a:hover {
+.container-dashboard-content .left ul li a:hover {
   color: #e4d8d8;
 }
 
-.wrapp2 .right {
+.container-dashboard-content .right {
   width: calc(100% - 200px);
-  padding: 20px;
   min-height: 100vh;
 }
 
-.wrapp2 .right .tool {
+.container-dashboard-content .right .tool {
   display: flex;
   justify-content: flex-end;
 }
 
-.succes {
+.container-dashboard-content .succes {
   color: white;
   font-weight: bold;
   border: 1px solid;
@@ -11163,7 +11145,7 @@ header .header-form ul li .button-search {
   border-radius: 6px;
 }
 
-.img-card {
+.container-dashboard-content .img-card {
   max-width: 80%;
   min-width: 30%;
 }
