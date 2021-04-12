@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Property;
+use Illuminate\Support\Facades\Auth;
 
 class PropertyController extends Controller
 {
@@ -40,7 +41,8 @@ class PropertyController extends Controller
     public function store(Request $request)
     {
       $data = $request->all();
-
+      $id = Auth::id();
+      
       $request->validate([
         'title' => 'required|max:80',
         'rooms_number' => 'required|max:5',
@@ -58,11 +60,12 @@ class PropertyController extends Controller
       ]);
 
       $newProperty = new Property();
+      $newProperty->user_id = $id;
 
       $newProperty->fill($data);
       $newProperty->save();
 
-      return redirect()->route('property.show', $newProperty->find($newProperty->id));
+      return redirect()->route('property.show', $newProperty->id)->with('status','appartamento-aggiunto');
     }
 
     /**

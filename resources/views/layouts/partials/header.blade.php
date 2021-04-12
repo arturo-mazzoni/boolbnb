@@ -54,6 +54,7 @@
                     document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
                   </a>
+                  <a class="dropdown-item" href="{{  route('property.index') }}">Area amministrativa</a>
 
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                       @csrf

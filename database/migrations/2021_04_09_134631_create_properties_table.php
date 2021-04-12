@@ -23,8 +23,8 @@ class CreatePropertiesTable extends Migration
             $table->string('bathrooms_number', 5);
             $table->string('sqm_number', 5);
             $table->string('address', 255);
-            $table->decimal('longitude', 11,8);
-            $table->decimal('latitude', 10,8);
+            $table->decimal('longitude', 11,8)->nullable();
+            $table->decimal('latitude', 10,8)->nullable();
             $table->text('image');
             $table->boolean('visible');
             $table->float('price_per_night', 7,2);

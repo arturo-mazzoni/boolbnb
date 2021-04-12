@@ -10,7 +10,7 @@
                                             <th scope="col">Nome Appartamento</th>
                                             <th scope="col">Immagine</th>
                                             <th scope="col">Operazioni</th>
-                                            <th><a href="" class="btn btn-success">Crea nuovo</a></th>
+                                            <th><a href="{{ route("property.create") }}" class="btn btn-success">Crea nuovo</a></th>
                                         </tr>
                                     </thead>
                                     <tbody>

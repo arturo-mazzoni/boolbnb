@@ -16,18 +16,60 @@
   @method('PUT')
   @csrf
   <div class="form-group">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $property->title }}">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <label for="title" class="form-label">Nome</label>
+    <input type="text" name="title" class="form-control" id="title" value="{{ $property->title }}">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="rooms" class="form-label">Numero Stanze</label>
+    <input type="text" name="rooms_number" class="form-control" id="rooms" value="{{ $property->rooms_number }}">
   </div>
-  <div class="form-group form-check">
+  <div class="form-group">
+    <label for="bathrooms" class="form-label">Bagni</label>
+    <input type="text" name="bathrooms_number" class="form-control" id="bathrooms" value="{{ $property->bathrooms_number }}">
+  </div>
+  <div class="form-group">
+    <label for="beds" class="form-label">Letti</label>
+    <input type="text" name="beds_number" class="form-control" id="beds" value="{{ $property->beds_number }}">
+  </div>
+  <div class="form-group">
+    <label for="mq" class="form-label">Metri Quadrati</label>
+    <input type="text" name="sqm_number" class="form-control" id="mq" value="{{ $property->sqm_number }}">
+  </div>
+  <div class="form-group">
+    <label for="address" class="form-label">Indirizzo</label>
+    <input type="text" name="address" class="form-control" id="address" value="{{ $property->address }}">
+  </div>
+  <div class="form-group">
+    <label for="image" class="form-label">immagine</label>
+    <input type="text" name="image" class="form-control" id="image" value="{{ $property->image }}">
+  </div>
+  {{-- @if ($post->cover)
+            <p>Immagine inserita:</p>
+            <img src="{{ asset('storage/' . $post->cover) }}" alt="{{ $post->title }}" style="max-width: 50%" class="mb-3">
+        @else
+            <p>Nessuna immagine caricata.</p>
+  @endif --}}
+  <div class="form-group">
+    <label for="visible" class="form-label">visibilità</label>
+    <input type="text" name="visible" class="form-control" id="visible" value="{{ $property->visible }}">
+  </div>
+  <div class="form-group">
+    <label for="price" class="form-label">Prezzo</label>
+    <input type="text" name="price_per_night" class="form-control" id="price" value="{{ $property->price_per_night}}">
+  </div>
+  <div class="form-group">
+    <label for="floor" class="form-label">Piano</label>
+    <input type="text" name="floor" class="form-control" id="floor" value="{{ $property->floor }}">
+  </div>
+  <div class="form-group">
+    <label for="description" class="form-label">Descrizione</label>
+    <input type="text" name="description" class="form-control" id="description" value="{{ $property->description }}">
+  </div>
+    
+  {{-- <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
+  </div> --}}
   <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
