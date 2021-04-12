@@ -1,77 +1,49 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container-fluid">
     <div class="row dashboard-table">
-            @include('layouts.partials.dashboard') {{-- Dashboard Utente registrato --}}
-
-            {{-- <h2>{{ $property->title }}</h2> --}}
-            {{-- {{ $property->rooms_number }}
-            {{ $property->beds_number }}
-            {{ $property->bathrooms_number }}
-            {{ $property->sqm_number }}
-            {{ $property->address }}
-            {{ $property->longitude }}
-            {{ $property->latitude }}
-            {{ $property->image }}
-            {{ $property->visible }}
-            {{ $property->price_per_night }}
-            {{ $property->floor }}
-            {{ $property->description }} --}}
-
-        <div class="col-10">
-
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">{{ __('Proprietà') }}</div>
-
-                        <div class="card-body">
-                            @if (session('status'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ session('status') }}
-                                </div>
-                            @endif
-                        
-                            <table class="table table-striped">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th scope="col">Nome Appartamento</th>
-                                            <th scope="col">Immagine</th>
-                                            <th scope="col">Operazioni</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                          <td>{{ $property->title }}</td>
-                                          <td>{{ $property->rooms_number }}</td>
-                                          <td>{{ $property->beds_number }}</td>
-                                          <td>{{ $property->bathrooms_number }}</td>
-                                          <td>{{ $property->sqm_number }}</td>
-                                          <td>{{ $property->address }}</td>
-                                          <td>{{ $property->image }}</td>
-                                          <td>{{ $property->visible }}</td>
-                                          <td>{{ $property->price_per_night }}</td>
-                                          <td>{{ $property->description }}</td>
-                                          <td class="operations-button">
-                                              
-                                              <a href="" class="btn btn-info">Dettagli</a>
-                                              <a href="" class="btn btn-info">Modifica</a>
-                                              <form action="" class="d-inline-block" method="post">
-                                                  @method('DELETE')
-                                                  @csrf
-                                                  <button class="btn btn-danger">Elimina</button>
-                                              </form>
-                                          </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
+    {{-- <h2>{{ $property->title }}</h2> --}}
+    {{-- {{ $property->rooms_number }}
+    {{ $property->beds_number }}
+    {{ $property->bathrooms_number }}
+    {{ $property->sqm_number }}
+    {{ $property->address }}
+    {{ $property->longitude }}
+    {{ $property->latitude }}
+    {{ $property->image }}
+    {{ $property->visible }}
+    {{ $property->price_per_night }}
+    {{ $property->floor }}
+    {{ $property->description }} --}}
+    @if (session('status'))
+    <div class="alert alert-success" role="alert">
+        {{ session('status') }}
     </div>
+    @endif
+
+    <ul>
+      <li>Nome: {{ $property->title }}</li>
+      <li>Stanze: {{ $property->rooms_number }}</li>
+      <li>Letti: {{ $property->beds_number }}</li>
+      <li>Bagni: {{ $property->bathrooms_number }}</li>
+      <li>Mq: {{ $property->sqm_number }}</li>
+      <li>Indirizzo: {{ $property->address }}</li>
+      <li>Foto: {{ $property->image }}</li>
+      <li>{{ $property->visible }}</li>
+      <li>Prezzo: {{ $property->price_per_night }}</li>
+      <li>Descrizione: {{ $property->description }}</li>
+    </ul>
+    
+    <div class="buttons">
+      <a href="" class="btn btn-info">Modifica</a>
+      <form action="" class="d-inline-block" method="post">
+          @method('DELETE')
+          @csrf
+          <button class="btn btn-danger">Elimina</button>
+      </form>
+    </div>
+  </div>
 </div>
 
 @endsection
