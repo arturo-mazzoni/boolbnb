@@ -15,6 +15,8 @@ class CreateViewsTable extends Migration
     {
         Schema::create('views', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('property_id');
+            $table->foreign('property_id')->references('id')->on('properties');
             $table->date('date');
             $table->timestamps();
         });
