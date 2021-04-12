@@ -15,6 +15,8 @@ class CreatePropertiesTable extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('title', 80);
             $table->string('rooms_number', 5);
             $table->string('beds_number', 5);
@@ -28,8 +30,9 @@ class CreatePropertiesTable extends Migration
             $table->float('price_per_night', 7,2);
             $table->string('floor', 5);
             $table->text('description')->nullable();
+
             $table->timestamps();
-          });
+        });
     }
 
     /**

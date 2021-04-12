@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use App\Property;
+use App\User;
 
 class PropertySeeder extends Seeder
 {
@@ -28,6 +29,8 @@ class PropertySeeder extends Seeder
         $newProperty->price_per_night = $faker->randomDigit();
         $newProperty->floor = $faker->randomDigit();
         $newProperty->description = $faker->paragraph();
+
+        $newProperty->user_id = rand(1,Count(User::all()->toArray()));
 
         $newProperty->save();
       }

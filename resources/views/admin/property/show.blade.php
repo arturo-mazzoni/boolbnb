@@ -43,8 +43,16 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                          <td>NOME</td>
-                                          <td>IMMAGINE</td>
+                                          <td>{{ $property->title }}</td>
+                                          <td>{{ $property->rooms_number }}</td>
+                                          <td>{{ $property->beds_number }}</td>
+                                          <td>{{ $property->bathrooms_number }}</td>
+                                          <td>{{ $property->sqm_number }}</td>
+                                          <td>{{ $property->address }}</td>
+                                          <td>{{ $property->image }}</td>
+                                          <td>{{ $property->visible }}</td>
+                                          <td>{{ $property->price_per_night }}</td>
+                                          <td>{{ $property->description }}</td>
                                           <td class="operations-button">
                                               
                                               <a href="" class="btn btn-info">Dettagli</a>
