@@ -29,7 +29,8 @@
       <li>Bagni: {{ $property->bathrooms_number }}</li>
       <li>Mq: {{ $property->sqm_number }}</li>
       <li>Indirizzo: {{ $property->address }}</li>
-      <li>Foto: {{ $property->image }}</li>
+      <li>Foto: 
+        <img src="{{ asset('storage/'.$property->image)  }}" alt=""> </li>
       <li>{{ $property->visible }}</li>
       <li>Prezzo: {{ $property->price_per_night }}</li>
       <li>Descrizione: {{ $property->description }}</li>

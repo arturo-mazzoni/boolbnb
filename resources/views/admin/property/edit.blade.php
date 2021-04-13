@@ -12,7 +12,7 @@
   </div>
   @endif
 
-  <form method="POST" action="{{ route('property.update', $property->id) }}">
+  <form method="POST" action="{{ route('property.update', $property->id) }} " enctype="multipart/form-data">
   @method('PUT')
   @csrf
   <div class="form-group">
@@ -40,8 +40,8 @@
     <input type="text" name="address" class="form-control" id="address" value="{{ $property->address }}">
   </div>
   <div class="form-group">
-    <label for="image" class="form-label">immagine</label>
-    <input type="text" name="image" class="form-control" id="image" value="{{ $property->image }}">
+    <label for="exampleFormControlFile1">Carica Immagine</label>
+    <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
   </div>
   {{-- @if ($post->cover)
             <p>Immagine inserita:</p>
@@ -50,8 +50,20 @@
             <p>Nessuna immagine caricata.</p>
   @endif --}}
   <div class="form-group">
+  
     <label for="visible" class="form-label">visibilità</label>
-    <input type="text" name="visible" class="form-control" id="visible" value="{{ $property->visible }}">
+    
+     <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" {{($property->visible==1)?   "checked" :''}}  name="visible" id="inlineRadio1" value="1">
+      <label class="form-check-label" for="inlineRadio1">Si</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" {{($property->visible!=1)?   "checked" :''}}  name="visible" id="inlineRadio1" value="0">
+      <label class="form-check-label" for="inlineRadio1">No</label>
+    </div>
+  
+  
+  
   </div>
   <div class="form-group">
     <label for="price" class="form-label">Prezzo</label>

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Property;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Storage;
 class PropertyController extends Controller
 {
     /**
@@ -63,6 +63,8 @@ class PropertyController extends Controller
       $newProperty->user_id = $id;
 
       $newProperty->fill($data);
+      $image_path=Storage::put('image',$data['image']);
+      $newProperty->image=$image_path;
       $newProperty->save();
 
       return redirect()->route('property.show', $newProperty->id)->with('status','appartamento-aggiunto');
@@ -121,7 +123,7 @@ class PropertyController extends Controller
         'address' => 'required',
         /* 'longitude' => 'required',
         'latitude' => 'required', */
-        'image' => 'required',
+        
         'visible' => 'required',
         'price_per_night' => 'required',
         'floor' => 'required',
