@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('guests.home');
 });
 
+Route::get('/host', function () {
+  return view('guests.host');
+})->name('became-host');
+
 Auth::routes();
 
 Route::prefix('admin')

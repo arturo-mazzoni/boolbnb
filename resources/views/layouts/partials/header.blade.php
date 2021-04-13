@@ -26,6 +26,7 @@
           <!-- <li><a href="#" >Experiences</a></li> -->
           <li><a href="#" >Esperienze online</a></li>
           <!-- <li><a href="#">Online Experiences</a></li> -->
+          <li><a href="{{ route('became-host') }}">Diventa un host</a></li>
         </ul>
       </div>
       <div class="header-right">
