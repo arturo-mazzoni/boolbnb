@@ -10978,6 +10978,14 @@ ul {
   background-color: #D90865;
 }
 
+.my-btn-home {
+  padding: 15px 30px;
+  background-color: #ffffff;
+  color: #201C19;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
 header {
   font-size: 14px;
   background-color: #000000;
@@ -11083,6 +11091,136 @@ header .header-form ul li .button-search {
   position: absolute;
   top: -10%;
   right: -5%;
+}
+
+.my-jumbotron {
+  height: 438px;
+  background-color: #000000;
+}
+
+.my-jumbotron .jumbo-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-height: 322px;
+  overflow: hidden;
+}
+
+.my-jumbotron .jumbo-image img {
+  width: 95%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.my-jumbotron .jumbo-text {
+  height: calc(438px - 322px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+section {
+  padding: 40px 0;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+section div[class$=box] {
+  border-radius: 8px;
+}
+
+section div[class$=text] div {
+  font-weight: bold;
+}
+
+.explore-home .explore-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.explore-home .explore-list .explore-object {
+  margin-top: 20px;
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.explore-home .explore-list .explore-object .explore-box {
+  margin-right: 10px;
+  height: 64px;
+  width: 64px;
+  background-image: url("https://a0.muscache.com/im/pictures/73ab906b-eea1-425d-9fea-bf2c79d86556.jpg");
+  background-size: cover;
+}
+
+.houses-home .houses-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.houses-home .houses-list .houses-object {
+  width: calc(25% - 10px);
+}
+
+.houses-home .houses-list .houses-object .houses-box {
+  width: 100%;
+  background-image: url("https://a0.muscache.com/im/pictures/7d82ca14-56e5-4465-8218-dcfa7d69b6ac.jpg");
+  background-size: cover;
+}
+
+.houses-home .houses-list .houses-object .houses-box::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.become-host-home {
+  display: flex;
+  align-items: center;
+}
+
+.become-host-home img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.become-host-home .become-host-interact {
+  width: 25%;
+  position: absolute;
+  left: 10%;
+}
+
+.become-host-home .become-host-interact h2,
+.become-host-home .become-host-interact p {
+  color: #ffffff;
+}
+
+.become-host-home .become-host-interact p {
+  margin-bottom: 30px;
+}
+
+.experiences-home .experiences-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experiences-home .experiences-list .experiences-object {
+  width: calc(100% / 3 - 10px);
+}
+
+.experiences-home .experiences-list .experiences-object .experiences-box {
+  width: 100%;
+  background-image: url("https://a0.muscache.com/im/pictures/a6b08861-feb8-4a01-a76d-b33d2867b441.jpg");
+  background-size: cover;
+}
+
+.experiences-home .experiences-list .experiences-object .experiences-box::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 .container-dashboard-content {
