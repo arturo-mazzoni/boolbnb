@@ -18,8 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('/host', function () {
-  return view('guests.host');
-})->name('became-host');
+  return view('guests.become-host');
+})->name('become-host');
 
 Auth::routes();
 

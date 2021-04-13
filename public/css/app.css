@@ -10986,6 +10986,24 @@ ul {
   border-radius: 8px;
 }
 
+.become-host-button {
+  width: 120px;
+  padding: 20px 0;
+  border-radius: 13px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #dc0e63;
+}
+
+.become-host-button a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.become-host-button:hover a {
+  font-weight: bold;
+}
+
 header {
   font-size: 14px;
   background-color: #000000;
@@ -11091,6 +11109,180 @@ header .header-form ul li .button-search {
   position: absolute;
   top: -10%;
   right: -5%;
+}
+
+#become-host-content .my-jumbotron {
+  max-width: 100%;
+  height: 550px;
+  background-color: lightseagreen;
+}
+
+#become-host-content .my-jumbotron .my-logo {
+  width: 100%;
+  height: 15%;
+}
+
+#become-host-content .my-jumbotron .my-title {
+  max-width: 45%;
+  margin-left: 10%;
+  color: #ffffff;
+}
+
+#become-host-content .my-jumbotron .my-title h4 {
+  text-transform: uppercase;
+}
+
+#become-host-content .my-jumbotron .my-title h1 {
+  font-size: 70px;
+}
+
+#become-host-content .my-jumbotron .my-title p {
+  max-width: 70%;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+main .become-host-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+main .become-host-container section#next-chapter {
+  display: flex;
+}
+
+main .become-host-container section#next-chapter .box {
+  flex-basis: 33%;
+  padding: 120px 0;
+}
+
+main .become-host-container section#next-chapter .box h2 {
+  max-width: 80%;
+  font-size: 45px;
+}
+
+main .become-host-container section#next-chapter .box .center-box {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+main .become-host-container section#next-chapter .box.box-right h4,
+main .become-host-container section#next-chapter .box.box-right p,
+main .become-host-container section#next-chapter .box.box-right a {
+  max-width: 80%;
+  margin-left: 20%;
+}
+
+main .become-host-container section#next-chapter .box a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+main .become-host-container section#review .content-box {
+  max-width: 100%;
+  height: 400px;
+  display: flex;
+}
+
+main .become-host-container section#review .content-box .left-box,
+main .become-host-container section#review .content-box .right-box {
+  flex-basis: 50%;
+  height: 100%;
+}
+
+main .become-host-container section#review .content-box .left-box {
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+  background-color: lightpink;
+}
+
+main .become-host-container section#review .content-box .right-box {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+  background-color: lightgray;
+}
+
+main .become-host-container section#revenue {
+  margin: 80px auto;
+}
+
+main .become-host-container section#revenue .content-box {
+  max-width: 100%;
+  height: 400px;
+  padding: 3% 5%;
+  border-radius: 13px;
+  background-color: lightsalmon;
+}
+
+main .become-host-container section#revenue .content-box .content-area {
+  max-width: 45%;
+}
+
+main .become-host-container section#how-does-it-work {
+  margin-bottom: 60px;
+}
+
+main .become-host-container section#how-does-it-work h2 {
+  margin-bottom: 60px;
+  font-size: 40px;
+}
+
+main .become-host-container section#how-does-it-work .box-area {
+  justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+main .become-host-container section#how-does-it-work .box-area .box {
+  flex-basis: 22%;
+  height: 600px;
+}
+
+main .become-host-container section#how-does-it-work .box-area .box .img-box {
+  width: 100%;
+  height: 250px;
+  border-radius: 13px;
+  background-color: lightskyblue;
+}
+
+main .become-host-container section#how-does-it-work .box-area .box .text-box {
+  padding: 20px;
+}
+
+main .become-host-container section#support .text-area {
+  justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+main .become-host-container section#support .text-area .text-box {
+  flex-basis: 30%;
+}
+
+main .img-bottom {
+  max-width: 100%;
+  height: 500px;
+  padding: 0 160px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  background-color: lightgreen;
+}
+
+main .img-bottom .content-area {
+  max-width: 25%;
+}
+
+main .img-bottom .content-area h2 {
+  font-size: 45px;
 }
 
 .my-jumbotron {

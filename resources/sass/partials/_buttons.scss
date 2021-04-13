@@ -24,3 +24,21 @@
     font-weight: bold;
     border-radius: 8px;
 }
+
+.become-host-button{
+  width: 120px;
+  padding: 20px 0;
+  border-radius: 13px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #dc0e63;
+
+  a{
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:hover a{
+    font-weight: bold;
+  }
+}
