@@ -16,9 +16,9 @@ class PropertyController extends Controller
      */
     public function index()
     {
-      $properties = Property::all();
+      $id_utente = Auth::id();
+      $properties = Property::where('user_id', $id_utente)->get(); // bomba soluzione get per associare all'id dell utente
       $data = ['properties' => $properties];
-
       return view('admin.property.index', $data);//collegamento pagina app.ti admin
     }
 
