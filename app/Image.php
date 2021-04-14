@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
+    protected $fillable = [
+        'property_id',
+        'image',
+      
+      ];  
     public function properties()
     {
     return $this->belongsTo('App\Property');

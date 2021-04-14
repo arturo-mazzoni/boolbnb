@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Property;
+use App\Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 class PropertyController extends Controller
@@ -16,7 +17,9 @@ class PropertyController extends Controller
      */
     public function index()
     {
-      $properties = Property::all();
+      $id_user=Auth::id();
+      $properties = Property::where('user_id', $id_user)->get();
+      
       $data = ['properties' => $properties];
 
       return view('admin.property.index', $data);//collegamento pagina app.ti admin
@@ -66,6 +69,19 @@ class PropertyController extends Controller
       $image_path=Storage::put('image',$data['image']);
       $newProperty->image=$image_path;
       $newProperty->save();
+      
+        if($request->hasFile('images')){
+          
+          foreach($request->images as $image){
+              $image_car=new image();
+              $image_path=Storage::put('image',$image);
+              $image_car->property_id=$newProperty->id;
+              $image_car->image=$image_path;
+              $image_car->save();
+          }
+        }
+    
+      
 
       return redirect()->route('property.show', $newProperty->id)->with('status','appartamento-aggiunto');
     }
@@ -129,6 +145,15 @@ class PropertyController extends Controller
         'floor' => 'required',
         'description' => 'required'
       ]);
+      if(array_key_exists('image',$data)){
+      
+        
+        Storage::delete($property->image);
+         $image_path=Storage::put('image',$data['image']);
+        $data['image']=$image_path;
+      }
+     
+      
 
       $property->update($data);
 
@@ -143,6 +168,9 @@ class PropertyController extends Controller
      */
     public function destroy(Property $property)
     {
+      $image= Image::where('property_id',$property->id);
+      
+      $image->delete();
       $property->delete();
 
       return redirect()->route('property.index');

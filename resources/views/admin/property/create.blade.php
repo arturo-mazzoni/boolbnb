@@ -40,8 +40,12 @@
     <input type="text" name="address" class="form-control" id="address">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlFile1">Carica Immagine</label>
+    <label for="exampleFormControlFile1">Carica Immagine Principale</label>
     <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Carica Immagini appartamento</label>
+    <input type="file" multiple="multiple" name="images[]" class="form-control-file" id="exampleFormControlFile1">
   </div>
   {{-- @if ($post->cover)
             <p>Immagine inserita:</p>

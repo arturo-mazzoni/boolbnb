@@ -43,9 +43,9 @@
     <label for="exampleFormControlFile1">Carica Immagine</label>
     <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
   </div>
-  {{-- @if ($post->cover)
+  {{-- @if ($property->image)
             <p>Immagine inserita:</p>
-            <img src="{{ asset('storage/' . $post->cover) }}" alt="{{ $post->title }}" style="max-width: 50%" class="mb-3">
+            <img src="{{$property->image}}" alt="" style="max-width: 50%" class="mb-3">
         @else
             <p>Nessuna immagine caricata.</p>
   @endif --}}
