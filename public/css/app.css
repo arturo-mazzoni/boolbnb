@@ -10982,13 +10982,9 @@ ul {
   align-items: center;
   width: 60px;
   height: 60px;
-  background-color: #FF385C;
+  background-color: #004C99;
   border-radius: 50px;
-  color: #ffffff;
-}
-
-.button-search:hover {
-  background-color: #D90865;
+  color: #F5B964;
 }
 
 .my-btn-home {
@@ -11019,23 +11015,16 @@ ul {
 
 header {
   font-size: 14px;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 header .header-bar {
-  padding-top: 30px 0;
+  padding-top: 50px;
   flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-}
-
-header .header-bar .header-menu {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 header .header-bar ul {
@@ -11047,32 +11036,39 @@ header .header-bar ul {
 }
 
 header .header-bar ul li a {
-  font-size: 20px;
-  color: #ffffff;
+  font-weight: bolder;
+  font-size: 1.6em;
+  color: #004C99;
   text-decoration: none;
   padding: 0 20px;
+  background: linear-gradient(#F5B964 0 0) bottom/var(--d, 0) 3px no-repeat;
+  transition: 0.2s;
 }
 
-header .header-bar ul li i {
+header .header-bar ul li:hover {
+  --d: 80%;
+}
+
+header .header-bar ul i {
   font-size: 20px;
 }
 
-header .header-bar .header-right ul li {
+header .header-right ul li {
   padding: 0 20px;
-  color: #ffffff;
 }
 
-header .header-bar .header-right ul li i {
+header .header-right ul li i {
   padding-right: 10px;
 }
 
-header .header-bar .header-right ul li .border-user {
+header .header-right ul li .border-user {
   padding: 10px 0;
   text-align: center;
   border-radius: 50px;
 }
 
 header .header-form ul {
+  transition: 0.2s;
   position: relative;
   bottom: -40px;
   height: 80px;
@@ -11081,26 +11077,39 @@ header .header-form ul {
   background-color: #ffffff;
   border: 1px solid #000000;
   border-radius: 50px;
-  width: 80%;
+  width: 102px;
 }
 
-header .header-form ul li:not(:last-child) {
-  border-right: 1px solid #d3d3d3;
+header .header-form ul:hover {
+  width: 240px;
 }
 
-header .header-form ul li {
+header .header-form ul:hover .search-inputs {
+  color: #004C99;
+}
+
+header .header-form ul:hover .search-inputs input::-moz-placeholder {
+  color: #F5B964;
+}
+
+header .header-form ul:hover .search-inputs input:-ms-input-placeholder {
+  color: #F5B964;
+}
+
+header .header-form ul:hover .search-inputs input::placeholder {
+  color: #F5B964;
+}
+
+header .header-form li {
   position: relative;
   float: left;
   height: 100%;
-  width: 25%;
+  width: 100%;
 }
 
-header .header-form ul li:hover {
-  background-color: #d3d3d3;
-  border-radius: 50px;
-}
-
-header .header-form ul li .search-inputs {
+header .header-form li .search-inputs {
+  transition: 0.2s;
+  color: transparent;
   float: left;
   position: relative;
   top: 50%;
@@ -11108,17 +11117,34 @@ header .header-form ul li .search-inputs {
   transform: translate(-50%, -50%);
 }
 
-header .header-form ul li .search-inputs label {
+header .header-form li .search-inputs label {
   font-weight: bolder;
 }
 
-header .header-form ul li .search-inputs input {
+header .header-form li .search-inputs input {
   background-color: transparent;
   border: none;
   outline: none;
 }
 
-header .header-form ul li .button-search {
+header .header-form li .search-inputs input::-moz-placeholder {
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+  color: transparent;
+}
+
+header .header-form li .search-inputs input:-ms-input-placeholder {
+  -ms-transition: 0.2s;
+  transition: 0.2s;
+  color: transparent;
+}
+
+header .header-form li .search-inputs input::placeholder {
+  transition: 0.2s;
+  color: transparent;
+}
+
+header .header-form li .button-search {
   position: absolute;
   top: -10%;
   right: -5%;

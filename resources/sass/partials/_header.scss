@@ -1,22 +1,26 @@
 header{
     font-size: $fontHeader;
-    background-color: $black;
+    background-color: $white;
     .#{&}-bar{
-        padding-top: 30px 0;
+        padding-top: 50px;
         @include flex;
         justify-content: space-between;
-        .header-menu{
-            @include flex;
-        }
         ul{
             @include flex;
             list-style: none;
-            li{
+            li{ 
                 a{
-                    font-size: 20px;
-                    color: $white;
+                    font-weight: bolder;
+                    font-size: 1.6em;
+                    color: $aloha-blue;
                     text-decoration: none;
                     padding: $paddingHeader;
+                    background: linear-gradient($aloha-yellow 0 0) bottom /var(--d, 0) 3px no-repeat;
+                    transition:0.2s;
+                    }
+                    &:hover {
+                    --d: 80%;
+                    }
                 }
                 i{
                     font-size: 20px;
@@ -27,7 +31,6 @@ header{
             ul{
                 li{
                 padding: $paddingHeader;
-                color: $white;
                     i{
                         padding-right: 10px;
                     }
@@ -39,9 +42,10 @@ header{
                 }  
             }
         }
-    }
+    
     .#{&}-form{
         ul{
+            transition: 0.2s;
             position: relative;
             bottom: -40px;
             height: 80px;
@@ -50,20 +54,25 @@ header{
             background-color: $white;
             border:1px solid $black;
             border-radius: 50px;
-            width: 80%;
-            li:not(:last-child){
-                border-right: 1px solid $dark-white;
+            width: 102px;
+            &:hover{
+                width: 240px;
+                .search-inputs{
+                    color: $aloha-blue;;
+                    input::placeholder{
+                        color: $aloha-yellow
+                    }
+                }
+            }
             }
             li{
                 position: relative;
                 float: left;
                 height: 100%;
-                width: 25%;
-                &:hover{
-                background-color:$dark-white;
-                border-radius: 50px;
-                }
+                width: 100%;
                 .search-inputs{
+                    transition: 0.2s;
+                    color: transparent;
                     float: left;
                     position: relative;
                     top:50%;
@@ -77,6 +86,10 @@ header{
                         border: none;
                         outline: none;
                     }
+                    input::placeholder{
+                        transition: 0.2s;
+                        color: transparent
+                    }
                 }
                 .button-search{
                     position: absolute;
@@ -86,4 +99,3 @@ header{
             }
         }
     }
-}
