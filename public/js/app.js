@@ -37508,8 +37508,8 @@ exploreImages.forEach(function (e, i) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Boolean\mamp_public\boolbnb\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Boolean\mamp_public\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

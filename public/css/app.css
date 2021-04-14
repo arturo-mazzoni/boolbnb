@@ -11673,7 +11673,7 @@ footer .footer-bottom ul li i.icon-size {
   z-index: 1;
   cursor: pointer;
   transform: scale(1.05);
-  background-color: #009EF7;
+  background-color: #57e4f7;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -11691,19 +11691,23 @@ footer .footer-bottom ul li i.icon-size {
   color: #d3d3d3;
 }
 
-.chat-container .colonna-dx {
-  width: 80%;
+.chat-container .colonna-cc {
+  width: 60%;
   height: 500px;
 }
 
-.chat-container .colonna-dx .header-chat {
+.chat-container .colonna-cc .header-chat {
   border-bottom: 1px solid #d3d3d3;
   height: 80px;
   padding: 15px;
   margin: 5px;
 }
 
-.chat-container .colonna-dx .chat-space {
+.chat-container .colonna-cc .header-chat h2 {
+  text-align: center;
+}
+
+.chat-container .colonna-cc .chat-space {
   border-left: 1px solid #d3d3d3;
   border-radius: 10px;
   padding: 15px;
@@ -11712,7 +11716,7 @@ footer .footer-bottom ul li i.icon-size {
   background-color: #F6F6F6;
 }
 
-.chat-container .colonna-dx .chat-space .message {
+.chat-container .colonna-cc .chat-space .message {
   position: relative;
   min-width: 100px;
   max-width: 400px;
@@ -11722,61 +11726,12 @@ footer .footer-bottom ul li i.icon-size {
   box-shadow: 0 5px 5px -5px;
   margin: 10px 0;
   padding: 10px 60px 10px 15px;
+  background-color: #57e4f7;
+  margin: 0 auto;
 }
 
-.chat-container .colonna-dx .chat-space .sent {
-  background-color: #bee3fa;
-  float: right;
-  margin-right: 20px;
-  clear: both;
-}
-
-.chat-container .colonna-dx .chat-space .received {
-  background-color: #cfcccc;
-  float: left;
-  margin-left: 20px;
-  clear: both;
-}
-
-.chat-container .colonna-dx .bottom-dx .scrivi {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-}
-
-.chat-container .colonna-dx .bottom-dx input[type=text] {
-  padding: 15px;
-  margin: 5px;
-  height: 50px;
-  text-decoration: none;
-  width: 90%;
-  outline: none;
-}
-
-.chat-container .colonna-dx .bottom-dx .send-button {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-size: 25px;
-  height: 50px;
-  border-radius: 10px;
-  margin-right: 5px;
-  margin: 5px;
-  color: white;
-  border: 1px solid black;
-  background-color: #31b331;
-  width: 10%;
-}
-
-.chat-container .colonna-dx .bottom-dx .send-button i {
-  transition: 0.3s;
-}
-
-.chat-container .colonna-dx .bottom-dx .send-button:hover i {
-  transform: scale(1.2);
+.chat-container .colonna-dx {
+  width: 20%;
+  height: 500px;
 }
 
