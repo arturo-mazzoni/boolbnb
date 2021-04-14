@@ -11442,28 +11442,49 @@ section div[class$=text] div {
 }
 
 .container-dashboard-content .left {
-  min-height: 100vh;
-  max-width: 200px;
-  background-color: #264c6f;
+  height: 70vh;
+  background-color: #f7f7f7;
+  width: 300px;
+  margin: 40px 20px;
+  border-radius: 16px;
 }
 
 .container-dashboard-content .left ul {
   width: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   list-style: none;
-  align-items: start;
-  color: white;
-  padding: 0;
+  align-items: flex-start;
+  color: #f7575c;
   padding: 10px;
 }
 
+.container-dashboard-content .left ul:hover {
+  color: white;
+}
+
 .container-dashboard-content .left ul li {
-  margin: 20px 0;
+  width: 80%;
+  margin: 20px 20px;
+  padding: 10px 20px;
+}
+
+.container-dashboard-content .left ul li:hover {
+  background-color: #f7575c;
+  border-radius: 5px;
+}
+
+.container-dashboard-content .left ul li:hover a {
+  color: white;
+}
+
+.container-dashboard-content .left ul li:hover i {
+  color: white;
 }
 
 .container-dashboard-content .left ul li a {
-  color: white;
+  color: #f7575c;
   text-decoration: none;
   font-size: 20px;
 }
@@ -11471,11 +11492,7 @@ section div[class$=text] div {
 .container-dashboard-content .left ul li a i {
   padding-right: 10px;
   font-size: 20px;
-  color: #a9d273;
-}
-
-.container-dashboard-content .left ul li a:hover {
-  color: #e4d8d8;
+  color: #f7575c;
 }
 
 .container-dashboard-content .right {
@@ -11500,6 +11517,38 @@ section div[class$=text] div {
 .container-dashboard-content .img-card {
   max-width: 80%;
   min-width: 30%;
+}
+
+.my-navbar {
+  background-color: #f7f7f7;
+  height: 90px;
+}
+
+.my-navbar #aaa {
+  color: #f7575c;
+}
+
+.my-navbar #navbarDropdown {
+  color: #484848;
+}
+
+.tabella {
+  max-width: 70vw;
+  margin-top: 40px;
+}
+
+.tabella .testa-tabella {
+  background-color: #f7f7f7;
+  color: #f7575c;
+}
+
+.tabella .bottone-rosso {
+  background-color: #f7575c;
+  color: white;
+}
+
+.tabella .bottone-rosso:hover {
+  color: #808080;
 }
 
 footer {
