@@ -19,11 +19,13 @@
     <div class="my-jumbotron">
       <div class="my-logo"></div>
       <div class="my-title">
-        <h4>diventa host</h4>
-        <h1>Uno spazio da condividere, un mondo da scoprire</h1>
-        <p>Affittare può aiutarti a trasformare il tuo spazio extra in un guadagno in più, permettendoti di dedicarti a ciò che ami.</p>
-        <div class="become-host-button">
-          <a href="">Inizia</a>
+        <div class="content-title">
+          <h4>diventa host</h4>
+          <h1>Uno spazio da condividere, un mondo da scoprire</h1>
+          <p>Affittare può aiutarti a trasformare il tuo spazio extra in un guadagno in più, permettendoti di dedicarti a ciò che ami.</p>
+          <div class="become-host-button">
+            <a href="">Inizia</a>
+          </div>
         </div>
       </div>
     </div>

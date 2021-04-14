@@ -11113,30 +11113,39 @@ header .header-form ul li .button-search {
 
 #become-host-content .my-jumbotron {
   max-width: 100%;
-  height: 550px;
+  height: 600px;
   background-color: lightseagreen;
 }
 
 #become-host-content .my-jumbotron .my-logo {
   width: 100%;
-  height: 15%;
+  height: 10%;
 }
 
 #become-host-content .my-jumbotron .my-title {
   max-width: 45%;
+  height: 90%;
   margin-left: 10%;
   color: #ffffff;
+  position: relative;
 }
 
-#become-host-content .my-jumbotron .my-title h4 {
+#become-host-content .my-jumbotron .my-title .content-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#become-host-content .my-jumbotron .my-title .content-title h4 {
   text-transform: uppercase;
 }
 
-#become-host-content .my-jumbotron .my-title h1 {
+#become-host-content .my-jumbotron .my-title .content-title h1 {
   font-size: 70px;
 }
 
-#become-host-content .my-jumbotron .my-title p {
+#become-host-content .my-jumbotron .my-title .content-title p {
   max-width: 70%;
   font-size: 22px;
   line-height: 1.6;
