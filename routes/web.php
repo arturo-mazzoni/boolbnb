@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('guests.home');
 });
 
+Route::get('/host', function () {
+  return view('guests.become-host');
+})->name('become-host');
+
 Auth::routes();
 
 Route::prefix('admin')
@@ -25,5 +29,6 @@ Route::prefix('admin')
     ->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
         Route::resource('property', 'PropertyController');
+        Route::get('/message', 'MessageController@index')->name('messages');
 });
 

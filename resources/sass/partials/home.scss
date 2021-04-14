@@ -1,0 +1,118 @@
+.my-jumbotron {
+  height: 438px;
+  background-color: $black;
+  .jumbo-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-height: 322px;
+    overflow: hidden;
+    img {
+      width: 95%;
+      object-fit: cover;
+    }
+  }
+  .jumbo-text {
+    height: calc(438px - 322px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-size: 30px;
+  }
+}
+
+section {
+  padding: 40px 0;
+  width: 90%;
+  margin: 0 auto;
+  background-color: $white;
+  div[class$="box"] {
+    border-radius: 8px;
+  }
+  div[class$="text"] {
+    div {
+      font-weight: bold;
+    }
+  }
+}
+
+.explore-home {
+  .explore-list {
+    display: flex;
+    flex-wrap:wrap;
+    .explore-object {
+      margin-top: 20px;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      .explore-box {
+        margin-right: 10px;
+        height: 64px;
+        width: 64px;
+        background-image: url('https://a0.muscache.com/im/pictures/73ab906b-eea1-425d-9fea-bf2c79d86556.jpg');
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.houses-home {
+  .houses-list {
+    display: flex;
+    justify-content: space-between;
+    .houses-object {
+      width:calc(25% - 10px);
+      .houses-box {
+        width: 100%;
+        background-image: url('https://a0.muscache.com/im/pictures/7d82ca14-56e5-4465-8218-dcfa7d69b6ac.jpg');
+        background-size: cover;
+        &::after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
+      }
+    }
+  }
+}
+
+.become-host-home {
+  display: flex;
+  align-items: center;
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .become-host-interact {
+    width: 25%;
+    position: absolute;
+    left: 10%;
+    h2, p {
+      color: $white;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.experiences-home {
+  .experiences-list {
+    display: flex;
+    justify-content: space-between;
+    .experiences-object {
+      width:calc(100% / 3 - 10px);
+      .experiences-box {
+        width: 100%;
+        background-image: url('https://a0.muscache.com/im/pictures/a6b08861-feb8-4a01-a76d-b33d2867b441.jpg');
+        background-size: cover;
+        &::after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
+      }
+    }
+  }
+}

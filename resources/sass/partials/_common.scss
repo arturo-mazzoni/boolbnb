@@ -11,3 +11,15 @@
 ul {
   list-style-type: none;
 }
+
+.bottone {
+  background-color: #75c6c7;
+  color: white;
+  &:hover {
+    color: $light-black;
+  }
+}
+
+.border-radius-20 {
+  border-radius: 20px;
+}
