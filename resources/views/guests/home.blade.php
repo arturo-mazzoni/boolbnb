@@ -3,7 +3,7 @@
 @section('content')
 <div class="my-jumbotron">
     <div class="jumbo-image">
-        <img src="https://a0.muscache.com/im/pictures/166791ff-bc82-4b88-ba3d-49be1d462dce.jpg" alt="jumbotron">
+        <img src="https://www.themodernhonolulu.com/sites/www.themodernhonolulu.com/files/waikiki-beach-night_1920x542_1.jpg" alt="Honolulu">
     </div>
     <div class="jumbo-text">
         <span>Grazie agli host puoi</span>
@@ -11,69 +11,14 @@
 </div>
 
 <section class="explore-home">
-    <h2>Esplora i dintorni</h2>
-    <div class="explore-list">
-        <div class="explore-object">
-            <div class="explore-box"></div>
-            <div class="explore-text">
-                <div>Città</div>
-                <span>Distanza</span>
-            </div>
-        </div>
-        <div class="explore-object">
-            <div class="explore-box"></div>
-            <div class="explore-text">
-                <div>Città</div>
-                <span>Distanza</span>
-            </div>
-        </div>
-        <div class="explore-object">
-            <div class="explore-box"></div>
-            <div class="explore-text">
-                <div>Città</div>
-                <span>Distanza</span>
-            </div>
-        </div>
-        <div class="explore-object">
-            <div class="explore-box"></div>
-            <div class="explore-text">
-                <div>Città</div>
-                <span>Distanza</span>
-            </div>
-        </div>
-        <div class="explore-object">
-            <div class="explore-box"></div>
-            <div class="explore-text">
-                <div>Città</div>
-                <span>Distanza</span>
-            </div>
-        </div>
-        <div class="explore-object">
-            <div class="explore-box"></div>
-            <div class="explore-text">
-                <div>Città</div>
-                <span>Distanza</span>
-            </div>
-        </div>
-        <div class="explore-object">
-            <div class="explore-box"></div>
-            <div class="explore-text">
-                <div>Città</div>
-                <span>Distanza</span>
-            </div>
-        </div>
-        <div class="explore-object">
-            <div class="explore-box"></div>
-            <div class="explore-text">
-                <div>Città</div>
-                <span>Distanza</span>
-            </div>
-        </div>
+    <h2>Esplora Honolulu</h2>
+    <div id="explore-list">
+        
     </div>
 </section>
 
 <section class="houses-home">
-    <h2>Una casa ovunque nel mondo</h2>
+    <h2>In Evidenza</h2>
     <div class="houses-list">
         <div class="houses-object">
             <div class="houses-box"></div>
@@ -113,29 +58,29 @@
     </div>
 </section>
 
-<section class="experiences-home">
-    <h2>Scopri le esperienze</h2>
-    <p>Attività uniche con esperti del luogo, di persona oppure online.</p>
-    <div class="experiences-list">
-        <div class="experiences-object">
-            <div class="experiences-box"></div>
-            <div class="experiences-text">
+<section class="partners-home">
+    <h2>I nostri partner</h2>
+    <p>Scopri i migliori ristoranti a Honolulu.</p>
+    <div class="partners-list">
+        <div class="partners-object">
+            <div class="partners-box"></div>
+            <div class="partners-text">
                 <div>Testo</div>
                 <span>Testo lungo</span>
             </div>
         </div>
-        <div class="experiences-object">
-            <div class="experiences-box"></div>
-            <div class="experiences-text">
+        <div class="partners-object">
+            <div class="partners-box"></div>
+            <div class="partners-text">
                 <div>Testo</div>
                 <span>Testo lungo</span>
             </div>
         </div>
-        <div class="experiences-object">
-            <div class="experiences-box"></div>
-            <div class="experiences-text">
-                <div>Testo</div>
-                <span>Testo lungo</span>
+        <div class="partners-object">
+            <div class="partners-box"></div>
+            <div class="partners-text">
+                <div><a href="https://www.tripadvisor.it/Restaurant_Review-g60982-d13189091-Reviews-Nalu_Health_Bar_Cafe-Honolulu_Oahu_Hawaii.html">Nalu Health Bar & Cafe</a></div>
+                <span>1170 Auahi St Suite 145, Honolulu, Oahu, HI 96814-4946</span>
             </div>
         </div>
     </div>

@@ -11308,7 +11308,6 @@ main .img-bottom .content-area h2 {
 }
 
 .my-jumbotron {
-  height: 438px;
   background-color: #000000;
 }
 
@@ -11316,7 +11315,7 @@ main .img-bottom .content-area h2 {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-height: 322px;
+  max-height: 542px;
   overflow: hidden;
 }
 
@@ -11324,10 +11323,13 @@ main .img-bottom .content-area h2 {
   width: 95%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 8px;
 }
 
 .my-jumbotron .jumbo-text {
-  height: calc(438px - 322px);
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11350,19 +11352,19 @@ section div[class$=text] div {
   font-weight: bold;
 }
 
-.explore-home .explore-list {
+.explore-home #explore-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.explore-home .explore-list .explore-object {
+.explore-home #explore-list .explore-object {
   margin-top: 20px;
   width: 25%;
   display: flex;
   align-items: center;
 }
 
-.explore-home .explore-list .explore-object .explore-box {
+.explore-home #explore-list .explore-object .explore-box {
   margin-right: 10px;
   height: 64px;
   width: 64px;
@@ -11416,22 +11418,22 @@ section div[class$=text] div {
   margin-bottom: 30px;
 }
 
-.experiences-home .experiences-list {
+.partners-home .partners-list {
   display: flex;
   justify-content: space-between;
 }
 
-.experiences-home .experiences-list .experiences-object {
+.partners-home .partners-list .partners-object {
   width: calc(100% / 3 - 10px);
 }
 
-.experiences-home .experiences-list .experiences-object .experiences-box {
+.partners-home .partners-list .partners-object .partners-box {
   width: 100%;
-  background-image: url("https://a0.muscache.com/im/pictures/a6b08861-feb8-4a01-a76d-b33d2867b441.jpg");
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/1b/64/c4/11/nalu-salad.jpg");
   background-size: cover;
 }
 
-.experiences-home .experiences-list .experiences-object .experiences-box::after {
+.partners-home .partners-list .partners-object .partners-box::after {
   content: "";
   display: block;
   padding-bottom: 100%;

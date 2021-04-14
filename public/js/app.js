@@ -37392,6 +37392,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./explore-home */ "./resources/js/explore-home.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37439,6 +37441,55 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/explore-home.js":
+/*!**************************************!*\
+  !*** ./resources/js/explore-home.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var exploreImages = [{
+  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-Hawaii.jpg',
+  name: 'Liliuokalani Botanical Gardens',
+  address: '123 N.Kuakini St.'
+}, {
+  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Honolulu-Hawaii-cosa-vedere.jpg',
+  name: 'Aliiolani Hale',
+  address: '417 S.King St.'
+}, {
+  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Honolulu-cosa-vedere-2.jpg',
+  name: 'Aloha Tower Marketplace',
+  address: ''
+}, {
+  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Honolulu-cosa-vedere-3.jpg',
+  name: 'Wakiki',
+  address: ''
+}, {
+  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Attrazioni-Honolulu-1.jpg',
+  name: 'Kalakaua Avenue',
+  address: ''
+}, {
+  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-Hawaii-1.jpg',
+  name: 'Diamond Head',
+  address: ''
+}, {
+  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Attrazioni-Honolulu.jpg',
+  name: 'Chinatown',
+  address: 'Beretania St.'
+}, {
+  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-2.jpg',
+  name: 'Honolulu Harbor',
+  address: ''
+}];
+exploreImages.forEach(function (e, i) {
+  var img = e.img,
+      name = e.name,
+      address = e.address;
+  document.getElementById('explore-list').innerHTML += "\n  <div class=\"explore-object\" style=\"margin-top: 20px;\n      width: 25%;\n      display: flex;\n      align-items: center;\">\n    <div class=\"explore-box\" style=\"background-image: url('".concat(img, "'); background-size: cover; height: 80px; width: 80px\"></div>\n    <div class=\"explore-text\" style=\"width:\"70%\"; font-size: 14px\">\n        <div>").concat(name, "</div>\n        <span>").concat(address, "</span>\n    </div>\n  </div>\n  ");
+});
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -37457,8 +37508,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Arturo\CorsoProgrammazione\corso\boolbnb\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Arturo\CorsoProgrammazione\corso\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Boolean\mamp_public\boolbnb\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Boolean\mamp_public\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
