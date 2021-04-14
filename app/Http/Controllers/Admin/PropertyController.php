@@ -21,7 +21,7 @@ class PropertyController extends Controller
       $properties = Property::where('user_id', $id_user)->get();
       
       $data = ['properties' => $properties];
-      return view('admin.property.index', $data);//collegamento pagina app.ti admin
+      return view('admin.property.index', $data);//collegamento pagina app.ti admin sda sd
     }
 
     /**

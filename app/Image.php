@@ -12,7 +12,7 @@ class Image extends Model
       
       ];  
     public function properties()
-    {
+    {//asd
     return $this->belongsTo('App\Property');
     }
 }

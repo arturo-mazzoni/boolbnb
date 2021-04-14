@@ -11,7 +11,7 @@
       </ul>
   </div>
   @endif
-
+    <!-- asdsad -->
   <form method="POST" action="{{ route('property.store') }}" enctype="multipart/form-data">
   @method('POST')
   @csrf
