@@ -11126,19 +11126,35 @@ header .header-form ul li .button-search {
 
 #become-host-content .my-jumbotron {
   max-width: 100%;
-  height: 600px;
-  background-color: lightseagreen;
+  height: 500px;
+  background-image: url("https://www.viaggi-usa.it/wp-content/uploads/2017/06/Spiagge-Honolulu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #become-host-content .my-jumbotron .my-logo {
   width: 100%;
   height: 10%;
+  padding: 20px;
+}
+
+#become-host-content .my-jumbotron .my-logo a {
+  color: #dc0e63;
+}
+
+#become-host-content .my-jumbotron .my-logo a i {
+  font-size: 50px;
+  padding: 7px 12px;
+  background-color: #201C19;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 #become-host-content .my-jumbotron .my-title {
-  max-width: 45%;
+  max-width: 48%;
   height: 90%;
-  margin-left: 10%;
+  margin-left: 45%;
   color: #ffffff;
   position: relative;
 }
@@ -11148,6 +11164,9 @@ header .header-form ul li .button-search {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 20px;
+  border-radius: 13px;
 }
 
 #become-host-content .my-jumbotron .my-title .content-title h4 {
@@ -11204,18 +11223,22 @@ main .become-host-container section#review .content-box {
   max-width: 100%;
   height: 400px;
   display: flex;
+  justify-content: space-between;
 }
 
 main .become-host-container section#review .content-box .left-box,
 main .become-host-container section#review .content-box .right-box {
-  flex-basis: 50%;
+  flex-basis: 48%;
   height: 100%;
+  border-radius: 13px;
+  /* box-shadow: 0.7px 0.7px 0.7px $light-black; */
+  /* border: 1px solid lightslategray; */
 }
 
 main .become-host-container section#review .content-box .left-box {
-  border-top-left-radius: 13px;
-  border-bottom-left-radius: 13px;
-  background-color: lightpink;
+  background-image: url("https://cdn.pixabay.com/photo/2015/09/09/07/05/sea-931164_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main .become-host-container section#review .content-box .right-box {
@@ -11224,9 +11247,7 @@ main .become-host-container section#review .content-box .right-box {
   justify-content: center;
   align-items: center;
   padding: 0 5%;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
-  background-color: lightgray;
+  background-color: rgba(255, 250, 185, 0.781);
 }
 
 main .become-host-container section#revenue {
@@ -11238,11 +11259,24 @@ main .become-host-container section#revenue .content-box {
   height: 400px;
   padding: 3% 5%;
   border-radius: 13px;
-  background-color: lightsalmon;
+  background-image: url("https://cdn.pixabay.com/photo/2015/11/10/14/33/hawaii-1037024_960_720.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 main .become-host-container section#revenue .content-box .content-area {
-  max-width: 45%;
+  max-width: 35%;
+  margin-left: 10%;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 13px;
+}
+
+main .become-host-container section#revenue .content-box .content-area h2 {
+  color: #ffffff;
+  font-size: 48px;
+  margin-bottom: 25px;
 }
 
 main .become-host-container section#how-does-it-work {
@@ -11270,11 +11304,33 @@ main .become-host-container section#how-does-it-work .box-area .box .img-box {
   width: 100%;
   height: 250px;
   border-radius: 13px;
-  background-color: lightskyblue;
+  background-image: url("https://cdn.pixabay.com/photo/2014/12/15/17/16/boardwalk-569314_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main .become-host-container section#how-does-it-work .box-area .box .text-box {
   padding: 20px;
+}
+
+main .become-host-container section#how-does-it-work .box-area .box:nth-child(2) .img-box {
+  background-image: url("https://cdn.pixabay.com/photo/2018/03/20/02/26/palm-3241933_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .become-host-container section#how-does-it-work .box-area .box:nth-child(3) .img-box {
+  background-image: url("https://cdn.pixabay.com/photo/2018/05/17/08/29/real-estate-3408039_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+main .become-host-container section#how-does-it-work .box-area .box:nth-child(4) .img-box {
+  background-image: url("https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
 }
 
 main .become-host-container section#support .text-area {
@@ -11289,6 +11345,10 @@ main .become-host-container section#support .text-area .text-box {
   flex-basis: 30%;
 }
 
+main .become-host-container section#support .text-area .text-box a {
+  color: #000000;
+}
+
 main .img-bottom {
   max-width: 100%;
   height: 500px;
@@ -11296,11 +11356,17 @@ main .img-bottom {
   margin-top: 50px;
   display: flex;
   align-items: center;
-  background-color: lightgreen;
+  background-image: url("https://cdn.pixabay.com/photo/2017/03/05/00/34/panorama-2117310_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main .img-bottom .content-area {
   max-width: 25%;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 30px;
+  border-radius: 13px;
 }
 
 main .img-bottom .content-area h2 {

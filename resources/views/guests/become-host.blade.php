@@ -17,14 +17,18 @@
 
   <div id="become-host-content">
     <div class="my-jumbotron">
-      <div class="my-logo"></div>
+      <div class="my-logo">
+        <a href="{{ url('/') }}">
+          <i class="fab fa-airbnb"></i>
+        </a>
+      </div>
       <div class="my-title">
         <div class="content-title">
           <h4>diventa host</h4>
           <h1>Uno spazio da condividere, un mondo da scoprire</h1>
           <p>Affittare può aiutarti a trasformare il tuo spazio extra in un guadagno in più, permettendoti di dedicarti a ciò che ami.</p>
           <div class="become-host-button">
-            <a href="">Inizia</a>
+            <a href="{{ route('register') }}">Inizia</a>
           </div>
         </div>
       </div>
@@ -65,8 +69,9 @@
       <section id="revenue">
         <div class="content-box">
           <div class="content-area">
+            <h2>Guadagna grazie alle spiagge più belle</h2>
             <div class="become-host-button">
-              <a href="">Inizia</a>
+              <a href="{{ route('register') }}">Inizia</a>
             </div>
           </div>
         </div>
@@ -77,29 +82,29 @@
           <div class="box">
             <div class="img-box"></div>
             <div class="text-box">
-              <h4>titolo</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque. Id, cum debitis at sequi delectus ipsa aspernatur tempore nulla veritatis veniam saepe fugiat repellendus facilis vel qui dicta ipsum?</p>
+              <h4>Perchè ospitare su Airbnb?</h4>
+              <p>Gli host rivelano perchè adorano condividere il proprio spazio su Airbnb.</p>
             </div>
           </div>
           <div class="box">
             <div class="img-box"></div>
             <div class="text-box">
-              <h4>titolo</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque. Id, cum debitis at sequi delectus ipsa aspernatur tempore nulla veritatis veniam saepe fugiat repellendus facilis vel qui dicta ipsum?</p>
+              <h4>Come iniziare la tua avventura su Airbnb</h4>
+              <p>Dalla creazione del tuo annuncio alla preparazione del tuo spazio, scopri come muovere i primi passi nel mondo dell'ospitalità.</p>
             </div>
           </div>
           <div class="box">
             <div class="img-box"></div>
             <div class="text-box">
-              <h4>titolo</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque. Id, cum debitis at sequi delectus ipsa aspernatur tempore nulla veritatis veniam saepe fugiat repellendus facilis vel qui dicta ipsum?</p>
+              <h4>Come guadagnare su Airbnb</h4>
+              <p>Ciò che ogni host deve sapere su prezzi e compensi.</p>
             </div>
           </div>
           <div class="box">
             <div class="img-box"></div>
             <div class="text-box">
-              <h4>titolo</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, itaque. Id, cum debitis at sequi delectus ipsa aspernatur tempore nulla veritatis veniam saepe fugiat repellendus facilis vel qui dicta ipsum?</p>
+              <h4>Il mio spazio è adatto a Airbnb?</h4>
+              <p>C'è un ospite perfetto per ogni spazio: il segreto è definire le aspettative degli ospiti.</p>
             </div>
           </div>
         </div>
@@ -108,19 +113,20 @@
         <h2>Come ti supportiamo</h2>
         <div class="text-area">
           <div class="text-box">
-            <h3>titolo</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores veniam nobis quis deserunt ea quo unde id hic perspiciatis commodi? Provident, deleniti nemo. Fugit repellat veritatis est dolorem, in sequi!</p>
-            <a href="">link</a>
+            <h3>Programmi di protezione dell'host</h3>
+            <p>Per ricevere il supporto necessario nel raro caso di un incidente, la maggior parte delle prenotazioni Airbnb include un'assicurazione contro i danni all'alloggio e un'assicurazione di responsabilità civile per un importo massimo di un milione di dollari.</p>
+            <a href="">Come ti proteggiamo quando svolgi l'attività di host</a>
           </div>
           <div class="text-box">
-            <h3>titolo</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores veniam nobis quis deserunt ea quo unde id hic perspiciatis commodi? Provident, deleniti nemo. Fugit repellat veritatis est dolorem, in sequi!</p>
-            <a href="">link</a>
+            <h3>Linee guida sulla sicurezza per l'emergenza COVID-19</h3>
+            <p>Per contribuire a proteggere la salute della nostra community, abbiamo collaborato con esperti allo scopo di creare linee guida di sicurezza per tutti, oltre a un processo di pulizia per gli host.
+            </p>
+            <a href="">Scopri il processo avanzato di pulizia</a>
           </div>
           <div class="text-box">
-            <h3>titolo</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores veniam nobis quis deserunt ea quo unde id hic perspiciatis commodi? Provident, deleniti nemo. Fugit repellat veritatis est dolorem, in sequi!</p>
-            <a href="">link</a>
+            <h3>Standard elevati per gli ospiti</h3>
+            <p>Per garantire tranquillità agli host, verifichiamo l'identità degli ospiti e ti permettiamo di consultare le recensioni relative a questi ultimi prima che prenotino. La nuova Politica sugli standard degli ospiti definisce aspettative maggiori relativamente al comportamento di questi ultimi.</p>
+            <a href="">Le misure che adottiamo per aiutare gli host a sentirsi sicuri</a>
           </div>
         </div>
       </section>
@@ -130,7 +136,7 @@
         <h2>Inizia il tuo percorso di host</h2>
         <p>Creiamo insieme il tuo annuncio.</p>
         <div class="become-host-button">
-          <a href="">Inizia</a>
+          <a href="{{ route('register') }}">Inizia</a>
         </div>
       </div>
     </div>
