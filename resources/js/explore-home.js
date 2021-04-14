@@ -48,7 +48,7 @@ exploreImages.forEach((e, i) => {
       width: 25%;
       display: flex;
       align-items: center;">
-    <div class="explore-box" style="background-image: url('${img}'); background-size: cover; height: 80px; width: 80px"></div>
+    <div class="explore-box" style="background-image: url('${img}'); background-position: center; background-size: cover; height: 80px; width: 80px"></div>
     <div class="explore-text" style="width:"70%"; font-size: 14px">
         <div>${name}</div>
         <span>${address}</span>

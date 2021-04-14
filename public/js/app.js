@@ -37485,7 +37485,7 @@ exploreImages.forEach(function (e, i) {
   var img = e.img,
       name = e.name,
       address = e.address;
-  document.getElementById('explore-list').innerHTML += "\n  <div class=\"explore-object\" style=\"margin-top: 20px;\n      width: 25%;\n      display: flex;\n      align-items: center;\">\n    <div class=\"explore-box\" style=\"background-image: url('".concat(img, "'); background-size: cover; height: 80px; width: 80px\"></div>\n    <div class=\"explore-text\" style=\"width:\"70%\"; font-size: 14px\">\n        <div>").concat(name, "</div>\n        <span>").concat(address, "</span>\n    </div>\n  </div>\n  ");
+  document.getElementById('explore-list').innerHTML += "\n  <div class=\"explore-object\" style=\"margin-top: 20px;\n      width: 25%;\n      display: flex;\n      align-items: center;\">\n    <div class=\"explore-box\" style=\"background-image: url('".concat(img, "'); background-position: center; background-size: cover; height: 80px; width: 80px\"></div>\n    <div class=\"explore-text\" style=\"width:\"70%\"; font-size: 14px\">\n        <div>").concat(name, "</div>\n        <span>").concat(address, "</span>\n    </div>\n  </div>\n  ");
 });
 
 /***/ }),
