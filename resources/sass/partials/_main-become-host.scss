@@ -1,18 +1,34 @@
 #become-host-content{
   .my-jumbotron{
     max-width: 100%;
-    height: 600px;
-    background-color: lightseagreen;
+    height: 500px;
+    background-image: url('https://www.viaggi-usa.it/wp-content/uploads/2017/06/Spiagge-Honolulu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     .my-logo{
       width: 100%;
       height: 10%;
+      padding: 20px;
+
+      a{
+        color: $become-host-red;
+
+        i{
+          font-size: 50px;
+          padding: 7px 12px;
+          background-color: $brown;
+          border-radius: 50%;
+          border: 2px solid white;
+        }
+      }
     }
 
     .my-title{
-      max-width: 45%;
+      max-width: 48%;
       height: 90%;
-      margin-left: 10%;
+      margin-left: 45%;
       color: $white;
       position: relative;
 
@@ -21,13 +37,16 @@
         top: 50%;
         left: 0;
         transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.45);
+        padding: 20px;
+        border-radius: 13px;
 
         h4{
           text-transform: uppercase;
         }
   
         h1{
-          font-size: 70px;
+          font-size: 45px;
         }
   
         p{
@@ -81,25 +100,27 @@ main{
         max-width: 100%;
         height: 400px;
         display: flex;
+        justify-content: space-between;
 
         .left-box,
         .right-box{
-          flex-basis: 50%;
+          flex-basis: 48%;
           height: 100%;
+          border-radius: 13px;
+          /* box-shadow: 0.7px 0.7px 0.7px $light-black; */
+          /* border: 1px solid lightslategray; */
         }
 
         .left-box{
-          border-top-left-radius: 13px;
-          border-bottom-left-radius: 13px;
-          background-color: lightpink;
+          background-image: url('https://cdn.pixabay.com/photo/2015/09/09/07/05/sea-931164_960_720.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
         }
 
         .right-box{
           @include flex;
           padding: 0 5%;
-          border-top-right-radius: 13px;
-          border-bottom-right-radius: 13px;
-          background-color: lightgray;
+          background-color: rgba(255, 250, 185, 0.781);
         }
       }
     }
@@ -112,10 +133,23 @@ main{
         height: 400px;
         padding: 3% 5%;
         border-radius: 13px;
-        background-color: lightsalmon;
+        background-image: url('https://cdn.pixabay.com/photo/2015/11/10/14/33/hawaii-1037024_960_720.jpg');
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: bottom;
 
         .content-area{
-          max-width: 45%;
+          max-width: 35%;
+          margin-left: 10%;
+          padding: 30px;
+          background-color: rgba(0, 0, 0, 0.45);
+          border-radius: 13px;
+
+          h2{
+            color: $white;
+            font-size: 40px;
+            margin-bottom: 25px;
+          }
         }
       }
     }
@@ -139,11 +173,39 @@ main{
             width: 100%;
             height: 250px;
             border-radius: 13px;
-            background-color: lightskyblue;
+            background-image: url('https://cdn.pixabay.com/photo/2014/12/15/17/16/boardwalk-569314_960_720.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
           }
 
           .text-box{
             padding: 20px;
+          }
+        }
+
+        .box:nth-child(2){
+          .img-box{
+            background-image: url('https://cdn.pixabay.com/photo/2018/03/20/02/26/palm-3241933_960_720.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+
+        .box:nth-child(3){
+          .img-box{
+            background-image: url('https://cdn.pixabay.com/photo/2018/05/17/08/29/real-estate-3408039_960_720.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+          }
+        }
+
+        .box:nth-child(4){
+          .img-box{
+            background-image: url('https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_960_720.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
           }
         }
       }
@@ -156,6 +218,10 @@ main{
 
         .text-box{
           flex-basis: 30%;
+
+          a{
+            color: $black;
+          }
         }
       }
     }
@@ -167,13 +233,19 @@ main{
     margin-top: 50px;
     display: flex;
     align-items: center;
-    background-color: lightgreen;
+    background-image: url('https://cdn.pixabay.com/photo/2017/03/05/00/34/panorama-2117310_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .content-area{
       max-width: 25%;
+      color: $white;
+      background-color: rgba(0, 0, 0, 0.45);
+      padding: 30px;
+      border-radius: 13px;
 
       h2{
-        font-size: 45px;
+        font-size: 40px;
       }
     }
   }

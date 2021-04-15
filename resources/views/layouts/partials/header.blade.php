@@ -17,31 +17,19 @@
 
   <div class="container">
     <div class="header-bar">
-      <div class="logo"><a href="#"><img src="img/logo.png" style="width:200px;" alt="Logo Airbnb"></a></div>
-      <div class="header-menu">
-        <ul>
-          <li><a href="#" >Alloggi</a></li>
-          <!-- <li><a href="#" >Places to stay</a></li> -->
-          <li><a href="#" >Esperienze</a></li>
-          <!-- <li><a href="#" >Experiences</a></li> -->
-          <li><a href="#" >Esperienze online</a></li>
-          <!-- <li><a href="#">Online Experiences</a></li> -->
-          <li><a href="{{ route('become-host') }}">Diventa un host</a></li>
-        </ul>
-      </div>
+      <div class="logo"><a href="#"><img src="https://assets.jobs.bg/assets/logo/2014-04-29/b_04743888ac08f85b45b4c476c7941c6f.jpg" style="width:200px;" alt="Logo Airbnb"></a></div>
       <div class="header-right">
         <ul>
           <li>
-            <i class="fas fa-globe"></i>
-          </li>
-          <li>
           @guest
+              <li class="nav-item"><a class="nav-link" href="#" >Alloggi</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ route('become-host') }}">Diventa un host</a></li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
               </li>
               @if (Route::has('register'))
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrati') }}</a>
               </li>
               @endif
               @else
@@ -74,38 +62,8 @@
           <li>
             <div class="search-inputs">
               <label for="location">
-                <div class="label">Dove</div>
-                <!-- <div class="label">Location</div> -->
-                <input name="location" id="location" placeholder="Dove vuoi andare?" />
-                <!-- <input name="location" id="location" placeholder="Where are you going?" /> -->
-              </label>
-            </div>
-          </li>
-          <li>
-            <div class="search-inputs">
-              <label for="check-in">
-                <div class="label">Check in</div>
-                <input name="check-in" id="check-in" placeholder="Aggiungi date" />
-                <!-- <input name="check-in" id="check-in" placeholder="Add dates" /> -->
-              </label>
-            </div>
-          </li>
-          <li>
-            <div class="search-inputs">
-              <label for="check-out">
-                <div class="label">Check out</div>
-                <input name="check-out" id="check-out" placeholder="Aggiungi date" />
-                <!-- <input name="check-out" id="check-out" placeholder="Add dates" /> -->
-              </label>
-            </div>
-          </li>
-          <li>
-            <div class="search-inputs">
-              <label for="guests">
-                <div class="label">Ospiti</div>
-                <!-- <div class="label">Guests</div> -->
-                <input name="guests" id="guests" placeholder="Aggiungi ospiti" />
-                <!-- <input name="guests" id="guests" placeholder="Add guests" /> -->
+                <div class="label">Scegli la zona</div>
+                <input name="search" id="search" placeholder="Scrivi..." />
               </label>
             </div>
             <button class="button-search">

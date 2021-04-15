@@ -2,7 +2,7 @@
     <div class="ul-container">
         <ul>
             <li>
-                <a href="{{route('home')}}"><i class="fas fa-home"></i>Home</a>
+                <a href="{{route('dashboardhome')}}"><i class="fas fa-home"></i>Home</a>
             </li>
             <li>
                 <a href="{{ route('messages') }}"><i class="fas fa-users"></i>Messaggi</a>

@@ -8,13 +8,9 @@
     @include flex;
     width: 60px;
     height: 60px;
-    background-color:  $button-search;
+    background-color:  $aloha-blue;
     border-radius: 50px;
-    color:$white;
-    
-    &:hover{
-    background-color: $button-search-hover;
-    }
+    color:$aloha-yellow;
 }
 
 .my-btn-home {
@@ -31,7 +27,7 @@
   border-radius: 13px;
   text-align: center;
   cursor: pointer;
-  background-color: #dc0e63;
+  background-color: $become-host-red;
 
   a{
     color: $white;
