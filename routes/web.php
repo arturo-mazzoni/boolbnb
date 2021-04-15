@@ -30,5 +30,6 @@ Route::prefix('admin')
         Route::get('/', 'HomeController@index')->name('home');
         Route::resource('property', 'PropertyController');
         Route::get('/message', 'MessageController@index')->name('messages');
+        Route::get('/dashboardhome', 'DashboardHomeController@index')->name('dashboardhome');
 });
 
