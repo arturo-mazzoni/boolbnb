@@ -9,7 +9,9 @@
         <span>Grazie agli host puoi</span>
     </div>
 </div>
-
+<div id="app">
+    <h1>@{{ message }}</h1>
+</div>
 <section class="explore-home">
     <h2>Esplora Honolulu</h2>
     <div id="explore-list">
