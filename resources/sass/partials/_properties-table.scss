@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 0 0 0 5px $aloha-blue; /* this draws the table border  */ 
+
+
+    .tabella {
+
+        max-width: 70vw;
+    
+        .testa-tabella {
+            border: 5px solid $aloha-blue;
+            color: $aloha-yellow;
+
+            
+            th {
+                border: 1px solid #ccc;
+            }
+        }  
+    }
+}
+
+
+

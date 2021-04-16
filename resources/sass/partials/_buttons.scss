@@ -38,3 +38,12 @@
     font-weight: bold;
   }
 }
+
+.bottone-rosso {
+  color: white;
+  font-weight: bolder;
+  background-color: #e73c51;
+  &:hover {
+      color: $light-black;
+  }
+}

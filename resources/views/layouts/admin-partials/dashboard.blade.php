@@ -11,7 +11,10 @@
                 <a href="{{route('property.index')}}"><i class="far fa-sticky-note"></i>Appartamenti</a>
             </li>
             <li>
-                <a href="{{ route("property.create") }}">Crea nuovo</a></th>
+                <a href="{{ route("property.create") }}"><i class="far fa-plus-square"></i>Crea nuovo</a>
+            </li>
+            <li>
+                <a href="{{ route("sponsors") }}"><i class="far fa-credit-card"></i>Sponsors</a>
             </li>
         </ul>
     </div>

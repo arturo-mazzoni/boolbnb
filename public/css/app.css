@@ -10958,8 +10958,9 @@ ul {
 }
 
 .bottone {
-  background-color: #75c6c7;
-  color: white;
+  background-color: #004C99;
+  color: #F5B964;
+  font-weight: bolder;
 }
 
 .bottone:hover {
@@ -11011,6 +11012,16 @@ ul {
 
 .become-host-button:hover a {
   font-weight: bold;
+}
+
+.bottone-rosso {
+  color: white;
+  font-weight: bolder;
+  background-color: #e73c51;
+}
+
+.bottone-rosso:hover {
+  color: #808080;
 }
 
 header {
@@ -11537,10 +11548,12 @@ section div[class$=text] div {
 
 .container-dashboard-content .left {
   height: 70vh;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   width: 300px;
-  margin: 40px 20px;
-  border-radius: 16px;
+  margin: 0 20px;
+  margin-top: -5px;
+  border-radius: 26px;
+  border: 5px solid #004C99;
 }
 
 .container-dashboard-content .left ul {
@@ -11550,12 +11563,11 @@ section div[class$=text] div {
   flex-direction: column;
   list-style: none;
   align-items: flex-start;
-  color: #f7575c;
   padding: 10px;
 }
 
 .container-dashboard-content .left ul:hover {
-  color: white;
+  color: red;
 }
 
 .container-dashboard-content .left ul li {
@@ -11565,20 +11577,22 @@ section div[class$=text] div {
 }
 
 .container-dashboard-content .left ul li:hover {
-  background-color: #f7575c;
+  background-color: #F5B964;
   border-radius: 5px;
+  transform: scale(1.15);
+  transition: 0.3s;
 }
 
 .container-dashboard-content .left ul li:hover a {
-  color: white;
+  color: #004C99;
 }
 
 .container-dashboard-content .left ul li:hover i {
-  color: white;
+  color: #004C99;
 }
 
 .container-dashboard-content .left ul li a {
-  color: #f7575c;
+  color: #004C99;
   text-decoration: none;
   font-size: 20px;
 }
@@ -11586,7 +11600,7 @@ section div[class$=text] div {
 .container-dashboard-content .left ul li a i {
   padding-right: 10px;
   font-size: 20px;
-  color: #f7575c;
+  color: #F5B964;
 }
 
 .container-dashboard-content .right {
@@ -11611,38 +11625,6 @@ section div[class$=text] div {
 .container-dashboard-content .img-card {
   max-width: 80%;
   min-width: 30%;
-}
-
-.my-navbar {
-  background-color: #f7f7f7;
-  height: 90px;
-}
-
-.my-navbar #aaa {
-  color: #f7575c;
-}
-
-.my-navbar #navbarDropdown {
-  color: #484848;
-}
-
-.tabella {
-  max-width: 70vw;
-  margin-top: 40px;
-}
-
-.tabella .testa-tabella {
-  background-color: #f7f7f7;
-  color: #f7575c;
-}
-
-.tabella .bottone-rosso {
-  background-color: #f7575c;
-  color: white;
-}
-
-.tabella .bottone-rosso:hover {
-  color: #808080;
 }
 
 footer {
@@ -11825,5 +11807,54 @@ footer .footer-bottom ul li i.icon-size {
 .chat-container .colonna-dx {
   width: 20%;
   height: 500px;
+}
+
+.my-navbar {
+  background-color: #004C99;
+  height: 90px;
+  margin-bottom: 40px;
+}
+
+.my-navbar #aaa {
+  color: #F5B964;
+}
+
+.my-navbar #navbarDropdown {
+  color: #F5B964;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  border-style: hidden;
+  /* hide standard table (collapsed) border */
+  box-shadow: 0 0 0 5px #004C99;
+  /* this draws the table border  */
+}
+
+table .tabella {
+  max-width: 70vw;
+}
+
+table .tabella .testa-tabella {
+  border: 5px solid #004C99;
+  color: #F5B964;
+}
+
+table .tabella .testa-tabella th {
+  border: 1px solid #ccc;
+}
+
+.card-margin {
+  margin: 40px;
+}
+
+.row .card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.row .card img {
+  width: 200px;
+  height: 150px;
 }
 

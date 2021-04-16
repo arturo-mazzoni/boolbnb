@@ -13,8 +13,9 @@ ul {
 }
 
 .bottone {
-  background-color: #75c6c7;
-  color: white;
+  background-color: $aloha-blue;
+  color: $aloha-yellow;
+  font-weight: bolder;
   &:hover {
     color: $light-black;
   }
