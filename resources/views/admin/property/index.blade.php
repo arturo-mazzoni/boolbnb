@@ -8,7 +8,7 @@
                 <thead style="text-align:center" class="testa-tabella">
                     <tr>
                         <th scope="col">Nome Appartamento</th>
-                        <th scope="col">Immagine</th>
+                        <th scope="col">Immagine appartamento</th>
                         <th scope="col">Operazioni</th>
                     </tr>
                 </thead>
