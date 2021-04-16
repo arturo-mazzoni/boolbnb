@@ -131,7 +131,7 @@
         </div>
       </section>
     </div>
-    <div class="img-bottom">
+    <div id="img-bottom">
       <div class="content-area">
         <h2>Inizia il tuo percorso di host</h2>
         <p>Creiamo insieme il tuo annuncio.</p>
