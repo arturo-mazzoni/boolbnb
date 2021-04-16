@@ -10967,6 +10967,11 @@ ul {
   color: #808080;
 }
 
+.padding-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
 .border-radius-20 {
   border-radius: 20px;
 }
@@ -11613,14 +11618,10 @@ section div[class$=text] div {
 .container-dashboard-content .left-small ul {
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   list-style: none;
-  align-items: flex-start;
-}
-
-.container-dashboard-content .left-small ul:hover {
-  color: red;
+  justify-content: baseline;
+  align-items: center;
 }
 
 .container-dashboard-content .left-small ul li {
@@ -11629,8 +11630,6 @@ section div[class$=text] div {
 }
 
 .container-dashboard-content .left-small ul li:hover {
-  background-color: #F5B964;
-  border-radius: 5px;
   transform: scale(1.15);
   transition: 0.3s;
 }
@@ -11655,8 +11654,12 @@ section div[class$=text] div {
   color: #F5B964;
 }
 
+.container-dashboard-content .left-small ul li a .special-icon {
+  padding-left: 2px;
+}
+
 .container-dashboard-content .right {
-  width: calc(100% - 200px);
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -11923,12 +11926,20 @@ table .tabella .testa-tabella th {
 }
 
 .row img {
-  width: 200px;
-  height: 150px;
+  max-width: 200px;
+  min-width: 50px;
 }
 
 .contenitore-card-sponsor {
   padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+}
+
+.box-shadow-card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 20px;
 }
 
