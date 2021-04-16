@@ -1,20 +1,17 @@
-.card-margin {
-  margin: 40px;
-}
 
 .row {
+  display: flex;
+  margin-bottom: 20px;
 
-  .card {
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
 
     img {
       width: 200px;
       height: 150px;
     }
   }
-}
 
+.contenitore-card-sponsor{
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 

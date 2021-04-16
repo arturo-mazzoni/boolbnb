@@ -1,4 +1,4 @@
-<nav class="my-navbar navbar navbar-expand-md navbar-dark shadow-sm">
+<nav class="my-navbar navbar navbar-expand-md navbar-dark">
     <a id="aaa"class="navbar-brand" href="{{ url('/') }}">
         AirBnb
                 </a>

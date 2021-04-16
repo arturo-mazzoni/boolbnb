@@ -1,8 +1,9 @@
 table {
     border-collapse: collapse;
-    border-radius: 10px;
+    border-radius: 26px;
     border-style: hidden; /* hide standard table (collapsed) border */
-    box-shadow: 0 0 0 5px $aloha-blue; /* this draws the table border  */ 
+    // box-shadow: 0 0 0 5px $aloha-blue; /* this draws the table border  */ 
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
 
     .tabella {

@@ -2,7 +2,6 @@
     display: flex;
     
     .colonna-sx{
-        width: 20%;
         height: 500px;
         .ricerca{
             border-bottom: 1px solid $dark-white;
@@ -53,7 +52,6 @@
         }
     }
     .colonna-cc{
-        width: 60%;
         height: 500px;
         .header-chat{
             border-bottom: 1px solid $dark-white;
@@ -87,7 +85,27 @@
         }
     }
     .colonna-dx{
-        width: 20%;
         height: 500px;
     }
 }
+.chat-space{
+            border-left: 1px solid $dark-white ;
+            border-radius: 10px;
+            padding: $padding-area-messages;
+            margin: $margin-area-messages;
+            height: calc(100% - 80px - 80px - 20px);
+            background-color:#F6F6F6;
+            .message{
+                position: relative;
+                min-width: 100px;
+                max-width: 400px;
+                /* non spezza le parole */
+                word-wrap: break-word;
+                border-radius: 10px;
+                box-shadow: 0 5px 5px -5px;
+                margin: 10px 0;
+                padding: 10px 60px 10px 15px;
+                background-color:$contatto-area-message;
+                margin: 0 auto;
+            }
+        }
