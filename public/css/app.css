@@ -10949,6 +10949,14 @@ a.text-dark:focus {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .my-container {
   margin: 0 100px;
 }
@@ -11609,10 +11617,6 @@ main #img-bottom .content-area h2 {
   }
 }
 
-.my-jumbotron {
-  background-color: #000000;
-}
-
 .my-jumbotron .jumbo-image {
   display: flex;
   justify-content: center;
@@ -11622,21 +11626,11 @@ main #img-bottom .content-area h2 {
 }
 
 .my-jumbotron .jumbo-image img {
-  width: 95%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  border-radius: 8px;
-}
-
-.my-jumbotron .jumbo-text {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  font-size: 30px;
 }
 
 section {
@@ -11644,6 +11638,7 @@ section {
   width: 90%;
   margin: 0 auto;
   background-color: #ffffff;
+  color: #004C99;
 }
 
 section div[class$=box] {
@@ -11668,15 +11663,31 @@ section div[class$=text] div {
 
 .explore-home #explore-list .explore-object .explore-box {
   margin-right: 10px;
-  height: 64px;
-  width: 64px;
-  background-image: url("https://a0.muscache.com/im/pictures/73ab906b-eea1-425d-9fea-bf2c79d86556.jpg");
-  background-size: cover;
+}
+
+.explore-home #explore-list .explore-object .explore-box img {
+  height: 150px;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 8px;
+}
+
+.explore-home #explore-list .explore-object .explore-text {
+  width: 50%;
+  font-size: 13px;
+}
+
+.explore-home #explore-list .explore-object .explore-text span {
+  color: #000000;
 }
 
 .houses-home .houses-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .houses-home .houses-list .houses-object {
@@ -11697,7 +11708,8 @@ section div[class$=text] div {
 
 .become-host-home {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .become-host-home img {
@@ -11729,16 +11741,189 @@ section div[class$=text] div {
   width: calc(100% / 3 - 10px);
 }
 
+.partners-home .partners-list .partners-object a {
+  color: #004C99;
+}
+
+.partners-home .partners-list .partners-object a:hover {
+  color: #3490dc;
+}
+
 .partners-home .partners-list .partners-object .partners-box {
   width: 100%;
-  background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/1b/64/c4/11/nalu-salad.jpg");
-  background-size: cover;
+  position: relative;
 }
 
 .partners-home .partners-list .partners-object .partners-box::after {
   content: "";
   display: block;
   padding-bottom: 100%;
+}
+
+.partners-home .partners-list .partners-object .partners-box img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+  border-radius: 8px;
+}
+
+.partners-home .partners-list .partners-object .partners-text span {
+  font-size: 14px;
+  color: #000000;
+}
+
+@media screen and (max-width: 1220px) {
+  .explore-home #explore-list .explore-object {
+    width: 50%;
+  }
+
+  .explore-home #explore-list .explore-object .explore-box img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .explore-home #explore-list .explore-object .explore-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .houses-home .houses-list .houses-object {
+    width: calc(50% - 10px);
+  }
+
+  .houses-home .houses-list .houses-object .houses-box::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 95%;
+  }
+
+  .explore-home #explore-list .explore-object {
+    width: 100%;
+  }
+
+  .explore-home #explore-list .explore-object .explore-box img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .explore-home #explore-list .explore-object .explore-text {
+    font-size: 16px;
+  }
+
+  .become-host-home img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .become-host-home .become-host-interact {
+    width: 40%;
+    position: absolute;
+    left: 5%;
+  }
+
+  .become-host-home p {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .become-host-home .my-btn-home {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #201C19;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .partners-home .partners-list {
+    flex-wrap: wrap;
+  }
+
+  .partners-home .partners-list .partners-object {
+    margin-bottom: 10px;
+    width: calc(50% - 10px);
+  }
+
+  .partners-home .partners-list .partners-object .partners-box {
+    width: 100%;
+  }
+
+  .partners-home .partners-list .partners-object .partners-box img {
+    width: inherit;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .houses-home .houses-list .houses-object {
+    width: calc(100% - 10px);
+  }
+
+  .houses-home .houses-list .houses-object .houses-box::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .become-host-home {
+    align-items: center;
+    background-color: #004C99;
+    border-radius: 8px;
+  }
+
+  .become-host-home img {
+    display: none;
+  }
+
+  .become-host-home .become-host-interact {
+    width: 90%;
+    position: relative;
+    left: 0;
+  }
+
+  .become-host-home .become-host-interact h2,
+  .become-host-home .become-host-interact p {
+    color: #ffffff;
+  }
+
+  .partners-home .partners-list {
+    flex-wrap: wrap;
+  }
+
+  .partners-home .partners-list .partners-object {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .partners-home .partners-list .partners-object .partners-box {
+    width: 100%;
+  }
+
+  .partners-home .partners-list .partners-object .partners-box img {
+    width: inherit;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    border-radius: 8px;
+  }
 }
 
 .container-dashboard-content {
@@ -12091,6 +12276,18 @@ footer .footer-bottom ul li i.icon-size {
 
 .my-navbar #navbarDropdown {
   color: #F5B964;
+}
+
+.cls-1 {
+  fill: #fff;
+}
+
+.cls-2 {
+  fill: #d9901a;
+}
+
+.cls-3 {
+  fill: #d9901a;
 }
 
 table {
