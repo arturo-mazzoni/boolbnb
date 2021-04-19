@@ -49658,12 +49658,37 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 __webpack_require__(/*! ./explore-home */ "./resources/js/explore-home.js");
 
 
-var chiamate = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
+var last_scroll = 0;
+
+window.onscroll = function () {
+  if (!document.getElementById("loader")) {
+    close_all_menu();
+    var header = document.getElementsByTagName("header")[0];
+    if (Math.abs(last_scroll - this.scrollY) <= 5) return;
+    this.scrollY < last_scroll ? header.style.top = "0" : header.style.top = "-" + header.clientHeight + "px";
+    last_scroll = this.scrollY;
+  }
+};
+
+var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
   data: {
-    message: 'ciao'
+    load: false
+  },
+  methods: {
+    display_menu: function display_menu() {
+      var body = document.getElementsByTagName("body")[0];
+      !body.classList.contains("display_menu") ? body.classList.add("display_menu") : body.classList.remove("display_menu");
+    }
   }
 });
+
+function close_all_menu() {
+  var lis = document.getElementById("menu").getElementsByTagName("li");
+  Array.from(lis).forEach(function (e) {
+    e.style.marginTop = 0;
+  });
+}
 
 /***/ }),
 
@@ -49779,8 +49804,8 @@ exploreImages.forEach(function (e, i) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\coding\bc\mamp_public\esercizi\progetto-finale\boolbnb\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\coding\bc\mamp_public\esercizi\progetto-finale\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
