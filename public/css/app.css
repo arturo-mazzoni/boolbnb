@@ -11015,11 +11015,11 @@ ul {
   border-radius: 13px;
   text-align: center;
   cursor: pointer;
-  background-color: #dc0e63;
+  background-color: #F5B964;
 }
 
 .become-host-button a {
-  color: #ffffff;
+  color: #004C99;
   text-decoration: none;
 }
 
@@ -11176,7 +11176,7 @@ header .header-form li .button-search {
 
 #become-host-content .my-jumbotron {
   max-width: 100%;
-  height: 500px;
+  height: 600px;
   background-image: url("https://www.viaggi-usa.it/wp-content/uploads/2017/06/Spiagge-Honolulu.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -11185,20 +11185,20 @@ header .header-form li .button-search {
 
 #become-host-content .my-jumbotron .my-logo {
   width: 100%;
-  height: 10%;
+  height: 15%;
   padding: 20px;
-}
+  background-color: #fff;
+  /* a{
+    color: $become-host-red;
 
-#become-host-content .my-jumbotron .my-logo a {
-  color: #dc0e63;
-}
-
-#become-host-content .my-jumbotron .my-logo a i {
-  font-size: 50px;
-  padding: 7px 12px;
-  background-color: #201C19;
-  border-radius: 50%;
-  border: 2px solid white;
+    i{
+      font-size: 50px;
+      padding: 7px 12px;
+      background-color: $brown;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+  } */
 }
 
 #become-host-content .my-jumbotron .my-title {
