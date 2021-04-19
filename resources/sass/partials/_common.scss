@@ -4,6 +4,14 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .my-container{
   margin: 0 100px;
 }
@@ -13,11 +21,17 @@ ul {
 }
 
 .bottone {
-  background-color: #75c6c7;
-  color: white;
+  background-color: $aloha-blue;
+  color: $aloha-yellow;
+  font-weight: bolder;
   &:hover {
     color: $light-black;
   }
+}
+
+.padding-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 .border-radius-20 {

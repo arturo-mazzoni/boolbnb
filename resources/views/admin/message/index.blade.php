@@ -5,7 +5,7 @@
 
 <div class="chat-container">
     <!-- lato sinistro -->
-    <div class="colonna-sx">
+    <div class="colonna-sx col-sm-12 col-lg-3 ">
         <!-- Ricerca -->
         <div class="ricerca">
             <i class="fas fa-search"></i>
@@ -23,32 +23,22 @@
                             {{-- <small>{ Orario di invio del messaggio }</small> --}}
                         </div>
                     </li>
-                    <li>
-                        <img class="chat-avatar" src="https://www.w3schools.com/howto/img_avatar2.png" alt="avatar">
-                        <div>
-                            <p> { CLIENTE 2 }</p>
-                            <small>{ Anteprima }</small>
-                            {{-- <small>{ Orario di invio del messaggio }</small> --}}
-                        </div>
-                    </li>
-                    <li>
-                        <img class="chat-avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
-                        <div>
-                            <p> { CLIENTE 3 }</p>
-                            <small>{ Anteprima }</small>
-                            {{-- <small>{ Orario di invio del messaggio }</small> --}}
-                        </div>
-                    </li>
+                    <div class="chat-space d-lg-none">
+                            <div class="message received">
+                                <p>buogiorno, volevo chiederle se posso portare il mio cane nell'appartamento</p>
+                            </div>
+                    </div>
+                    
                 </ul>
             </div>
         </div>
     </div>
-    <!-- lato centrale -->
-    <div class="colonna-cc">
+    <!-- lato centrale col -->
+    <div class="colonna-cc col-6">
         <!-- HEADER della CHAT -->
-        <div class="header-chat">
+        <div class="header-chat d-none d-lg-block">
             <div class="contatto">
-                <div class="contact-text">
+                <div class="contact-text ">
                     <div>
                         <h2> I tuoi messaggi ricevuti </h2>
                     </div>
@@ -57,7 +47,7 @@
         </div>
         <!-- FINE HEADER della CHAT -->
         <!--  Ricevuti -->
-        <div class="chat-space">
+        <div class="chat-space d-none d-lg-block">
             <div class="message received">
                 <p>buogiorno, volevo chiederle se posso portare il mio cane nell'appartamento</p>
             </div>
@@ -65,7 +55,7 @@
         <!--  Fine Ricevuti -->
     </div>
     <!-- lato destro -->
-    <div class="colonna-sx">
+    <div class="colonna-sx col-3 d-none d-lg-block">
         <div>
             <!-- VUOTO AL MOMENTO -->
         </div>

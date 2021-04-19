@@ -49658,12 +49658,37 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 __webpack_require__(/*! ./explore-home */ "./resources/js/explore-home.js");
 
 
-var chiamate = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
+var last_scroll = 0;
+
+window.onscroll = function () {
+  if (!document.getElementById("loader")) {
+    close_all_menu();
+    var header = document.getElementsByTagName("header")[0];
+    if (Math.abs(last_scroll - this.scrollY) <= 5) return;
+    this.scrollY < last_scroll ? header.style.top = "0" : header.style.top = "-" + header.clientHeight + "px";
+    last_scroll = this.scrollY;
+  }
+};
+
+var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
   data: {
-    message: 'ciao'
+    load: false
+  },
+  methods: {
+    display_menu: function display_menu() {
+      var body = document.getElementsByTagName("body")[0];
+      !body.classList.contains("display_menu") ? body.classList.add("display_menu") : body.classList.remove("display_menu");
+    }
   }
 });
+
+function close_all_menu() {
+  var lis = document.getElementById("menu").getElementsByTagName("li");
+  Array.from(lis).forEach(function (e) {
+    e.style.marginTop = 0;
+  });
+}
 
 /***/ }),
 
@@ -49716,47 +49741,67 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!**************************************!*\
   !*** ./resources/js/explore-home.js ***!
   \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var exploreImages = [{
-  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-Hawaii.jpg',
-  name: 'Liliuokalani Botanical Gardens',
-  address: '123 N.Kuakini St.'
-}, {
-  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Honolulu-Hawaii-cosa-vedere.jpg',
-  name: 'Aliiolani Hale',
-  address: '417 S.King St.'
-}, {
-  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Honolulu-cosa-vedere-2.jpg',
-  name: 'Aloha Tower Marketplace',
-  address: ''
-}, {
-  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Honolulu-cosa-vedere-3.jpg',
-  name: 'Wakiki',
-  address: ''
-}, {
-  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Attrazioni-Honolulu-1.jpg',
-  name: 'Kalakaua Avenue',
-  address: ''
-}, {
-  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-Hawaii-1.jpg',
-  name: 'Diamond Head',
-  address: ''
-}, {
-  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Attrazioni-Honolulu.jpg',
-  name: 'Chinatown',
-  address: 'Beretania St.'
-}, {
-  img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-2.jpg',
-  name: 'Honolulu Harbor',
-  address: ''
-}];
-exploreImages.forEach(function (e, i) {
-  var img = e.img,
-      name = e.name,
-      address = e.address;
-  document.getElementById('explore-list').innerHTML += "\n  <div class=\"explore-object\" style=\"margin-top: 20px;\n      width: 25%;\n      display: flex;\n      align-items: center;\">\n    <div class=\"explore-box\" style=\"background-image: url('".concat(img, "'); background-position: center; background-size: cover; height: 80px; width: 80px\"></div>\n    <div class=\"explore-text\" style=\"width:\"70%\"; font-size: 14px\">\n        <div>").concat(name, "</div>\n        <span>").concat(address, "</span>\n    </div>\n  </div>\n  ");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+
+var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
+  el: '#root',
+  data: {
+    explorePlaces: [{
+      img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-Hawaii.jpg',
+      name: 'Liliuokalani Botanical Gardens',
+      address: '123 N.Kuakini St.'
+    }, {
+      img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Honolulu-Hawaii-cosa-vedere.jpg',
+      name: 'Aliiolani Hale',
+      address: '417 S.King St.'
+    }, {
+      img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Honolulu-cosa-vedere-2.jpg',
+      name: 'Aloha Tower Marketplace',
+      address: ''
+    }, {
+      img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Honolulu-cosa-vedere-3.jpg',
+      name: 'Wakiki',
+      address: ''
+    }, {
+      img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Attrazioni-Honolulu-1.jpg',
+      name: 'Kalakaua Avenue',
+      address: ''
+    }, {
+      img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-Hawaii-1.jpg',
+      name: 'Diamond Head',
+      address: ''
+    }, {
+      img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Attrazioni-Honolulu.jpg',
+      name: 'Chinatown',
+      address: 'Beretania St.'
+    }, {
+      img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-2.jpg',
+      name: 'Honolulu Harbor',
+      address: ''
+    }],
+    partners: [{
+      img: 'https://media-cdn.tripadvisor.com/media/photo-o/1b/64/c4/11/nalu-salad.jpg',
+      name: 'Nalu Health Bar & Cafe',
+      address: '1170 Auahi St Suite 145, Honolulu, Oahu, HI 96814-4946',
+      link: 'https://www.naluhealthbar.com/'
+    }, {
+      img: 'https://i.postimg.cc/hvtGLF8m/senia.png',
+      name: 'Senia Restaurant',
+      address: '75 N King St, Honolulu, Oahu, HI 96817-5108',
+      link: 'http://restaurantsenia.com/'
+    }, {
+      img: 'https://pbs.twimg.com/profile_images/646801491060064256/zAY9m2XF_400x400.jpg',
+      name: 'Duke\'s Waikiki',
+      address: '2335 Kalakaua Ave Ste 116, Honolulu, Oahu, HI 96815-2941',
+      link: 'http://www.dukeswaikiki.com/'
+    }]
+  }
 });
 
 /***/ }),

@@ -1,11 +1,13 @@
 .container-dashboard-content {
     display: flex;
     .left{
-      height: 70vh;
-      background-color: #f7f7f7;
+      height: 100%;
+      background-color: $white;
       width: 300px;
-      margin: 40px 20px;
-      border-radius: 16px;
+      margin: 0 20px;
+      border-radius: 26px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      
 
         ul{
             width: 100%;
@@ -14,105 +16,106 @@
             flex-direction: column;
             list-style: none;
             align-items: flex-start;
-            color: $airbnb;
-            padding: 10px;
+            padding: 2%;
             &:hover {
-                color: white;
+                color: red;
             }
             li{
                 width: 80%;
                 margin: 20px 20px;
                 padding: 10px 20px;
                 &:hover{
-                    background-color: $airbnb;
+                    background-color: $aloha-yellow;
                     border-radius: 5px;
+                    transform: scale(1.15);
+                    transition: 0.3s;
                     a {
-                        color: white;
+                        color: $aloha-blue;
                     }
                     i {
-                        color: white;
+                        color: $aloha-blue;
                     }
                 }
                 a{
-                    color: $airbnb;
+                    color: $aloha-blue;
                     text-decoration: none;
                     font-size: 20px;
 
                     i{
                         padding-right: 10px;
                         font-size: 20px;
-                        color: $airbnb;
+                        color: $aloha-yellow;
                     }
                 }
             }
         }
     }
+    .left-small{
+        height: 100%;
+        background-color: $white;
+        margin: 0 20px;
+        border-radius: 26px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        ul{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            justify-content: baseline;
+            align-items: center;            
+            li{
+                width: 80%;
+                padding: 10px 20px;
+                &:hover{
+                    transform: scale(1.15);
+                    transition: 0.3s;
+                    a {
+                        color: $aloha-blue;
+                    }
+                    i {
+                        color: $aloha-blue;
+                    }
+                }
+                a{
+                    color: $aloha-blue;
+                    text-decoration: none;
+                    font-size: 20px;
 
+                    i{
+                        padding-right: 10px;
+                        font-size: 20px;
+                        color: $aloha-yellow;
+                    }
+                    .special-icon {
+                        padding-left: 2px;
+                    }
+                }
+            }
+        }
+    
+    }
 
-  .right{
-      width: calc(100% - 200px);
-       min-height: 100vh;
-       .tool{
-           display: flex;
-           justify-content: flex-end;
-       }
-  }
+.right{
+    width: 100%;
+    min-height: 100vh;
+    .tool{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
 
 .succes{
-  color: white;
-  font-weight: bold;
-  border: 1px solid;
-  padding: 4px;
-  background-color: #41af4178;
-  border-radius: 6px;
-  
-  
+    color: white;
+    font-weight: bold;
+    border: 1px solid;
+    padding: 4px;
+    background-color: #41af4178;
+    border-radius: 6px;
 }
 
 
-  .img-card{
-      max-width: 80%;
-      min-width: 30%;
+.img-card{
+    max-width: 80%;
+    min-width: 30%;
   }
 }
-
-// ****************navnar********************
-
-.my-navbar{
-    background-color: #f7f7f7;
-    height: 90px;
-
-    #aaa {
-        color: $airbnb;
-    }
-
-    #navbarDropdown {
-        color: #484848;
-    }
-}
-
-
-// ***************tabella***************
-
-.tabella {
-
-    max-width: 70vw;
-    margin-top: 40px;
-
-    .testa-tabella {
-        background-color: #f7f7f7;
-        color: $airbnb;
-    }
-
-    .bottone-rosso {
-        background-color: $airbnb;
-        color: white;
-        &:hover {
-            color: $light-black;
-        }
-    }
-
-    
-}
-
-

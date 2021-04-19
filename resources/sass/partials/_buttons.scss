@@ -1,18 +1,3 @@
-
-.button-search{
-    font-size: 20px;
-    text-transform: uppercase;
-    outline: none;
-    border: 1px solid black;
-    margin:18px 24px 0 0;
-    @include flex;
-    width: 60px;
-    height: 60px;
-    background-color:  $aloha-blue;
-    border-radius: 50px;
-    color:$aloha-yellow;
-}
-
 .my-btn-home {
     padding: 15px 30px;
     background-color: $white;
@@ -27,14 +12,23 @@
   border-radius: 13px;
   text-align: center;
   cursor: pointer;
-  background-color: $become-host-red;
+  background-color: $aloha-yellow;
 
   a{
-    color: $white;
+    color: $aloha-blue;
     text-decoration: none;
   }
 
   &:hover a{
     font-weight: bold;
+  }
+}
+
+.bottone-rosso {
+  color: white;
+  font-weight: bolder;
+  background-color: #e73c51;
+  &:hover {
+      color: $light-black;
   }
 }

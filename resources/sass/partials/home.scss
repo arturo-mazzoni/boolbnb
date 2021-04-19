@@ -1,5 +1,4 @@
 .my-jumbotron {
-  background-color: $black;
   .jumbo-image {
     display: flex;
     justify-content: center;
@@ -7,19 +6,10 @@
     max-height: 542px;
     overflow: hidden;
     img {
-      width: 95%;
+      width: 100%;
       object-fit: cover;
       object-position: top;
-      border-radius: 8px;
     }
-  }
-  .jumbo-text {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $white;
-    font-size: 30px;
   }
 }
 
@@ -28,6 +18,7 @@ section {
   width: 90%;
   margin: 0 auto;
   background-color: $white;
+  color: $aloha-blue;
   div[class$="box"] {
     border-radius: 8px;
   }
@@ -49,10 +40,20 @@ section {
       align-items: center;
       .explore-box {
         margin-right: 10px;
-        height: 64px;
-        width: 64px;
-        background-image: url('https://a0.muscache.com/im/pictures/73ab906b-eea1-425d-9fea-bf2c79d86556.jpg');
-        background-size: cover;
+        img {
+          height: 150px;
+          width: 150px;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 8px;
+        }
+      }
+      .explore-text {
+        width: 50%;
+        font-size: 13px;
+        span {
+          color: $black;
+        }
       }
     }
   }
@@ -62,6 +63,7 @@ section {
   .houses-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .houses-object {
       width:calc(25% - 10px);
       .houses-box {
@@ -80,7 +82,8 @@ section {
 
 .become-host-home {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   img {
     width: 100%;
     border-radius: 8px;
@@ -104,14 +107,192 @@ section {
     justify-content: space-between;
     .partners-object {
       width:calc(100% / 3 - 10px);
+      a {
+        color: $aloha-blue;
+        &:hover {
+          color: $blue;
+        }
+      }
       .partners-box {
         width: 100%;
-        background-image: url('https://media-cdn.tripadvisor.com/media/photo-o/1b/64/c4/11/nalu-salad.jpg');
-        background-size: cover;
+        position: relative;
         &::after {
           content: "";
           display: block;
           padding-bottom: 100%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+          object-position:left;
+          border-radius: 8px;
+        }
+      }
+      .partners-text {
+        span {
+          font-size: 14px;
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .explore-home {
+    #explore-list {
+      .explore-object {
+        width: 50%;
+        .explore-box {
+          img {
+            height: 200px;
+            width: 200px;
+          }
+        }
+        .explore-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+
+  .houses-home {
+    .houses-list {
+      .houses-object {
+        width:calc(50% - 10px);
+        .houses-box {
+          &::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 95%;
+  }
+  
+  .explore-home {
+    #explore-list {
+      .explore-object {
+        width: 100%;
+        .explore-box {
+          img {
+            height: 300px;
+            width: 300px;
+          }
+        }
+        .explore-text {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .become-host-home {
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .become-host-interact {
+      width: 40%;
+      position: absolute;
+      left: 5%;
+      }
+    p {
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+    .my-btn-home {
+      padding: 10px 20px;
+      background-color: $white;
+      color: $brown;
+      font-weight: bold;
+      font-size: 14px;
+      border-radius: 8px;
+    }
+  }
+  
+  .partners-home {
+    .partners-list {
+      flex-wrap: wrap;
+      .partners-object {
+        margin-bottom: 10px;
+        width: calc(50% - 10px);
+        .partners-box {
+          width: 100%;
+          img {
+            width: inherit;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .houses-home {
+    .houses-list {
+      .houses-object {
+        width:calc(100% - 10px);
+        .houses-box {
+          &::after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .become-host-home {
+    align-items: center;
+    background-color: $aloha-blue;
+    border-radius: 8px;
+  img {
+    display: none;
+  }
+    .become-host-interact {
+      width: 90%;
+      position: relative;
+      left: 0;
+      h2, p {
+        color: $white;
+      }
+    }
+  }
+
+  .partners-home {
+    .partners-list {
+      flex-wrap: wrap;
+      .partners-object {
+        margin-bottom: 10px;
+        width: 100%;
+        .partners-box {
+          width: 100%;
+          img {
+            width: inherit;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+          }
         }
       }
     }
