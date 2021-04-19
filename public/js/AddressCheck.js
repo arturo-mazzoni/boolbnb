@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2141,10 +2141,10 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./resources/js/vueproperty.js":
-/*!*************************************!*\
-  !*** ./resources/js/vueproperty.js ***!
-  \*************************************/
+/***/ "./resources/js/AddressCheck.js":
+/*!**************************************!*\
+  !*** ./resources/js/AddressCheck.js ***!
+  \**************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2154,38 +2154,61 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
 var app = new Vue({
-  el: '#app',
+  el: '#root',
   data: {
-    query: "all",
-    elementdb: [],
-    categorie: []
+    query: "",
+    apikey: "QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp",
+    searchElement: 0,
+    prova: "ciao",
+    filter: [],
+    lat: 0,
+    lon: 0,
+    checked: true
   },
   mounted: function mounted() {
-    var _this = this;
+    console.log(this.query);
+  },
+  methods: {
+    searchadrres: function searchadrres() {
+      var _this = this;
 
-    // axios
-    //     .get('http://127.0.0.1:8000/api/property',{})
-    //     .then((result) => {
-    //         this.elementdb=result.data;           
-    //        console.log(this.elementdb);
-    //     })
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://127.0.0.1:8000/api/property', {}).then(function (result) {
-      _this.elementdb = result.data;
-      console.log(_this.elementdb);
-    });
+      this.searchElement = [];
+      this.checked = true;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + this.query + '.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp', {}).then(function (result) {
+        _this.searchElement = result.data.results;
+        console.log(_this.searchElement);
+      });
+    },
+    filtere: function filtere() {
+      var _this2 = this;
+
+      this.filter = this.vie.filter(function (query) {
+        return query.toLowerCase().startsWith(_this2.query.toLowerCase());
+      });
+      console.log(this.filter);
+    },
+    setstreets: function setstreets(item, index) {
+      console.log(index);
+      this.query = item;
+      this.checked = false;
+      this.lat = this.searchElement[index].position.lat;
+      this.lon = this.searchElement[index].position.lon;
+      console.log(this.lat);
+      console.log(this.lon);
+    }
   }
 });
 
 /***/ }),
 
-/***/ 1:
-/*!*******************************************!*\
-  !*** multi ./resources/js/vueproperty.js ***!
-  \*******************************************/
+/***/ 2:
+/*!********************************************!*\
+  !*** multi ./resources/js/AddressCheck.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\js\vueproperty.js */"./resources/js/vueproperty.js");
+module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
 
 
 /***/ })

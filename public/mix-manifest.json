@@ -1,4 +1,7 @@
 {
+    "/js/AddressCheck.js": "/js/AddressCheck.js",
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/js/explore-home.js": "/js/explore-home.js",
+    "/js/vueproperty.js": "/js/vueproperty.js"
 }

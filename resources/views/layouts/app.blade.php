@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
     <title>@yield('title')</title>
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
@@ -20,6 +21,7 @@
   @include('layouts.partials.header')
   @include('layouts.partials.main')
   @include('layouts.partials.footer')
-<script src="{{ asset('js/vueproperty.js') }}" defer></script>
+
+<script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

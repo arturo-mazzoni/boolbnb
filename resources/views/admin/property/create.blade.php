@@ -11,14 +11,10 @@
       </ul>
   </div>
   @endif
-<<<<<<< HEAD
-    <!-- Form Create -->
-=======
-    <!-- asdsad -->
-    <div id="app">
 
-    
->>>>>>> main
+    <!-- Form Create -->
+    <div id="root">
+
   <form method="POST" action="{{ route('property.store') }}" enctype="multipart/form-data">
   @method('POST')
   @csrf
@@ -51,6 +47,7 @@
       <label for="address" class="form-label">Indirizzo</label>
       <input type="text" name="address" class="form-control" id="address">
     </div>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-6">
@@ -61,6 +58,34 @@
       <label for="exampleFormControlFile1">Carica Immagini appartamento</label>
       <input type="file" multiple="multiple" name="images[]" class="form-control-file" id="exampleFormControlFile1">
     </div>
+  </div>
+  <div class="form-group">
+    <label for="mq" class="form-label">Metri Quadrati</label>
+    <input type="text" name="sqm_number" class="form-control" id="mq">
+  </div>
+  <div class="form-group">
+    <label for="address" class="form-label">Indirizzo</label>
+    <input type="text" v-model="query" @input="filtere" @keyup="searchadrres"   name="address" class="form-control" id="address">
+    <div v-if="searchElement " class="drop">
+      <ul v-if="checked" class="list-group">
+        <li v-for="(item,index) in searchElement"  @click="setstreets(item['address'].freeformAddress,index)" class="list-group-item "><i class="fas fa-map-marker-alt pr-2"></i>@{{item['address'].freeformAddress}}</li>
+        
+      </ul> 
+      <input class="d-none"  type="text" name="longitude" :value="lon" class="form-control" >
+      <input  class="d-none" type="text" name="latitude" :value="lat" class="form-control" >
+    </div>
+  </div>
+
+   
+
+
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Carica Immagine Principale</label>
+    <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Carica Immagini appartamento</label>
+    <input type="file" multiple="multiple" name="images[]" class="form-control-file" id="exampleFormControlFile1">
   </div>
   {{-- @if ($post->cover)
             <p>Immagine inserita:</p>
@@ -110,14 +135,8 @@
     <label class="form-check-label" for="inlineCheckbox1">{{$item->service}}</label> 
   </div>
   @endforeach
-<div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-</div>
-  
- 
   </form>
 >>>>>>> main
 </div>
 </div>
 @endsection
-
