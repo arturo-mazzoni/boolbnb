@@ -1,5 +1,7 @@
 require('./bootstrap');
 require('./explore-home');
+require('./AddressCheck');
+require('./vueproperty');
 
 import Vue from 'vue';
 
@@ -14,7 +16,7 @@ window.onscroll = function () {
     }
 }
 var app = new Vue({
-    el: '#app',
+    el: '#header',
     data: {
         load: false,
     },

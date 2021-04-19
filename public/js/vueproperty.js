@@ -2158,8 +2158,7 @@ var app = new Vue({
   data: {
     query: "all",
     elementdb: [],
-    categorie: [],
-    prova: "ciao"
+    categorie: []
   },
   mounted: function mounted() {
     var _this = this;
