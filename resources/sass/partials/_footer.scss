@@ -1,70 +1,136 @@
 footer {
-  background-color: $black;
-  color: $white;
+  background-color: #f7f7f7;
+  color: $aloha-blue;
   padding: 20px 0;
   width: 100%;
 
-  .footer-top {
-    @include flex-between;
+  .my-container {
+    width: 80%;
+    margin: auto;
 
-    ul {
-      line-height: 2.6;
-      padding-bottom: $padd-bottom-20;
+    .footer-top {
+      @include flex-between;
 
-      li:first-child {
-        text-transform: uppercase;
-        font-weight: bolder;
-      }
-    }
+      .footer-section{
 
-  }
+        &:not(first-child) {
+          margin-left: 20px;
+        }
 
-  .footer-bottom {
 
-    @include flex-baseline($justify:space-between);
-    border-top: 1px solid $white;
-
-    ul {
-      @include flex;
-      padding: 20px 0;
-
-      button.btn-social {
-        border-radius: 100%;
-        display: inline-flex;
-        font-size: 20px;
-        width: 40px;
-        height: 40px;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-        margin: 10px;
-
-        &:hover {
-          background-color: $white;
+        
+        h6 {
+          color: $aloha-yellow;
+          text-transform: uppercase;
+          font-weight: 800;
+        }
+    
+        ul {
+          padding-bottom: $padd-bottom-20;
           
-          i {
-            color: $black;
+          li {
+            margin-bottom: 20px;
+            // font-weight: bold;
           }
         }
       }
-
-      li {
-        margin: $padding5;
-
-        a {
-          color: $white;
-          text-decoration: none;
+    }
+  
+    .footer-bottom {
+  
+      @include flex-baseline($justify:space-between);
+      border-top: 1px solid $aloha-yellow;
+  
+      ul {
+        @include flex;
+        padding: 20px 0;
+  
+        button.btn-social {
+          border-radius: 100%;
+          display: inline-flex;
+          font-size: 20px;
+          width: 40px;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          margin: 10px;
+  
           &:hover {
-            text-decoration: underline;
+            background-color: $white;
+            
+            i {
+              color: $black;
+            }
           }
         }
   
-        i.icon-size {
-          padding: 5px;
-          font-size: 28px;
-          color: $light-black;
+        li {
+          margin: $padding5;
+  
+          a {
+            color: $white;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+    
+          i.icon-size {
+            padding: 5px;
+            font-size: 28px;
+            color: $light-black;
+          }
         }
       }
     }
   }
+}  
+
+
+@media screen and (max-width: 980px) {
+
+  footer .my-container .footer-top {
+    display: block;
+
+    .footer-section {
+      margin-left: 40px;
+      margin-right: 40px;
+      border-bottom: 1px solid $aloha-blue;
+      margin-bottom: 20px;
+          
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          flex-basis: 33.3333333%;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid $aloha-blue;
+  }
+
+
 }
+
+@media screen and (max-width: 780px) {
+
+  footer .my-container .footer-top {
+
+    .footer-section {
+
+          
+      ul {
+        display: block
+
+      }
+    }
+  }
+
+}
+
+

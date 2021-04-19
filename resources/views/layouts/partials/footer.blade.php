@@ -1,33 +1,44 @@
 <footer>
-  <div class="container">
+  <div class="my-container">
     <div class="footer-top">
-      <ul>
-        <li>Informazioni</li>
-        <li>Come funziona</li>
-        <li>Opportinità di lavoro</li>
-        <li>Newsroom</li>
-      </ul>
-      <ul>
-        <li>Community</li>
-        <li>AirBnb.org</li>
-        <li>Accessibilità</li>
-        <li>Invitare un ospite</li>
-        <li>Diversità e appartenenza</li>
-      </ul>
-      <ul>
-        <li>Ospita</li>
-        <li>Diventa un host</li>
-        <li>Ospitare responsabilmente</li>
-        <li>Centro Risorse</li>
-      </ul>
-      <ul>
-        <li>Assistenza</li>
-        <li>La nostra risposta all'emergenza COVID-19</li>
-        <li>Centro assistenza</li>
-        <li>Opzioni di cancellazione</li>
-        <li>Affidabilità e sicurezza</li>
-        <li>Contatti</li>
-      </ul>
+      <div class="footer-section">
+        <h6>Informazioni</h6>
+        <ul>
+          <li>Come funziona</li>
+          <li>Opportinità di lavoro</li>
+          <li>Newsroom</li>
+        </ul>
+      </div>  
+
+      <div class="footer-section">
+        <h6>Community</h6>
+        <ul>
+          <li>AirBnb.org</li>
+          <li>Accessibilità</li>
+          <li>Invitare un ospite</li>
+          <li>Diversità e appartenenza</li>
+        </ul>
+      </div>  
+
+      <div class="footer-section">
+        <h6>Ospita</h6>
+        <ul>
+          <li>Diventa un host</li>
+          <li>Ospitare responsabilmente</li>
+          <li>Centro Risorse</li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h6>Assistenza</h6>
+        <ul>
+          <li>Contatti</li>
+          <li>Centro assistenza</li>
+          <li>La nostra risposta all'emergenza COVID-19</li>
+          <li>Affidabilità e sicurezza</li>
+          <li>Opzioni di cancellazione</li>
+        </ul>
+      </div>
     </div>
     <!-- fine footer-top -->
     <div class="footer-bottom">
