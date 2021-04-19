@@ -11,14 +11,10 @@
       </ul>
   </div>
   @endif
-<<<<<<< HEAD
-    <!-- Form Create -->
-=======
-    <!-- asdsad -->
-    <div id="root">
 
-    
->>>>>>> main
+    <!-- Form Create -->
+    <div id="app">
+
   <form method="POST" action="{{ route('property.store') }}" enctype="multipart/form-data">
   @method('POST')
   @csrf
@@ -130,8 +126,6 @@
     <button style="margin-top:20px" type="submit" class="bottone padding-btn">Submit</button>
     </form>
   </div>
-<<<<<<< HEAD
-=======
   @foreach($amenity as $item)
   <div   class="form-check form-check-inline">
     <input class="form-check-input" name="amenity[]" type="checkbox" id="inlineCheckbox1" value="{{$item->id}}">
@@ -144,7 +138,6 @@
   
  
   </form>
->>>>>>> main
 </div>
 </div>
 @endsection
