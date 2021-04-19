@@ -20,6 +20,15 @@
       ),
       'reference' => 'b9c31def6a83f84b4d4a40d35996d375755f0e08',
     ),
+    'braintree/braintree_php' => 
+    array (
+      'pretty_version' => '6.0.0',
+      'version' => '6.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e22dc11e5e92182999288d914d14640a3f50cd85',
+    ),
     'brick/math' => 
     array (
       'pretty_version' => '0.9.2',

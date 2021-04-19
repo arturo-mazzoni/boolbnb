@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Property;
 use App\Image;
+use App\Amenity;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 class PropertyController extends Controller
@@ -30,8 +31,13 @@ class PropertyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-      return view('admin.property.create');
+    {   $amenity=Amenity::all();
+        $data=[
+          'amenity'=>$amenity
+        ];
+      return view('admin.property.create',$data);
+
+      
     }
 
     /**
@@ -63,7 +69,7 @@ class PropertyController extends Controller
 
       $newProperty = new Property();
       $newProperty->user_id = $id;
-
+        
       $newProperty->fill($data);
       $image_path=Storage::put('image',$data['image']);
       $newProperty->image=$image_path;
@@ -79,6 +85,9 @@ class PropertyController extends Controller
               $image_car->save();
           }
         }
+        if(array_key_exists('amenity',$data)){
+          $newProperty->amenities()->sync($data['amenity']);
+         }
     
       
 
