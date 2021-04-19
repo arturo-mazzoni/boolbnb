@@ -11133,6 +11133,7 @@ header #hamburger span:nth-child(3) {
   background-color: #ffffff;
   border-radius: 50px;
   width: 102px;
+  width: 240px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -11304,6 +11305,10 @@ header #hamburger span:nth-child(3) {
     top: -20%;
     right: -7.5%;
   }
+}
+
+main {
+  margin-top: 120px;
 }
 
 #become-host-content .my-jumbotron {
@@ -11750,6 +11755,7 @@ main #img-bottom .content-area h2 {
 }
 
 .my-jumbotron .jumbo-image {
+  margin-top: 120px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -12109,7 +12115,7 @@ section div[class$=text] div {
 .container-dashboard-content .left ul li a {
   color: #004C99;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .container-dashboard-content .left ul li a i {

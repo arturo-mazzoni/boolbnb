@@ -80,7 +80,10 @@ header #hamburger span {
             list-style: none;
             background-color: $white;
             border-radius: 50px;
+			
             width: 102px;
+			width: 240px ;
+			
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
             &:hover{
                 background-color: rgb(250, 250, 250);
