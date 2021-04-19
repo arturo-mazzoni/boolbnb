@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
   <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}" defer></script>
+
   
   <title>Document</title>
 </head>
@@ -20,6 +20,7 @@
   @include('layouts.partials.header')
   @include('layouts.partials.main')
   @include('layouts.partials.footer')
-<script src="{{ asset('js/vueproperty.js') }}" defer></script>
+
+@yield('script')
 </body>
 </html>

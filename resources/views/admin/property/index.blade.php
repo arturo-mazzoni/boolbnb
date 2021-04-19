@@ -7,16 +7,18 @@
         <table class="table tabella col-11">
                 <thead style="text-align:center" class="testa-tabella">
                     <tr>
+                    <th scope="col" class="d-none d-lg-block">Immagine</th>
                         <th scope="col">Nome Appartamento</th>
-                        <th scope="col" class="d-none d-lg-block">Immagine</th>
                         <th scope="col">Operazioni</th>
                     </tr>
                 </thead>
                 <tbody style="text-align:center" >
                     @foreach ($properties as $property)
-                    <tr>
+                    <tr class=>
+                        <td class="d-none d-lg-block"> <img src="{{ asset('storage/'.$property->image)  }}" alt=""></td>
                         <td>{{ $property->title }}</td>
-                        <td class="d-none d-lg-block">{{ $property->price_per_night }}</td>
+                  
+                        
                         <td class="operations-button">
                             
                             <a href="{{ route('property.show', $property->id) }}" class="btn bottone border-radius-20"><i class="fas fa-info-circle d-lg-none"></i> <span  class="d-none d-lg-block">Dettagli</span></a>

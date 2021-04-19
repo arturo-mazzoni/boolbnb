@@ -12,7 +12,7 @@
   </div>
   @endif
     <!-- asdsad -->
-    <div id="app">
+    <div id="root">
 
     
   <form method="POST" action="{{ route('property.store') }}" enctype="multipart/form-data">
@@ -40,8 +40,20 @@
   </div>
   <div class="form-group">
     <label for="address" class="form-label">Indirizzo</label>
-    <input type="text" name="address" class="form-control" id="address">
+    <input type="text" v-model="query" @input="filtere" @keyup="searchadrres"   name="address" class="form-control" id="address">
+    <div v-if="searchElement " class="drop">
+      <ul v-if="checked" class="list-group">
+        <li v-for="(item,index) in searchElement"  @click="setstreets(item['address'].freeformAddress,index)" class="list-group-item "><i class="fas fa-map-marker-alt pr-2"></i>@{{item['address'].freeformAddress}}</li>
+        
+      </ul> 
+      <input class="d-none"  type="text" name="longitude" :value="lon" class="form-control" >
+      <input  class="d-none" type="text" name="latitude" :value="lat" class="form-control" >
+    </div>
   </div>
+
+   
+
+
   <div class="form-group">
     <label for="exampleFormControlFile1">Carica Immagine Principale</label>
     <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
@@ -94,4 +106,6 @@
 </div>
 </div>
 @endsection
-
+@section('script')
+  <script src="{{ asset('js/AddressCheck.js')}}"></script>
+@endsection
