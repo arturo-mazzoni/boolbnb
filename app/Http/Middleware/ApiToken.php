@@ -21,12 +21,12 @@ class ApiToken
         $token_acces="cmYIsL9C64Xxn9NR6ZkAaGiSCSYZWdlyyEfF4Yc5IgmHkcsi28";
     
 
-        if($api_token!=$token_acces){
-            return response()->json([
-                'success'=>false,
-                'error'=>'non sei autorizzato'    
-            ]);
-        }
+        // if($api_token!=$token_acces){
+        //     return response()->json([
+        //         'success'=>false,
+        //         'error'=>'non sei autorizzato'    
+        //     ]);
+        // }
 
 
         return $next($request);

@@ -12,6 +12,9 @@
   </div>
   @endif
     <!-- asdsad -->
+    <div id="app">
+
+    
   <form method="POST" action="{{ route('property.store') }}" enctype="multipart/form-data">
   @method('POST')
   @csrf
@@ -76,13 +79,19 @@
     <label for="description" class="form-label">Descrizione</label>
     <input type="text" name="description" class="form-control" id="description">
   </div>
-    
-  {{-- <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div> --}}
-  <button type="submit" class="btn btn-primary">Submit</button>
+  @foreach($amenity as $item)
+  <div   class="form-check form-check-inline">
+    <input class="form-check-input" name="amenity[]" type="checkbox" id="inlineCheckbox1" value="{{$item->id}}">
+    <label class="form-check-label" for="inlineCheckbox1">{{$item->service}}</label> 
+  </div>
+  @endforeach
+<div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+  
+ 
   </form>
+</div>
 </div>
 @endsection
 
