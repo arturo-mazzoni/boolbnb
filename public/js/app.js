@@ -49642,6 +49642,67 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/AddressCheck.js":
+/*!**************************************!*\
+  !*** ./resources/js/AddressCheck.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+var app = new Vue({
+  el: '#root',
+  data: {
+    query: "",
+    apikey: "QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp",
+    searchElement: 0,
+    prova: "ciao",
+    vie: [],
+    filter: [],
+    lat: 0,
+    lon: 0,
+    checked: true
+  },
+  mounted: function mounted() {
+    console.log(this.query);
+  },
+  methods: {
+    searchadrres: function searchadrres() {
+      var _this = this;
+
+      this.searchElement = [];
+      this.checked = true;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + this.query + '.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp', {}).then(function (result) {
+        _this.searchElement = result.data.results;
+        console.log(_this.searchElement);
+      });
+    },
+    filtere: function filtere() {
+      var _this2 = this;
+
+      this.filter = this.vie.filter(function (query) {
+        return query.toLowerCase().startsWith(_this2.query.toLowerCase());
+      });
+      console.log(this.filter);
+    },
+    setstreets: function setstreets(item, index) {
+      console.log(index);
+      this.query = item;
+      this.checked = false;
+      this.lat = this.searchElement[index].position.lat;
+      this.lon = this.searchElement[index].position.lon;
+      console.log(this.lat);
+      console.log(this.lon);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -49657,6 +49718,10 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./explore-home */ "./resources/js/explore-home.js");
 
+__webpack_require__(/*! ./AddressCheck */ "./resources/js/AddressCheck.js");
+
+__webpack_require__(/*! ./vueproperty */ "./resources/js/vueproperty.js");
+
 
 var last_scroll = 0;
 
@@ -49671,7 +49736,7 @@ window.onscroll = function () {
 };
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app',
+  el: '#header',
   data: {
     load: false
   },
@@ -49750,7 +49815,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#root',
+  el: '#roothome',
   data: {
     explorePlaces: [{
       img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-Hawaii.jpg',
@@ -49806,6 +49871,43 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 
 /***/ }),
 
+/***/ "./resources/js/vueproperty.js":
+/*!*************************************!*\
+  !*** ./resources/js/vueproperty.js ***!
+  \*************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    query: "all",
+    elementdb: [],
+    categorie: []
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    // axios
+    //     .get('http://127.0.0.1:8000/api/property',{})
+    //     .then((result) => {
+    //         this.elementdb=result.data;           
+    //        console.log(this.elementdb);
+    //     })
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://127.0.0.1:8000/api/property', {}).then(function (result) {
+      _this.elementdb = result.data;
+      console.log(_this.elementdb);
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -49824,12 +49926,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-__webpack_require__(/*! C:\Boolean\mamp_public\boolbnb\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Boolean\mamp_public\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
-
-__webpack_require__(/*! C:\Arturo\CorsoProgrammazione\corso\boolbnb\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Arturo\CorsoProgrammazione\corso\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 

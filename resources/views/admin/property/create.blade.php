@@ -13,11 +13,7 @@
   @endif
 
     <!-- Form Create -->
-
-    <!-- asdsad -->
     <div id="root">
-
-    
 
   <form method="POST" action="{{ route('property.store') }}" enctype="multipart/form-data">
   @method('POST')
@@ -48,15 +44,8 @@
       <input type="text" name="sqm_number" class="form-control" id="mq">
     </div>
     <div class="col-md-6">
-    <label for="address" class="form-label">Indirizzo</label>
-    <input type="text" v-model="query" @input="filtere" @keyup="searchadrres"   name="address" class="form-control" id="address">
-    <div v-if="searchElement " class="drop">
-      <ul v-if="checked" class="list-group">
-        <li v-for="(item,index) in searchElement"  @click="setstreets(item['address'].freeformAddress,index)" class="list-group-item "><i class="fas fa-map-marker-alt pr-2"></i>@{{item['address'].freeformAddress}}</li>
-        
-      </ul> 
-      <input class="d-none"  type="text" name="longitude" :value="lon" class="form-control" >
-      <input  class="d-none" type="text" name="latitude" :value="lat" class="form-control" >
+      <label for="address" class="form-label">Indirizzo</label>
+      <input type="text" name="address" class="form-control" id="address">
     </div>
     </div>
   </div>
@@ -74,7 +63,18 @@
     <label for="mq" class="form-label">Metri Quadrati</label>
     <input type="text" name="sqm_number" class="form-control" id="mq">
   </div>
-
+  <div class="form-group">
+    <label for="address" class="form-label">Indirizzo</label>
+    <input type="text" v-model="query" @input="filtere" @keyup="searchadrres"   name="address" class="form-control" id="address">
+    <div v-if="searchElement " class="drop">
+      <ul v-if="checked" class="list-group">
+        <li v-for="(item,index) in searchElement"  @click="setstreets(item['address'].freeformAddress,index)" class="list-group-item "><i class="fas fa-map-marker-alt pr-2"></i>@{{item['address'].freeformAddress}}</li>
+        
+      </ul> 
+      <input class="d-none"  type="text" name="longitude" :value="lon" class="form-control" >
+      <input  class="d-none" type="text" name="latitude" :value="lat" class="form-control" >
+    </div>
+  </div>
 
    
 
@@ -127,24 +127,16 @@
     <button style="margin-top:20px" type="submit" class="bottone padding-btn">Submit</button>
     </form>
   </div>
-
-
+<<<<<<< HEAD
+=======
   @foreach($amenity as $item)
   <div   class="form-check form-check-inline">
     <input class="form-check-input" name="amenity[]" type="checkbox" id="inlineCheckbox1" value="{{$item->id}}">
     <label class="form-check-label" for="inlineCheckbox1">{{$item->service}}</label> 
   </div>
   @endforeach
-<div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-</div>
-  
- 
   </form>
-
+>>>>>>> main
 </div>
 </div>
-@endsection
-@section('script')
-  <script src="{{ asset('js/AddressCheck.js')}}"></script>
 @endsection

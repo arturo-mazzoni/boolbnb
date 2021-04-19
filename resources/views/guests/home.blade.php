@@ -7,7 +7,7 @@
     </div>    
 </div>
 
-<div id="root">
+<div id="roothome">
     <section class="explore-home">
         <h2>Esplora Honolulu</h2>
         <div id="explore-list">

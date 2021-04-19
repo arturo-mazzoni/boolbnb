@@ -22,7 +22,7 @@ var app = new Vue({
             this.searchElement=[];
             this.checked=true;
             axios.get('https://api.tomtom.com/search/2/search/'+this.query+'.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp', {
-              
+           
             
               })
               .then((result) => {
@@ -48,10 +48,6 @@ var app = new Vue({
             console.log(this.lat);
             console.log(this.lon);
         },
-      
-
-
-
     }
 
 });

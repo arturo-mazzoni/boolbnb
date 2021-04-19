@@ -5,8 +5,6 @@ var app = new Vue({
         query:"all",
         elementdb:[],
         categorie:[],
-      
-     
         
     },
     mounted(){
@@ -16,8 +14,6 @@ var app = new Vue({
                 
         //         this.elementdb=result.data;           
         //        console.log(this.elementdb);
-      
-               
         //     })
         
             axios.get('http://127.0.0.1:8000/api/property', {
@@ -29,7 +25,5 @@ var app = new Vue({
                 console.log(this.elementdb);
               })
               
-
     }
-
 });
