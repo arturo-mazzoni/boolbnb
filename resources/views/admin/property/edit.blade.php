@@ -12,7 +12,7 @@
   </div>
   @endif
 <!-- sdasd -->
-  <form method="POST" action="{{ route('property.update', $property->id) }} " enctype="multipart/form-data">
+  <form method="POST" action="{{ route('property.update', $property->id) }}" enctype="multipart/form-data">
   @method('PUT')
   @csrf
   <div class="form-group">
