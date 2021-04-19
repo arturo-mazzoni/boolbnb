@@ -6,7 +6,7 @@ var app = new Vue({
         elementdb:[],
         categorie:[],
       
-        prova:"ciao",
+     
         
     },
     mounted(){
