@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="row">
         
-        <table class="table tabella col-11">
+        <table class="table tabella table-striped col-11">
                 <thead style="text-align:center" class="testa-tabella">
                     <tr>
                     <th scope="col" class="d-none d-lg-block">Immagine</th>

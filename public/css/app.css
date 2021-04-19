@@ -11133,6 +11133,7 @@ header #hamburger span:nth-child(3) {
   background-color: #ffffff;
   border-radius: 50px;
   width: 102px;
+  width: 240px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -11754,6 +11755,7 @@ main #img-bottom .content-area h2 {
 }
 
 .my-jumbotron .jumbo-image {
+  margin-top: 120px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -12113,7 +12115,7 @@ section div[class$=text] div {
 .container-dashboard-content .left ul li a {
   color: #004C99;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .container-dashboard-content .left ul li a i {
@@ -12198,37 +12200,50 @@ section div[class$=text] div {
 }
 
 footer {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #f7f7f7;
+  color: #004C99;
   padding: 20px 0;
   width: 100%;
 }
 
-footer .footer-top {
+footer .my-container {
+  width: 80%;
+  margin: auto;
+}
+
+footer .my-container .footer-top {
   justify-content: space-between;
   display: flex;
   align-items: flex-start;
   flex-direction: row;
 }
 
-footer .footer-top ul {
-  line-height: 2.6;
+footer .my-container .footer-top .footer-section:not(first-child) {
+  margin-left: 20px;
+}
+
+footer .my-container .footer-top .footer-section h6 {
+  color: #F5B964;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+footer .my-container .footer-top .footer-section ul {
   padding-bottom: 20px;
 }
 
-footer .footer-top ul li:first-child {
-  text-transform: uppercase;
-  font-weight: bolder;
+footer .my-container .footer-top .footer-section ul li {
+  margin-bottom: 20px;
 }
 
-footer .footer-bottom {
+footer .my-container .footer-bottom {
   flex-direction: row;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #F5B964;
 }
 
-footer .footer-bottom ul {
+footer .my-container .footer-bottom ul {
   flex-direction: row;
   display: flex;
   justify-content: center;
@@ -12236,7 +12251,7 @@ footer .footer-bottom ul {
   padding: 20px 0;
 }
 
-footer .footer-bottom ul button.btn-social {
+footer .my-container .footer-bottom ul button.btn-social {
   border-radius: 100%;
   display: inline-flex;
   font-size: 20px;
@@ -12248,31 +12263,63 @@ footer .footer-bottom ul button.btn-social {
   margin: 10px;
 }
 
-footer .footer-bottom ul button.btn-social:hover {
+footer .my-container .footer-bottom ul button.btn-social:hover {
   background-color: #ffffff;
 }
 
-footer .footer-bottom ul button.btn-social:hover i {
+footer .my-container .footer-bottom ul button.btn-social:hover i {
   color: #000000;
 }
 
-footer .footer-bottom ul li {
+footer .my-container .footer-bottom ul li {
   margin: 0 5px;
 }
 
-footer .footer-bottom ul li a {
+footer .my-container .footer-bottom ul li a {
   color: #ffffff;
   text-decoration: none;
 }
 
-footer .footer-bottom ul li a:hover {
+footer .my-container .footer-bottom ul li a:hover {
   text-decoration: underline;
 }
 
-footer .footer-bottom ul li i.icon-size {
+footer .my-container .footer-bottom ul li i.icon-size {
   padding: 5px;
   font-size: 28px;
   color: #808080;
+}
+
+@media screen and (max-width: 980px) {
+  footer .my-container .footer-top {
+    display: block;
+  }
+
+  footer .my-container .footer-top .footer-section {
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: 1px solid #004C99;
+    margin-bottom: 20px;
+  }
+
+  footer .my-container .footer-top .footer-section ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer .my-container .footer-top .footer-section ul li {
+    flex-basis: 33.3333333%;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #004C99;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  footer .my-container .footer-top .footer-section ul {
+    display: block;
+  }
 }
 
 .chat-container {
