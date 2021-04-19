@@ -42,14 +42,14 @@
     </div>
     <!-- fine footer-top -->
     <div class="footer-bottom">
-      <ul>
+      <ul class="div-1">
         <li>&#xa9;2021 AirBnb, Inc. all rights reserved</li>
         <li><a href="">Privacy</a></li>
         <li><a href="">Termini</a></li>
         <li><a href="">Mappa del sito</a></li>
         <li><a href="">Dettagli dell'azienda</a></li>
       </ul>
-      <ul>
+      <ul class="div-2">
         <li>
           <i class="fas fa-globe"></i>
           <a href="">Italiano(IT)</a>
@@ -59,7 +59,7 @@
           <a href="">EUR</a>
         </li>
       </ul>
-      <ul>
+      <ul class="div-3">
         <li>
         <button type="button" class="btn-social"><i class="icon-size fab fa-facebook-f"></i></button>
         </li>
