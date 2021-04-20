@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -11,7 +11,7 @@
       </ul>
   </div>
   @endif
-<!-- sdasd -->
+<!-- Modifica -->
   <form method="POST" action="{{ route('property.update', $property->id) }}" enctype="multipart/form-data">
   @method('PUT')
   @csrf

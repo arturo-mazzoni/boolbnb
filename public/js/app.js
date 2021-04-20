@@ -49738,7 +49738,8 @@ window.onscroll = function () {
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#header',
   data: {
-    load: false
+    load: false,
+    state: "close"
   },
   methods: {
     display_menu: function display_menu() {

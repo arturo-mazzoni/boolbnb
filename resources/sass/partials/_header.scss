@@ -1,4 +1,3 @@
-.wrap {max-width: 1024px; min-width: 320px;}
 header {
 	display: flex;
 	z-index: 1;
@@ -13,8 +12,7 @@ header {
     
 }
 header .wrap {
-	padding: 0 2%;
-	width: 100%;
+	width: 90%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -69,81 +67,76 @@ header #hamburger span {
 	span:nth-child(2) {transform: rotate(-45deg) ;}
 	span:nth-child(3) {transform: rotate(45deg) translate(6px, -9px);}
 }
-.header-form{
-        ul{
-            transition: 0.2s;
-            position: absolute;
-            top:50%;
-            left:40%;
-            transform: translate(-50%, -50%);
-            height: 80px;
-            list-style: none;
-            background-color: $white;
-            border-radius: 50px;
-			
-            width: 102px;
-			width: 240px ;
-			
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
-            &:hover{
-                background-color: rgb(250, 250, 250);
-                width: 240px;
-                .search-inputs{
-                    color: $aloha-blue;;
-                    input::placeholder{
-                        color: rgb(239,145,0);
-                    }
-                }
-            }
-            }
-            li{
-                float: left;
-                height: 100%;
-                width: 100%;
-                .search-inputs{
-                    transition: 0.2s;
-                    color: transparent;
-                    float: left;
-                    position: relative;
-                    top:50%;
-                    left:50%;
-                    transform: translate(-50%, -50%);
-                    label{
-                        font-weight: bolder;
-                    }
-                    input{
-                        background-color: transparent;
-                        border: none;
-                        outline: none;
-                    }
-                    input::placeholder{
-                        transition: 0.2s;
-                        color: transparent
-                    }
-                }
-                .button-search{
-                    font-size: 20px;
-                    text-transform: uppercase;
-                    outline: none;
-                    border: 1px solid black;
-                    margin:18px 24px 0 0;
-                    @include flex;
-                    width: 60px;
-                    height: 60px;
-                    background-color:  $aloha-blue;
-                    border-radius: 50px;
-                    color:$aloha-yellow;
-                    position: absolute;
-                    top : -10%;
-                    right: -5%;
-                }
-            }
-        }
+.bottone-speciale{
+	position: absolute;
+	top:50%;
+	left: 37%;
+	transform: translate(-50%, -50%);
+		label{
+			position: relative;
+			display: inline-block;
+			background-color: $white;
+			padding: 5px 12px;
+			transition: all 1s ease;
+			border-radius: 10px;
+			box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+			&::after{
+				content: '';
+				display: block;
+				height: 2px;
+				width: 80%;
+				background-color: $aloha-yellow;
+				transition: all 1s ease 0.5s;
+		}
+		input{
+			transition: width 1s ease, opacity 0.5s ease 0.5s;
+			opacity: 1;
+			width: 180px;
+			height: 33px;
+			border: 0;
+			outline: none;
+			color: $aloha-yellow
+		}
+		i{
+			position: absolute;
+			top: 11px;
+			right: 11px;
+			color: $aloha-blue;
+			cursor: pointer;
+			font-size: 22px;
+		}
+		&[data-state="close"]{
+			border-radius: 30px;
+			padding: 5px 5px;
+			transition: all 1s ease;
+			&::after{
+			width: 0%;
+			transition: all 0.3s ease;
+			}
+			i{
+			pointer-events: none;
+			font-size: 22px;
+			}
+			input{
+			font-size: 22px;
+			width: 35px;
+			height: 33px;
+			opacity:0;
+			cursor: pointer;
+			transition: opacity 0.5s ease, width 1s ease;
+			-webkit-appearance:none
+			} 
+		}
+	}
+}
+
 @media screen and (max-width: 980px) {
-    .header-form ul{
-        top:150%;
-        left:50%;
-    }
+    .bottone-speciale{
+	position: absolute;
+	top:130%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	}
 }
 
 @media screen and (max-width: 660px) {
@@ -190,23 +183,12 @@ header #hamburger span {
 			width: 100%;
 			display: block;
 			&:hover {
-				color: white;
+				color: rgb(200, 199, 199);
                 background: none;
 				background-color:$aloha-yellow;
 			}
 		}
 	}
-    .header-form ul{
-        height: 60px;
-        top:150%;
-        left:50%;
-        .button-search{
-                    font-size: 20px;
-                    width: 48px;
-                    height: 48px;
-                    top : -20%;
-                    right: -7.5%;
-                }
-    }
+   
 }
 

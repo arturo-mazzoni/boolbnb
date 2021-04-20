@@ -19,6 +19,7 @@ var app = new Vue({
     el: '#header',
     data: {
         load: false,
+        state: "close"
     },
     methods: {
         display_menu: function () {
