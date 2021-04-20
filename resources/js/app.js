@@ -1,7 +1,7 @@
 require('./bootstrap');
 require('./explore-home');
-require('./AddressCheck');
-require('./vueproperty');
+
+
 
 import Vue from 'vue';
 

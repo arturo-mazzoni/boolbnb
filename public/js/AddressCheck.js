@@ -2157,9 +2157,7 @@ var app = new Vue({
   el: '#root',
   data: {
     query: "",
-    apikey: "QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp",
     searchElement: 0,
-    prova: "ciao",
     filter: [],
     lat: 0,
     lon: 0,
@@ -2174,7 +2172,7 @@ var app = new Vue({
 
       this.searchElement = [];
       this.checked = true;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + this.query + '.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp', {}).then(function (result) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + this.query + '.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=5lt6BzvANpSqx2GPtFy2UJ3Xye0uTdiS', {}).then(function (result) {
         _this.searchElement = result.data.results;
         console.log(_this.searchElement);
       });
@@ -2208,7 +2206,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
+module.exports = __webpack_require__(/*! C:\Users\DreamD3vil\Desktop\laravel22.03\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
 
 
 /***/ })
