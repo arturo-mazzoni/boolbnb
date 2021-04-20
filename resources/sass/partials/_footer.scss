@@ -69,7 +69,7 @@ footer {
           margin: $padding5;
   
           a {
-            color: $white;
+            color: $aloha-blue;
             text-decoration: none;
             &:hover {
               text-decoration: underline;
@@ -87,34 +87,55 @@ footer {
   }
 }  
 
+@media screen and (max-width: 1360px) {
+  
+  footer {
 
-@media screen and (max-width: 980px) {
+    .my-container {
 
-  footer .my-container .footer-top {
-    display: block;
+      .footer-bottom {
+        display: block;
 
-    .footer-section {
-      margin-left: 40px;
-      margin-right: 40px;
-      border-bottom: 1px solid $aloha-blue;
-      margin-bottom: 20px;
-          
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-
-        li {
-          flex-basis: 33.3333333%;
+        ul:not(:first-child) {
+          padding: 0;
         }
       }
     }
   }
+}
 
-  .footer-bottom {
-    border-top: 1px solid $aloha-blue;
+
+@media screen and (max-width: 980px) {
+
+  footer {
+
+    .my-container{
+
+      .footer-top {
+        display: block;
+    
+        .footer-section {
+          margin-left: 40px;
+          margin-right: 40px;
+          margin-bottom: 20px;
+          min-height: 150px;
+    
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+    
+            li {
+              flex-basis: 33.3333333%;
+            }
+          }
+        }
+    
+        .footer-section:not(:last-child) {
+          border-bottom: 1px solid $aloha-blue;
+        }
+      }
+    } 
   }
-
-
 }
 
 @media screen and (max-width: 780px) {
@@ -123,7 +144,6 @@ footer {
 
     .footer-section {
 
-          
       ul {
         display: block
 

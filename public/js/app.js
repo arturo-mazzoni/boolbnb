@@ -49931,6 +49931,7 @@ __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-fin
 module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
+
 /***/ })
 
 /******/ });

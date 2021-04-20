@@ -12024,7 +12024,7 @@ section div[class$=text] div {
 
 .container-dashboard-content .left {
   height: 100%;
-  background-color: #ffffff;
+  background-color: #f7f7f7;
   width: 300px;
   margin: 0 20px;
   border-radius: 26px;
@@ -12230,7 +12230,7 @@ footer .my-container .footer-bottom ul li {
 }
 
 footer .my-container .footer-bottom ul li a {
-  color: #ffffff;
+  color: #004C99;
   text-decoration: none;
 }
 
@@ -12244,6 +12244,16 @@ footer .my-container .footer-bottom ul li i.icon-size {
   color: #808080;
 }
 
+@media screen and (max-width: 1360px) {
+  footer .my-container .footer-bottom {
+    display: block;
+  }
+
+  footer .my-container .footer-bottom ul:not(:first-child) {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 980px) {
   footer .my-container .footer-top {
     display: block;
@@ -12252,8 +12262,8 @@ footer .my-container .footer-bottom ul li i.icon-size {
   footer .my-container .footer-top .footer-section {
     margin-left: 40px;
     margin-right: 40px;
-    border-bottom: 1px solid #004C99;
     margin-bottom: 20px;
+    min-height: 150px;
   }
 
   footer .my-container .footer-top .footer-section ul {
@@ -12265,8 +12275,8 @@ footer .my-container .footer-bottom ul li i.icon-size {
     flex-basis: 33.3333333%;
   }
 
-  .footer-bottom {
-    border-top: 1px solid #004C99;
+  footer .my-container .footer-top .footer-section:not(:last-child) {
+    border-bottom: 1px solid #004C99;
   }
 }
 
@@ -12459,7 +12469,9 @@ table .tabella .testa-tabella th {
 }
 
 .contenitore-card-sponsor {
+  background-color: #f7f7f7;
   padding: 20px;
+  margin-top: 40px;
   margin-bottom: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -12469,5 +12481,6 @@ table .tabella .testa-tabella th {
 .box-shadow-card {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
+  background-color: #f7f7f7;
 }
 

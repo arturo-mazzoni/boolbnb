@@ -6,7 +6,6 @@ var app = new Vue({
         apikey:"QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp",
         searchElement:0,
         prova:"ciao",
-        vie:[],
         filter:[],
         lat:0,
         lon:0,
