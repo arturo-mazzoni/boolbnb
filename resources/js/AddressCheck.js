@@ -3,9 +3,7 @@ var app = new Vue({
     el: '#root',
     data: {
         query:"",
-        apikey:"QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp",
         searchElement:0,
-        prova:"ciao",
         filter:[],
         lat:0,
         lon:0,
@@ -21,7 +19,7 @@ var app = new Vue({
         searchadrres(){
             this.searchElement=[];
             this.checked=true;
-            axios.get('https://api.tomtom.com/search/2/search/'+this.query+'.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp', {
+            axios.get('https://api.tomtom.com/search/2/search/'+this.query+'.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=5lt6BzvANpSqx2GPtFy2UJ3Xye0uTdiS', {
            
             
               })

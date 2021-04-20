@@ -1,7 +1,7 @@
 require('./bootstrap');
 require('./explore-home');
-require('./AddressCheck');
-require('./vueproperty');
+
+
 
 import Vue from 'vue';
 
@@ -19,6 +19,7 @@ var app = new Vue({
     el: '#header',
     data: {
         load: false,
+        state: "close"
     },
     methods: {
         display_menu: function () {
