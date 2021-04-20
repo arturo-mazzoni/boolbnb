@@ -20,16 +20,16 @@
           @endif
           @else
           <li class="nav-item dropdown">
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            <a style="background:none" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 {{ Auth::user()->name }}
             </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ route('logout') }}"
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a style="background:none" class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
               </a>
-              <a class="dropdown-item" href="{{  route('property.index') }}">Area amministrativa</a>
+              <a style="background:none" class="dropdown-item" href="{{  route('property.index') }}">Area amministrativa</a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                   @csrf
               </form>
@@ -38,23 +38,11 @@
         @endguest
     </nav>
   </div>
-  <div class="header-form">
-      <form class="search">
-        <ul>
-          <li>
-            <div class="search-inputs">
-              <label for="location">
-                <div class="label">Scegli l'alloggio</div>
-                <input name="search" id="search" placeholder="Scrivi..." />
-              </label>
-            </div>
-            <button class="button-search">
-              <i class="fas fa-search fa-xs"></i>
-            </button>
-          </li>
-        </form>
-      </ul>
-    </div>
-      
+      <form class="bottone-speciale" action="#">
+        <label :data-state="state" for="search">
+          <input type="text" placeholder="Ricerca.." @click="state = 'opan'" @blur="state='close'"/>
+          <i class="fa fa-search" @click="" aria-hidden="true"></i>
+        </label>
+      </form>
 </header>
 	

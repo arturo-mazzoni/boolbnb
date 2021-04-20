@@ -11,8 +11,7 @@
       </ul>
   </div>
   @endif
-<!-- modifica -->
-
+<!-- Modifica -->
   <form method="POST" action="{{ route('property.update', $property->id) }}" enctype="multipart/form-data">
   @method('PUT')
   @csrf
