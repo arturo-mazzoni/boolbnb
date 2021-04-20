@@ -1,5 +1,5 @@
-require('./bootstrap');
-require('./explore-home');
+ require('./bootstrap');
+ require('./explore-home');
 
 
 
