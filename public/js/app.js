@@ -49661,7 +49661,6 @@ var app = new Vue({
     apikey: "QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp",
     searchElement: 0,
     prova: "ciao",
-    vie: [],
     filter: [],
     lat: 0,
     lon: 0,
@@ -49926,9 +49925,8 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
-
+__webpack_require__(/*! C:\Arturo\CorsoProgrammazione\corso\boolbnb\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Arturo\CorsoProgrammazione\corso\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

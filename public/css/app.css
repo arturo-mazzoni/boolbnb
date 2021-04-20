@@ -12530,3 +12530,18 @@ table .tabella .testa-tabella th {
   background-color: #f7f7f7;
 }
 
+.carousel-inner {
+  border-radius: 10px;
+}
+
+.carousel-inner img {
+  height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.anteprima-img img {
+  width: 50%;
+}
+
