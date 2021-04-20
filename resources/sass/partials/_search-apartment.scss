@@ -1,0 +1,112 @@
+body {
+    overflow-x: hidden;
+}
+#root {
+    height: 100vh;
+    position: relative;
+    .left-box {
+        padding: 20px 10px;
+        overflow-y: scroll;
+        float: left;
+        height: 100%;
+        width: 55%;
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background: rgba(0,0,0,0.1);
+        }
+        &::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            background: rgba(0,0,0,0.2);
+        }
+        &::-webkit-scrollbar-thumb:hover{
+            background: rgba(0,0,0,0.4);
+        }
+        &::-webkit-scrollbar-thumb:active{
+            background: rgba(0,0,0,.9);
+        }
+
+        .left-box-top {
+            border-bottom: 1px solid lightgrey;
+            h2 {
+                color: $aloha-blue;
+            }
+            .filters {
+                display: flex;
+                justify-content: space-around;
+                padding: 10px 0 20px;
+            }
+        }
+
+        .left-box-bottom {
+            .apartment {
+                padding: 20px 0;
+                display: flex;
+                border-bottom: 1px solid lightgrey;
+                .apartment-image {
+                    background-color: khaki;
+                    height: 180px;
+                    width: 300px;
+                    border-radius: 8px;
+                }
+                .apartment-info {
+                    margin-left: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .info-top {
+                        .apartment-amenities {
+                            margin-top: 20px;
+                            position: relative;
+                        }
+                        .apartment-amenities::before {
+                            content: "";
+                            background: lightgrey;
+                            display: block;
+                            position: absolute;
+                            top: -10px;
+                            height: 1px;
+                            width: 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .right-box {
+        // overflow: hidden;
+        // position: fixed;
+        // right: 0;
+        // top: 120px;
+        float:left;
+        height:100%;
+        width: 45%;
+        background-color: grey;
+    }
+}
+
+// .left-box {
+//   scrollbar-width: 8px;
+//   scrollbar-color: #161718 transparent;
+//   scrollbar-border-radius: 20px;
+// }
+
+//   /* Chrome, Edge, Safari */
+// .left-box::-webkit-scrollbar {
+//   width: 8px;
+// }
+
+// .left-box::-webkit-scrollbar-track {
+//   background: transparent;
+// }
+
+// .left-box::-webkit-scrollbar-thumb {
+//   background-color: #161718;
+//   border-radius: 20px;
+// }

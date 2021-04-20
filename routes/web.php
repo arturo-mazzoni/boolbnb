@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('guests.home');
 });
 
+Route::get('/search-apartment', function () {
+  return view('guests.search-apartment');
+})->name('search-apartment');
+
 Route::get('/host', function () {
   return view('guests.become-host');
 })->name('become-host');
