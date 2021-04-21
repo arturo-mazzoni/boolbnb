@@ -5,6 +5,7 @@
 @foreach ($messages as $message)
 
 
+
 <div class="chat-container">
     <!-- lato sinistro -->
     <div class="colonna-sx col-sm-12 col-lg-3 ">
@@ -54,8 +55,9 @@
             
                 
                 <div class="message received">
-                    <p>{{ $message->properties->title }}</p>
+                    <p>{{ $message->property_id }}</p>
                     <p>{{ $message->content }}</p>
+                    <p>Proprietà: {{ $message->property->title }}</p>
                 </div>
 
 

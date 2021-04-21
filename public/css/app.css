@@ -12580,18 +12580,32 @@ table .tabella .testa-tabella th {
   background-color: #f7f7f7;
 }
 
-.carousel-inner {
+.container-slider .carousel-inner {
   border-radius: 10px;
 }
 
-.carousel-inner img {
+.container-slider .carousel-inner img {
   height: 500px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.anteprima-img img {
-  width: 50%;
+.container-slider .anteprima-img {
+  margin: 20px 0;
+}
+
+.container-slider .anteprima-img .box-img {
+  display: flex;
+}
+
+.container-slider .anteprima-img .box-img img {
+  width: 25%;
+  border-radius: 15px;
+  padding: 2.5px;
+}
+
+.container-slider .title-address {
+  border-bottom: 1px solid #004C99;
 }
 

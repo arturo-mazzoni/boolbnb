@@ -18,7 +18,7 @@ class Property extends Model
   return $this->belongsToMany('App\Sponsor');
   }
 
-  public function users()
+  public function user()
   {
   return $this->belongsTo('App\User');
   }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class View extends Model
 {
-    public function properties()
+    public function property()
     {
     return $this->belongsTo('App\Property');
     }
