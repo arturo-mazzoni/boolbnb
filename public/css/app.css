@@ -12585,13 +12585,9 @@ table .tabella .testa-tabella th {
 }
 
 .carousel-inner img {
-  height: 500px;
+  height: 200px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.anteprima-img img {
-  width: 50%;
 }
 

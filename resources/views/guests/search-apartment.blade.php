@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CDN TOM TOM -->
+  <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
+  <!-- fine CDN TOM TOM -->
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -75,12 +80,25 @@
     
         </div>
     
-        <div class="right-box"></div>
+        <div class="right-box">
+        <!-- TOM TOM mappa-->
+        <div id="map-div"></div>
+            <script>
+                const ONOLULU = { lng: -157.970000, lat: 21.4525000 };
+
+                var map = tt.map({
+                    key: 'QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp',
+                    container: 'map-div',
+                    center: ONOLULU,
+                    zoom: 9.3
+                });
+            </script>
+        <!-- FINE TOM TOM mappa-->
+        </div>
     </main>
   </div>
 
   @include('layouts.partials.footer')
 <script src="{{ asset('js/AddressCheck.js') }}" defer></script>
-<script src="{{ asset('js/search-apartment.js') }}" defer></script>
 </body>
 </html>
