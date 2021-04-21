@@ -21,6 +21,6 @@
   @include('layouts.partials.main')
   @include('layouts.partials.footer')
 <script src="{{ asset('js/app.js') }}" ></script>
-@yield('script')
+<script src="{{ asset('js/AddressCheck.js') }}" ></script>
 </body>
 </html>

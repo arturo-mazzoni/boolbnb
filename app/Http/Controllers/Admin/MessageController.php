@@ -8,8 +8,15 @@ use App\Message;
 
 class MessageController extends Controller
 {
-    public function index(){
-        return view('admin.message.index');
+    public function index(Message $message){
+
+        $messages = Message::all();
+
+        $data = [
+            'messages' => $messages
+        ];
+
+        return view('admin.message.index', $data);
     }
     
 }

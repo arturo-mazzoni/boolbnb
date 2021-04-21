@@ -8,7 +8,7 @@
     <img src="https://assets.jobs.bg/assets/logo/2014-04-29/b_04743888ac08f85b45b4c476c7941c6f.jpg" style="width:200px;" alt="Logo Airbnb">
     <nav id="menu">
       @guest
-          <li class="nav-item"><a class="nav-link" href="#" >Alloggi</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ route('search-apartment') }}" >Alloggi</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ route('become-host') }}">Diventa un host</a></li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

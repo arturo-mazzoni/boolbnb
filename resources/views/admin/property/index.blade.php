@@ -14,7 +14,7 @@
                 </thead>
                 <tbody style="text-align:center" >
                     @foreach ($properties as $property)
-                    <tr class=>
+                    <tr>
                         <td class="d-none d-lg-block"> <img src="{{ asset('storage/'.$property->image)  }}" alt=""></td>
                         <td>{{ $property->title }}</td>
                   

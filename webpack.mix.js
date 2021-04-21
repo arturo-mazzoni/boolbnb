@@ -15,4 +15,5 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/vueproperty.js','public/js')
     .js('resources/js/AddressCheck.js','public/js')
     .js('resources/js/explore-home.js','public/js')
+    .js('resources/js/search-apartment.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
