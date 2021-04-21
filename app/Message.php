@@ -10,4 +10,12 @@ class Message extends Model
     {
     return $this->belongsTo('App\Property');
     }
+
+    protected $fillable = [
+        'email',
+        'name',
+        'content',
+        'date',
+        'prpperty_id'
+      ];
 }

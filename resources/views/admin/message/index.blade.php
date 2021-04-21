@@ -2,6 +2,8 @@
 @extends('layouts.admin')
 
 @section('content')
+@foreach ($messages as $message)
+
 
 <div class="chat-container">
     <!-- lato sinistro -->
@@ -12,14 +14,15 @@
             <input type="text" placeholder="Cerca un cliente...">
         </div>
         <!-- lista contatti -->
+
         <div class="contact-list">
             <div class="scrolling-list">
                 <ul>
                     <li>
                         <img class="chat-avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
                         <div>
-                            <p> { CLIENTE 1 }</p>
-                            <small>{ Anteprima }</small>
+                            <p>{{ $message->name }}</p>
+                            <small>{{ $message->email }}</small>
                             {{-- <small>{ Orario di invio del messaggio }</small> --}}
                         </div>
                     </li>
@@ -48,9 +51,14 @@
         <!-- FINE HEADER della CHAT -->
         <!--  Ricevuti -->
         <div class="chat-space d-none d-lg-block">
-            <div class="message received">
-                <p>buogiorno, volevo chiederle se posso portare il mio cane nell'appartamento</p>
-            </div>
+            
+                
+                <div class="message received">
+                    <p>{{ $message->properties->title }}</p>
+                    <p>{{ $message->content }}</p>
+                </div>
+
+
         </div>
         <!--  Fine Ricevuti -->
     </div>
@@ -61,6 +69,8 @@
         </div>
     </div>
 </div>
+
+@endforeach
 
 
 @endsection

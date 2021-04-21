@@ -12018,6 +12018,102 @@ section div[class$=text] div {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100vh;
+  position: relative;
+}
+
+#root .left-box {
+  padding: 20px 10px;
+  overflow-y: scroll;
+  float: left;
+  height: 100%;
+  width: 55%;
+}
+
+#root .left-box::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+#root .left-box::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#root .left-box::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#root .left-box::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#root .left-box::-webkit-scrollbar-thumb:active {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#root .left-box .left-box-top {
+  border-bottom: 1px solid lightgrey;
+}
+
+#root .left-box .left-box-top h2 {
+  color: #004C99;
+}
+
+#root .left-box .left-box-top .filters {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 20px;
+}
+
+#root .left-box .left-box-bottom .apartment {
+  padding: 20px 0;
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+}
+
+#root .left-box .left-box-bottom .apartment .apartment-image {
+  background-color: khaki;
+  height: 180px;
+  width: 300px;
+  border-radius: 8px;
+}
+
+#root .left-box .left-box-bottom .apartment .apartment-info {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#root .left-box .left-box-bottom .apartment .apartment-info .info-top .apartment-amenities {
+  margin-top: 20px;
+  position: relative;
+}
+
+#root .left-box .left-box-bottom .apartment .apartment-info .info-top .apartment-amenities::before {
+  content: "";
+  background: lightgrey;
+  display: block;
+  position: absolute;
+  top: -10px;
+  height: 1px;
+  width: 40px;
+}
+
+#root .right-box {
+  float: left;
+  height: 100%;
+  width: 45%;
+  background-color: grey;
+}
+
 .container-dashboard-content {
   display: flex;
 }
