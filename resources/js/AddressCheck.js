@@ -59,16 +59,22 @@ var app = new Vue({
         searchApartment() {
             this.apartmentsList.forEach(e => {
                 axios
-                    .get('https://api.tomtom.com/search/2/search/' + e.latitude + ', ' + e.longitude + '.json?' + 'lat=' + this.lat + '&lon=' + this.lon + '&radius=20000' + '&key=5lt6BzvANpSqx2GPtFy2UJ3Xye0uTdiS')
+                    .get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + this.lat + '&lon=' + this.lon + '&radius=2000' + '&key=5lt6BzvANpSqx2GPtFy2UJ3Xye0uTdiS')
                     .then((result) => {
                         this.apartmentsResult = result.data.results;
                         this.apartmentsResult.forEach(r => {
-                            this.finalCoords.push(r.position.lat + '000' + ', ' + r.position.lon + '000') ;
+                            this.finalCoords.push({
+                                'lat': r.position.lat + '000',
+                                'lon': r.position.lon + '000',
+                            });
+                                
                         });
                         console.log(this.finalCoords);
-                        console.log(e.latitude + ', ' + e.longitude);
+
+                        
                         this.finalCoords.forEach(c => {
-                            if (c == e.latitude + ', ' + e.longitude) {
+                            if (c.lat == e.latitude && c.lon == e.longitude) {
+                                this.finalApartments = [];
                                 this.finalApartments.push(e);
                             }
                         });
