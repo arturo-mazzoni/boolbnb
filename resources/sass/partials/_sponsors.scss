@@ -1,3 +1,35 @@
+.contenitore-radiobox{
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-left:10px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  text-align: center;
+  .list-group input[type="radio"] {
+    display: none;
+  }
+
+  .list-group input[type="radio"] + .list-group-item {
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  .list-group input[type="radio"] + .list-group-item:before {
+    content: "\2022";
+    color: transparent;
+    font-weight: bold;
+    margin-right: 1em;
+  }
+
+  .list-group input[type="radio"]:checked + .list-group-item {
+    background-color: $aloha-blue;
+    color: $aloha-yellow;
+  }
+
+  .list-group input[type="radio"]:checked + .list-group-item:before {
+    color: inherit;
+  }
+}
 .row {
   display: flex;
   margin-bottom: 20px;
@@ -9,13 +41,16 @@
 }
 
 .contenitore-card-sponsor{
-  background-color: #f7f7f7;
+  transition: .33s;
   padding: 20px;
   margin-top: 40px;
   margin-bottom: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   text-align: center;
+  &:hover{
+  transform: scale(1.05);
+  }
 }
 
 .box-shadow-card {
@@ -23,4 +58,15 @@
   border-radius: 20px;
   background-color: #f7f7f7;
 }
-
+.bg-bronzo{
+  background-image: linear-gradient(to bottom right, #CD7F32, #F3A960);
+}
+.bg-argento{
+  background-image: linear-gradient(to bottom right, #C0C0C0, #E6E6E6);
+}
+.bg-oro{
+  background-image: linear-gradient(to bottom right,#B78628, #FCC201);
+}
+.bg-offerta{
+  background-image: linear-gradient(to bottom right, red, yellow);
+}
