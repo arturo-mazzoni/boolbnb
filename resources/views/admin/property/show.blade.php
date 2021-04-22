@@ -45,6 +45,26 @@
     </div>
   </div>
 
+  <div class="card-body"  id="chart-vue">
+    <input type="text" id="propertyId" value="{{ $property->id }}" class="d-none">
+    <input type="text" id="propertyName" value="{{ $property->title }}" class="d-none">
+    <div class="row">
+        <div class="col-sm-8 my-auto">
+            <canvas id="myBarChart" width="100" height="50"></canvas>
+        </div>
+        <div class="col-sm-4 text-center my-auto">
+            <div class="h4 mb-0 text-primary">100</div>
+            <div class="small text-muted">visualizzazioni mese</div>
+            <hr>
+            <div class="h4 mb-0 text-warning">50</div>
+            <div class="small text-muted">visualizzazioni settimana</div>
+            <hr>
+            <div class="h4 mb-0 text-success">25</div>
+            <div class="small text-muted">visualizzazioni di oggi</div>
+        </div>
+    </div>
+</div>
+
 
 
   <div class="row dashboard-table">

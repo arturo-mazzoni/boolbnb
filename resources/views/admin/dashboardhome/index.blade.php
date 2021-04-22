@@ -30,7 +30,7 @@
                                 <div class="card-header">
                                     <i class="fa fa-bar-chart"></i> Area Grafico a candele
                                 </div>
-                                <div class="card-body">
+                                {{-- <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-8 my-auto">
                                             <canvas id="myBarChart" width="100" height="50"></canvas>
@@ -46,7 +46,7 @@
                                             <div class="small text-muted">visualizzazioni di oggi</div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             <div class="card-footer small text-muted">Aggiornato oggi</div>
                         </div>
                     </th>

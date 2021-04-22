@@ -26,7 +26,6 @@ Route::get('/host', function () {
 })->name('become-host');
 
 Auth::routes();
-Route :: get ( '/ payment / process' , 'PaymentsController @ process' ) -> name ( 'payment.process' ); 
 Route::prefix('admin')
     ->namespace('Admin')
     ->middleware('auth')
