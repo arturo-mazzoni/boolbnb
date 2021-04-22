@@ -109,14 +109,47 @@
       <li>Descrizione: {{ $property->description }}</li>
     </ul> --}}
     <div class="buttons">
-      <a href="" class="btn btn-info">Modifica</a>
+      <button style="margin-top:20px" type="submit" class="bottone padding-btn">Modifica</button>
       <form action="" class="d-inline-block" method="post">
           @method('DELETE')
           @csrf
-          <button class="btn btn-danger">Elimina</button>
+          <button style="margin-top:20px" type="submit" class="bottone-rosso padding-btn">Elimina</button>
       </form>
     </div>
   </div>
 </div>
+  <div class="col-md-8">
+    
+        <ul class="list-group">
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="fas fa-home mr-5"></i><strong>Nome:</strong> {{ $property->title }} 
+            </li>
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="fas fa-door-open mr-5"></i><strong>Stanze:</strong> {{ $property->rooms_number }} 
+            </li>
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="fas fa-bed mr-5"></i><strong>Letti:</strong> {{ $property->beds_number }} 
+            </li>
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="far fa-square mr-5"></i><strong>Mq:</strong> {{ $property->sqm_number }} 
+            </li>
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="fas fa-map-marker-alt mr-5"></i><strong>Indirizzo:</strong> {{ $property->address }} 
+            </li>
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="fas fa-images mr-5"></i><strong>Foto:</strong> <img src="{{ asset('storage/'.$property->image)  }}" alt=""> </li> 
+            </li>
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="fas fa-eye mr-5"></i><strong>Visibile:</strong> {{ $property->visible }}
+            </li>
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="fas fa-money-bill-alt mr-5"></i><strong>Prezzo:</strong> {{ $property->price_per_night }}
+            </li>
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="fas fa-info-circle mr-5"></i><strong>Descrizione:</strong><br> {{ $property->description }}
+            </li>
+          </ul>
+    
+    </div>
 
 @endsection
