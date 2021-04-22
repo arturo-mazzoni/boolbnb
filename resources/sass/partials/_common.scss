@@ -28,7 +28,14 @@ ul {
     color: $light-black;
   }
 }
-
+.bottone-rosso {
+  background-color: red;
+  color: $aloha-yellow;
+  font-weight: bolder;
+  &:hover {
+    color: $light-black;
+  }
+}
 .padding-btn {
   padding: 10px 20px;
   border-radius: 20px;
