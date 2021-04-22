@@ -18,7 +18,6 @@
     <title>@yield('title')</title>
   <!-- Scripts -->
   
-  
   <title>Document</title>
 </head>
 <body>
