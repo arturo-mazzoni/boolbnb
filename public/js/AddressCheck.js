@@ -2156,6 +2156,7 @@ __webpack_require__.r(__webpack_exports__);
 var app = new Vue({
   el: '#root',
   data: {
+    tomTomKey: '3FstatXcnIf665Bzhq7IiVthukRLdKkG',
     query: "",
     searchElement: 0,
     filter: [],
@@ -2183,7 +2184,7 @@ var app = new Vue({
 
       this.searchElement = [];
       this.checked = true;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + this.query + '.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=5lt6BzvANpSqx2GPtFy2UJ3Xye0uTdiS', {}).then(function (result) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + this.query + '.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=' + this.tomTomKey, {}).then(function (result) {
         _this2.searchElement = result.data.results;
         console.log(_this2.searchElement);
       });
@@ -2209,7 +2210,7 @@ var app = new Vue({
       var _this4 = this;
 
       this.apartmentsList.forEach(function (e) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + _this4.lat + '&lon=' + _this4.lon + '&radius=2000' + '&key=5lt6BzvANpSqx2GPtFy2UJ3Xye0uTdiS').then(function (result) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + _this4.lat + '&lon=' + _this4.lon + '&radius=2000' + '&key=' + _this4.tomTomKey).then(function (result) {
           _this4.apartmentsResult = result.data.results;
 
           _this4.apartmentsResult.forEach(function (r) {
@@ -2220,11 +2221,10 @@ var app = new Vue({
           });
 
           console.log(_this4.finalCoords);
+          _this4.finalApartments = [];
 
           _this4.finalCoords.forEach(function (c) {
             if (c.lat == e.latitude && c.lon == e.longitude) {
-              _this4.finalApartments = [];
-
               _this4.finalApartments.push(e);
             }
           });

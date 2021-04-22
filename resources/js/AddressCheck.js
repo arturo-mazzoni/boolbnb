@@ -2,6 +2,7 @@ import axios from 'axios';
 var app = new Vue({
     el: '#root',
     data: {
+        tomTomKey: '3FstatXcnIf665Bzhq7IiVthukRLdKkG',
         query:"",
         searchElement:0,
         filter:[],
@@ -28,7 +29,7 @@ var app = new Vue({
         searchadrres(){
             this.searchElement=[];
             this.checked=true;
-            axios.get('https://api.tomtom.com/search/2/search/'+this.query+'.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=5lt6BzvANpSqx2GPtFy2UJ3Xye0uTdiS', {
+            axios.get('https://api.tomtom.com/search/2/search/'+this.query+'.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=' + this.tomTomKey, {
            
             
               })
@@ -59,7 +60,7 @@ var app = new Vue({
         searchApartment() {
             this.apartmentsList.forEach(e => {
                 axios
-                    .get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + this.lat + '&lon=' + this.lon + '&radius=2000' + '&key=5lt6BzvANpSqx2GPtFy2UJ3Xye0uTdiS')
+                    .get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + this.lat + '&lon=' + this.lon + '&radius=2000' + '&key=' + this.tomTomKey)
                     .then((result) => {
                         this.apartmentsResult = result.data.results;
                         this.apartmentsResult.forEach(r => {
@@ -71,10 +72,9 @@ var app = new Vue({
                         });
                         console.log(this.finalCoords);
 
-                        
+                        this.finalApartments = [];
                         this.finalCoords.forEach(c => {
                             if (c.lat == e.latitude && c.lon == e.longitude) {
-                                this.finalApartments = [];
                                 this.finalApartments.push(e);
                             }
                         });
