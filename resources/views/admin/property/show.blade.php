@@ -67,6 +67,9 @@
       <div class="col-sm-8 my-auto">
         <canvas id="lineChart" width="100" height="50"></canvas>
       </div>
+      <div class="col-sm-8 my-auto">
+        <canvas id="lineChartYear" width="100" height="50"></canvas>
+      </div>
     </div>
 </div>
 

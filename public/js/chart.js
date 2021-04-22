@@ -14466,6 +14466,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
     viewsNumber: [],
     viewsPerId: [],
     //visite per id show
+
+    /* mesi */
     viewsJanuary: [],
     viewsFebraury: [],
     viewsMarch: [],
@@ -14477,7 +14479,21 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
     viewsSeptember: [],
     viewsOctober: [],
     viewsNovember: [],
-    viewsDecember: []
+    viewsDecember: [],
+
+    /* anni */
+    viewsTwenty: [],
+    viewsTwentyOne: [],
+    viewsTwentyTwo: [],
+    viewsTwentyThree: [],
+    viewsTwentyFour: [],
+    viewsTwentyFive: [],
+    viewsTwentySix: [],
+    viewsTwentySeven: [],
+    viewsTwentyEight: [],
+    viewsTwentyNine: [],
+    viewsThirty: [],
+    viewsThirtyOne: []
   },
   mounted: function mounted() {
     var _this = this;
@@ -14489,10 +14505,11 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
 
       var propertyId = document.getElementById('propertyId').value; //visite per id show
 
-      console.log(propertyId);
+      /* console.log(propertyId); */
+
       var propertyName = document.getElementById('propertyName').value; //visite per id show
 
-      console.log(propertyName);
+      /* console.log(propertyName); */
 
       _this.items.forEach(function (element) {
         if (!_this.properties.includes(element.property_id)) {
@@ -14671,7 +14688,40 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
         }
       });
 
-      console.log(_this.viewsApril);
+      _this.items.forEach(function (element) {
+        if (element.property_id == propertyId) {
+          var year = element.date.slice(0, 4);
+          /* console.log(year); */
+
+          if (year == '2020') {
+            _this.viewsTwenty.push(element);
+          } else if (year == '2021') {
+            _this.viewsTwentyOne.push(element);
+          } else if (year == '2022') {
+            _this.viewsTwentyTwo.push(element);
+          } else if (year == '2023') {
+            _this.viewsTwentyThree.push(element);
+          } else if (year == '2024') {
+            _this.viewsTwentyFour.push(element);
+          } else if (year == '2025') {
+            _this.viewsTwentyFive.push(element);
+          } else if (year == '2026') {
+            _this.viewsTwentySix.push(element);
+          } else if (year == '2027') {
+            _this.viewsTwentySeven.push(element);
+          } else if (year == '2028') {
+            _this.viewsTwentyEight.push(element);
+          } else if (year == '2029') {
+            _this.viewsTwentyNine.push(element);
+          } else if (year == '2030') {
+            _this.viewsThirty.push(element);
+          } else if (year == '2032') {
+            _this.viewsThirtyOne.push(element);
+          }
+        }
+      });
+
+      console.log(_this.viewsTwentyOne);
       var myChart = document.getElementById('myBarChart').getContext('2d');
       var viewChart = new Chart(myChart, {
         type: 'bar',
@@ -14701,14 +14751,25 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
         data: {
           labels: ["January", "February", "March", "April", "May", "June", "July", 'August', 'September', 'October', 'November', 'December'],
           datasets: [{
-            label: "My First dataset",
+            label: "Visualizzazioni per mese",
             data: [_this.viewsJanuary.length, _this.viewsFebraury.length, _this.viewsMarch.length, _this.viewsApril.length, _this.viewsMay.length, _this.viewsJune.length, _this.viewsJuly.length, _this.viewsAugust.length, _this.viewsSeptember.length, _this.viewsOctober.length, _this.viewsNovember.length, _this.viewsDecember.length],
             backgroundColor: ['rgba(105, 0, 132, .2)'],
             borderColor: ['rgba(200, 99, 132, .7)'],
             borderWidth: 2
-          }, {
-            label: "My Second dataset",
-            data: [28, 48, 40, 19, 86, 27, 90],
+          }]
+        },
+        options: {
+          responsive: true
+        }
+      });
+      var ctxLY = document.getElementById("lineChartYear").getContext('2d');
+      var myLineChart = new Chart(ctxLY, {
+        type: 'line',
+        data: {
+          labels: ["2020", "2021", "2022", "2023", "2024", "2025", "2026", '2027', '2028', '2029', '2030', '2031'],
+          datasets: [{
+            label: "Visualizzazioni per anno",
+            data: [_this.viewsTwenty.length, _this.viewsTwentyOne.length, _this.viewsTwentyTwo.length, _this.viewsTwentyThree.length, _this.viewsTwentyFour.length, _this.viewsTwentyFive.length, _this.viewsTwentySix.length, _this.viewsTwentySeven.length, _this.viewsTwentyEight.length, _this.viewsTwentyNine.length, _this.viewsThirty.length, _this.viewsThirtyOne.length],
             backgroundColor: ['rgba(0, 137, 132, .2)'],
             borderColor: ['rgba(0, 10, 130, .7)'],
             borderWidth: 2
