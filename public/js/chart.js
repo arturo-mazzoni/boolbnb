@@ -14464,8 +14464,20 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
     items: [],
     properties: [],
     viewsNumber: [],
-    viewsPerId: [] //visite per id show
-
+    viewsPerId: [],
+    //visite per id show
+    viewsJanuary: [],
+    viewsFebraury: [],
+    viewsMarch: [],
+    viewsApril: [],
+    viewsMay: [],
+    viewsJune: [],
+    viewsJuly: [],
+    viewsAugust: [],
+    viewsSeptember: [],
+    viewsOctober: [],
+    viewsNovember: [],
+    viewsDecember: []
   },
   mounted: function mounted() {
     var _this = this;
@@ -14515,7 +14527,151 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
         }
       });
 
-      console.log(_this.viewsPerId);
+      _this.items.forEach(function (element) {
+        //visite per id gennaio
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '01') {
+            _this.viewsJanuary.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id febbraio
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '02') {
+            _this.viewsFebraury.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id marzo
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '03') {
+            _this.viewsMarch.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id aprile
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '04') {
+            _this.viewsApril.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id maggio
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '05') {
+            _this.viewsMay.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id giugno
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '06') {
+            _this.viewsJune.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id luglio
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '07') {
+            _this.viewsJuly.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id agosto
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '08') {
+            _this.viewsAugust.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id settembre
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '09') {
+            _this.viewsSeptember.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id ottobre
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '10') {
+            _this.viewsOctober.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id novembre
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '11') {
+            _this.viewsNovember.push(element);
+          }
+        }
+      });
+
+      _this.items.forEach(function (element) {
+        //visite per id dicembre
+        if (element.property_id == propertyId) {
+          var month = element.date.slice(5, 7);
+          /* console.log(month); */
+
+          if (month == '12') {
+            _this.viewsDecember.push(element);
+          }
+        }
+      });
+
+      console.log(_this.viewsApril);
       var myChart = document.getElementById('myBarChart').getContext('2d');
       var viewChart = new Chart(myChart, {
         type: 'bar',
@@ -14535,7 +14691,9 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
             hoverBorderWidth: 3
           }]
         },
-        options: {}
+        options: {
+          responsive: true
+        }
       });
       var ctxL = document.getElementById("lineChart").getContext('2d');
       var myLineChart = new Chart(ctxL, {
@@ -14544,7 +14702,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
           labels: ["January", "February", "March", "April", "May", "June", "July", 'August', 'September', 'October', 'November', 'December'],
           datasets: [{
             label: "My First dataset",
-            data: [65, 59, 80, 81, 56, 55, 40],
+            data: [_this.viewsJanuary.length, _this.viewsFebraury.length, _this.viewsMarch.length, _this.viewsApril.length, _this.viewsMay.length, _this.viewsJune.length, _this.viewsJuly.length, _this.viewsAugust.length, _this.viewsSeptember.length, _this.viewsOctober.length, _this.viewsNovember.length, _this.viewsDecember.length],
             backgroundColor: ['rgba(105, 0, 132, .2)'],
             borderColor: ['rgba(200, 99, 132, .7)'],
             borderWidth: 2
