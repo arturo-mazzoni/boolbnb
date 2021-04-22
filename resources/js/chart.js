@@ -8,6 +8,7 @@ var app = new Vue({
     properties: [],
     viewsNumber: [],
     viewsPerId: [],    //visite per id show
+    /* mesi */
     viewsJanuary: [],
     viewsFebraury: [],
     viewsMarch: [],
@@ -20,6 +21,19 @@ var app = new Vue({
     viewsOctober: [],
     viewsNovember: [],
     viewsDecember: [],
+    /* anni */
+    viewsTwenty: [],
+    viewsTwentyOne: [],
+    viewsTwentyTwo: [],
+    viewsTwentyThree: [],
+    viewsTwentyFour: [],
+    viewsTwentyFive: [],
+    viewsTwentySix: [],
+    viewsTwentySeven: [],
+    viewsTwentyEight: [],
+    viewsTwentyNine: [],
+    viewsThirty: [],
+    viewsThirtyOne: []
   },
   mounted() {
     axios.get('http://127.0.0.1:8000/api/views')
@@ -29,9 +43,9 @@ var app = new Vue({
         /* console.log(this.items); */
 
         let propertyId = document.getElementById('propertyId').value;   //visite per id show
-        console.log(propertyId);
+        /* console.log(propertyId); */
         let propertyName = document.getElementById('propertyName').value;   //visite per id show
-        console.log(propertyName);
+        /* console.log(propertyName); */
 
         this.items.forEach(element => {
           if (!this.properties.includes(element.property_id)) {
@@ -179,7 +193,39 @@ var app = new Vue({
           }
         });
 
-        console.log(this.viewsApril);
+        this.items.forEach(element => {
+          if (element.property_id == propertyId) {
+            let year = element.date.slice(0,4);
+            /* console.log(year); */
+            if (year == '2020') {
+              this.viewsTwenty.push(element);
+            } else if (year == '2021') {
+              this.viewsTwentyOne.push(element);
+            } else if (year == '2022') {
+              this.viewsTwentyTwo.push(element);
+            } else if (year == '2023') {
+              this.viewsTwentyThree.push(element);
+            } else if (year == '2024') {
+              this.viewsTwentyFour.push(element);
+            } else if (year == '2025') {
+              this.viewsTwentyFive.push(element);
+            } else if (year == '2026') {
+              this.viewsTwentySix.push(element);
+            } else if (year == '2027') {
+              this.viewsTwentySeven.push(element);
+            } else if (year == '2028') {
+              this.viewsTwentyEight.push(element);
+            } else if (year == '2029') {
+              this.viewsTwentyNine.push(element);
+            } else if (year == '2030') {
+              this.viewsThirty.push(element);
+            } else if (year == '2032') {
+              this.viewsThirtyOne.push(element);
+            }
+          }
+        });
+
+        console.log(this.viewsTwentyOne);
 
         let myChart = document.getElementById('myBarChart').getContext('2d');
         let viewChart = new Chart(myChart, {
@@ -211,7 +257,7 @@ var app = new Vue({
           data: {
             labels: ["January", "February", "March", "April", "May", "June", "July", 'August', 'September', 'October', 'November', 'December'],
             datasets: [{
-                label: "My First dataset",
+                label: "Visualizzazioni per mese",
                 data: [
                   this.viewsJanuary.length,
                   this.viewsFebraury.length,
@@ -234,9 +280,34 @@ var app = new Vue({
                 ],
                 borderWidth: 2
               },
-              {
-                label: "My Second dataset",
-                data: [28, 48, 40, 19, 86, 27, 90],
+            ]
+          },
+          options: {
+            responsive: true
+          }
+        });
+
+        var ctxLY = document.getElementById("lineChartYear").getContext('2d');
+        var myLineChart = new Chart(ctxLY, {
+          type: 'line',
+          data: {
+            labels: ["2020", "2021", "2022", "2023", "2024", "2025", "2026", '2027', '2028', '2029', '2030', '2031'],
+            datasets: [{
+                label: "Visualizzazioni per anno",
+                data: [
+                  this.viewsTwenty.length,
+                  this.viewsTwentyOne.length,
+                  this.viewsTwentyTwo.length,
+                  this.viewsTwentyThree.length,
+                  this.viewsTwentyFour.length,
+                  this.viewsTwentyFive.length,
+                  this.viewsTwentySix.length,
+                  this.viewsTwentySeven.length,
+                  this.viewsTwentyEight.length,
+                  this.viewsTwentyNine.length,
+                  this.viewsThirty.length,
+                  this.viewsThirtyOne.length,
+                ],
                 backgroundColor: [
                   'rgba(0, 137, 132, .2)',
                 ],
@@ -244,7 +315,7 @@ var app = new Vue({
                   'rgba(0, 10, 130, .7)',
                 ],
                 borderWidth: 2
-              }
+              },
             ]
           },
           options: {
