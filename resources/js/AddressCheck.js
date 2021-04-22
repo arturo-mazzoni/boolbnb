@@ -8,11 +8,20 @@ var app = new Vue({
         lat:0,
         lon:0,
         checked:true,
+        apartmentsResult: '',
+        apartmentsList : '',
+        apartmentAddress: '',
+        finalCoords: [],
+        finalApartments: [],
+        storagePath: 'storage/'
     },
-    mounted(){
-        console.log(this.query);
-      
-        
+    mounted() {
+        axios
+        .get('http://127.0.0.1:8000/api/property')
+        .then((result) => {
+            this.apartmentsList = result.data.response;
+            console.log(this.apartmentsList);
+        });       
     },
     methods:{
         
@@ -31,6 +40,7 @@ var app = new Vue({
               })
               
         },
+        
         filtere(){
             this.filter=this.vie.filter(query=>{
                 return query.toLowerCase().startsWith(this.query.toLowerCase());
@@ -46,6 +56,28 @@ var app = new Vue({
             console.log(this.lat);
             console.log(this.lon);
         },
+        searchApartment() {
+            this.apartmentsList.forEach(e => {
+                axios
+                    .get('https://api.tomtom.com/search/2/search/' + e.latitude + ', ' + e.longitude + '.json?' + 'lat=' + this.lat + '&lon=' + this.lon + '&radius=20000' + '&key=5lt6BzvANpSqx2GPtFy2UJ3Xye0uTdiS')
+                    .then((result) => {
+                        this.apartmentsResult = result.data.results;
+                        this.apartmentsResult.forEach(r => {
+                            this.finalCoords.push(r.position.lat + '000' + ', ' + r.position.lon + '000') ;
+                        });
+                        console.log(this.finalCoords);
+                        console.log(e.latitude + ', ' + e.longitude);
+                        this.finalCoords.forEach(c => {
+                            if (c == e.latitude + ', ' + e.longitude) {
+                                this.finalApartments.push(e);
+                            }
+                        });
+                        console.log(this.finalApartments);
+                    });
+                });
+        },
     }
 
 });
+
+
