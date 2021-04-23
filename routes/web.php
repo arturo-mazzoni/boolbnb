@@ -25,7 +25,7 @@ Route::get('/host', function () {
   return view('guests.become-host');
 })->name('become-host');
 
-Auth::routes(); 
+Auth::routes();
 Route::prefix('admin')
     ->namespace('Admin')
     ->middleware('auth')

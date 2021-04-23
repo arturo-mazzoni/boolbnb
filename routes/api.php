@@ -19,3 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/property','Api\PropertyController@index')->middleware('api_token');
+
+Route::get('/views','Api\ViewController@index');
+
+

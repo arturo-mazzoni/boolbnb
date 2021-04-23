@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- CDN TOM TOM -->
   <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
   <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js"></script>
   <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/services/services-web.min.js"></script>
   <!-- fine CDN TOM TOM -->
@@ -16,7 +17,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
   <!-- Scripts -->
-  
   
   <title>Document</title>
 </head>
@@ -39,7 +39,7 @@
                                   <li id="my-li-search" v-for="(item,index) in searchElement"  @click="setstreets(item['address'].freeformAddress,index)" class="list-group-item "><i class="fas fa-map-marker-alt pr-2"></i>@{{item['address'].freeformAddress}}</li>
                                 </ul> 
                             </div>
-              <i class="fa fa-search" @click="" aria-hidden="true"></i>
+              <i class="fa fa-search" @click="searchApartment" aria-hidden="true"></i>
           </label></form>
           </ul>
         </div>
@@ -62,17 +62,19 @@
     
             <div class="left-box-bottom">
     
-                <div class="apartment">
+                <div v-for="apartment in finalApartments" class="apartment">
                     <div class="apartment-image">
-                        
+                        <img :src="storagePath + apartment.image" alt="">
                     </div>
                     
                     <div class="apartment-info">
                         <div class="info-top">
-                            <h3>Nome appartamento</h3>
-                            <div class="apartment-amenities">lista di tutti i servizi</div>
+                            <h3>@{{apartment.title}}</h3>
+                            <div class="apartment-amenities">
+                              <span v-for="amenity in apartment.amenity">@{{amenity['service']}}, </span>
+                            </div>
                         </div>
-                        <div class="info-bottom">Prezzo</div>
+                        <div class="info-bottom">@{{apartment.price_per_night}}</div>
                     </div>                
                 </div>
     
@@ -82,17 +84,46 @@
     
         <div class="right-box">
         <!-- TOM TOM mappa-->
-        <div id="map-div"></div>
-            <script>
-                const ONOLULU = { lng: -157.970000, lat: 21.4525000 };
+          <div style="width:100%;height:100%" id="map-div"></div>
+ <script>
+   $(document).ready(function(){
+    const Honolulu = {lng: -157.970000, lat: 21.4525000};
 
-                var map = tt.map({
-                    key: 'QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp',
-                    container: 'map-div',
-                    center: ONOLULU,
-                    zoom: 9.3
-                });
-            </script>
+        var map = tt.map({
+          key: 'QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp',
+          container: 'map-div',
+          center: Honolulu,
+          zoom: 9.3
+        });
+        
+      // scheletro di come mettere il marker attraverso la posizione (latitudine e longitudine)
+      // ( var marker = new tt.Marker().setLngLat(HQ).addTo(map);
+      // per ora è una lista con latitudine e longitudine inventate
+            var posizioni = [
+                { lat: 21.4000000, lng: -157.975000 },
+                { lat: 21.4500000, lng: -157.985000 },
+                { lat: 21.4900000, lng: -157.995000 },
+                { lat: 21.5500000, lng: -157.999990 }
+            ];
+        //  contatore per ciclarli 
+            count = 1;
+
+        // crea maker per ogni posizioni (latitudine e longitudine)
+            posizioni.forEach(posizione => {
+
+        // Casella di testo
+            var popup = new tt.Popup({ anchor: 'top' }).setText('nome appartamento');
+        
+            var marker = new tt.Marker().setLngLat(posizione).addTo(map);
+
+        // makers
+            marker.setPopup(popup).togglePopup();
+            count++;
+        
+        });   
+        
+});
+</script>  
         <!-- FINE TOM TOM mappa-->
         </div>
     </main>

@@ -10,4 +10,9 @@ class View extends Model
     {
     return $this->belongsTo('App\Property');
     }
+
+    protected $fillable = [
+      'property_id',
+      'date'
+    ];
 }

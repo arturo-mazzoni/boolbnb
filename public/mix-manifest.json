@@ -2,6 +2,8 @@
     "/js/AddressCheck.js": "/js/AddressCheck.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/js/chart.js": "/js/chart.js",
     "/js/explore-home.js": "/js/explore-home.js",
+    "/js/search-apartment.js": "/js/search-apartment.js",
     "/js/vueproperty.js": "/js/vueproperty.js"
 }
