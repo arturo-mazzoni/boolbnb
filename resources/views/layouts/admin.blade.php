@@ -29,6 +29,7 @@
         </div>
     </div>
     <script src="{{ asset('js/AddressCheck.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/chart.js') }}"></script>
 </body>
 </html>
