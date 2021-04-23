@@ -4,14 +4,13 @@
 
   <div class="row col-12">
     <div class="contenitore-radiobox col-12">
-      <h4>Indica l'appartamento che vuoi sponsorizzare!</h4>
+      <h4>Indica l'appartamento che vuoi sponsorizzare!</h4>     
       <div class="list-group">
-      
-        <input type="radio" name="RadioInputName" value="Value1" id="Radio1" />
-        <label class="list-group-item" for="Radio1"> $property->title1 di $property->address1</label>
-
-        <input type="radio" name="RadioInputName" value="Value2" id="Radio2" />
-        <label class="list-group-item" for="Radio2"> $property->title2 di $property->address2</label>
+      @foreach ($properties as $property)
+        <input type="radio" name="RadioInputName" value="{{ $property->id }}" id="{{ $property->id }}" />
+        <label class="list-group-item" for="{{ $property->id }}"> {{ $property->title }}</label>
+      @endforeach
+        
         
       </div>
     </div>
@@ -51,7 +50,7 @@
     </div>
   </div>
 
-  <div class="row col-12">
+  {{-- <div class="row col-12">
     <div class="col-12">
       <div class="card-body box-shadow-card bg-offerta text-center">
         <h5 class="card-title">Attenzione !</h5>
@@ -59,6 +58,6 @@
         <a style="text-decoration:none" href="#" class="bottone padding-btn">Riattiva</a>
       </div>
     </div>
-  </div>
+  </div> --}}
 
 @endsection
