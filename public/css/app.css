@@ -12584,13 +12584,19 @@ table .tabella .testa-tabella th {
   border-radius: 10px;
 }
 
+<<<<<<< HEAD
 .container-slider .carousel-inner img {
   height: 500px;
+=======
+.carousel-inner img {
+  height: 200px;
+>>>>>>> main
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+<<<<<<< HEAD
 .container-slider .anteprima-img {
   margin: 20px 0;
 }
@@ -12609,3 +12615,5 @@ table .tabella .testa-tabella th {
   border-bottom: 1px solid #004C99;
 }
 
+=======
+>>>>>>> main

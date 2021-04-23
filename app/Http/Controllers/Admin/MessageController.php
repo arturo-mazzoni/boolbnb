@@ -18,5 +18,5 @@ class MessageController extends Controller
 
         return view('admin.message.index', $data);
     }
-    
+
 }

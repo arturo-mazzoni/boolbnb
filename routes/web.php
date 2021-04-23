@@ -25,14 +25,14 @@ Route::get('/host', function () {
   return view('guests.become-host');
 })->name('become-host');
 
-Auth::routes();
-Route :: get ( '/ payment / process' , 'PaymentsController @ process' ) -> name ( 'payment.process' ); 
+Auth::routes(); 
 Route::prefix('admin')
     ->namespace('Admin')
     ->middleware('auth')
     ->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
         Route::resource('property', 'PropertyController');
+        Route::resource('message', 'MessageController');
         Route::get('/message', 'MessageController@index')->name('messages');
         Route::get('/sponsor', 'SponsorController@index')->name('sponsors');
         Route::get('/dashboardhome', 'DashboardHomeController@index')->name('dashboardhome');
