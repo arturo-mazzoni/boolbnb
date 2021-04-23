@@ -10975,6 +10975,16 @@ ul {
   color: #808080;
 }
 
+.bottone-rosso {
+  background-color: red;
+  color: #F5B964;
+  font-weight: bolder;
+}
+
+.bottone-rosso:hover {
+  color: #808080;
+}
+
 .padding-btn {
   padding: 10px 20px;
   border-radius: 20px;
@@ -12252,10 +12262,14 @@ body {
 }
 
 #search-main .left-box .left-box-bottom .apartment .apartment-image {
-  background-color: khaki;
   height: 180px;
   width: 300px;
-  border-radius: 8px;
+}
+
+#search-main .left-box .left-box-bottom .apartment .apartment-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 #search-main .left-box .left-box-bottom .apartment .apartment-info {
@@ -12289,7 +12303,6 @@ body {
 #search-main .right-box #map-div {
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 
 footer {
@@ -12597,6 +12610,40 @@ table .tabella .testa-tabella th {
   border: 1px solid #ccc;
 }
 
+.contenitore-radiobox {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-left: 10px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+}
+
+.contenitore-radiobox .list-group input[type=radio] {
+  display: none;
+}
+
+.contenitore-radiobox .list-group input[type=radio] + .list-group-item {
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.contenitore-radiobox .list-group input[type=radio] + .list-group-item:before {
+  content: "\2022";
+  color: transparent;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.contenitore-radiobox .list-group input[type=radio]:checked + .list-group-item {
+  background-color: #004C99;
+  color: #F5B964;
+}
+
+.contenitore-radiobox .list-group input[type=radio]:checked + .list-group-item:before {
+  color: inherit;
+}
+
 .row {
   display: flex;
   margin-bottom: 20px;
@@ -12608,7 +12655,7 @@ table .tabella .testa-tabella th {
 }
 
 .contenitore-card-sponsor {
-  background-color: #f7f7f7;
+  transition: 0.33s;
   padding: 20px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -12617,10 +12664,30 @@ table .tabella .testa-tabella th {
   text-align: center;
 }
 
+.contenitore-card-sponsor:hover {
+  transform: scale(1.05);
+}
+
 .box-shadow-card {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
   background-color: #f7f7f7;
+}
+
+.bg-bronzo {
+  background-image: linear-gradient(to bottom right, #CD7F32, #F3A960);
+}
+
+.bg-argento {
+  background-image: linear-gradient(to bottom right, #C0C0C0, #E6E6E6);
+}
+
+.bg-oro {
+  background-image: linear-gradient(to bottom right, #B78628, #FCC201);
+}
+
+.bg-offerta {
+  background-image: linear-gradient(to bottom right, red, yellow);
 }
 
 .carousel-inner {
