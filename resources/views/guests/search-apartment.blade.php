@@ -70,7 +70,9 @@
                     <div class="apartment-info">
                         <div class="info-top">
                             <h3>@{{apartment.title}}</h3>
-                            <div class="apartment-amenities">lista di tutti i servizi</div>
+                            <div class="apartment-amenities">
+                              <span v-for="amenity in apartment.amenity">@{{amenity['service']}}, </span>
+                            </div>
                         </div>
                         <div class="info-bottom">@{{apartment.price_per_night}}</div>
                     </div>                

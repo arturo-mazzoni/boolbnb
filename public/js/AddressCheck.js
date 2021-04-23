@@ -2165,7 +2165,6 @@ var app = new Vue({
     checked: true,
     apartmentsResult: '',
     apartmentsList: '',
-    apartmentAddress: '',
     finalCoords: [],
     finalApartments: [],
     storagePath: 'storage/'
@@ -2182,7 +2181,6 @@ var app = new Vue({
     searchadrres: function searchadrres() {
       var _this2 = this;
 
-      this.searchElement = [];
       this.checked = true;
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + this.query + '.json?countrySet=IT&extendedPostalCodesFor=Str&entityTypeSet=&key=' + this.tomTomKey, {}).then(function (result) {
         _this2.searchElement = result.data.results;
@@ -2221,16 +2219,20 @@ var app = new Vue({
           });
 
           console.log(_this4.finalCoords);
-          _this4.finalApartments = [];
 
           _this4.finalCoords.forEach(function (c) {
             if (c.lat == e.latitude && c.lon == e.longitude) {
-              _this4.finalApartments.push(e);
+              if (!_this4.finalApartments.includes(e)) {
+                _this4.finalApartments.push(e);
+              }
             }
           });
 
           console.log(_this4.finalApartments);
         });
+        _this4.finalApartments = [];
+        _this4.finalCoords = [];
+        _this4.apartmentsResult = [];
       });
     }
   }
