@@ -118,8 +118,10 @@ class PropertyController extends Controller
     {
       if ($property) {
         $tags = Property::all();
+        $amenity=Amenity::all();
         $data = [
-          'property' => $property
+          'property' => $property,
+          'amenity'=> $amenity
         ];
 
         return view('admin.property.edit', $data);
@@ -165,6 +167,8 @@ class PropertyController extends Controller
       
 
       $property->update($data);
+
+      $property->amenities()->sync($data['amenity']);
 
       return redirect()->route('property.show', $property)->with('status', 'Record updated');
     }
