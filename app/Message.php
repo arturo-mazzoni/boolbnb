@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Message extends Model
 {
-    public function properties()
+    public function property()
     {
     return $this->belongsTo('App\Property');
     }
@@ -16,6 +16,6 @@ class Message extends Model
         'name',
         'content',
         'date',
-        'prpperty_id'
+        'property_id'
       ];
 }

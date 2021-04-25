@@ -10,8 +10,7 @@
         <input type="radio" name="RadioInputName" value="{{ $property->id }}" id="{{ $property->id }}" />
         <label class="list-group-item" for="{{ $property->id }}"> {{ $property->title }}</label>
       @endforeach
-        
-        
+
       </div>
     </div>
   </div>

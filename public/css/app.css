@@ -12674,6 +12674,19 @@ table .tabella .testa-tabella th {
   background-color: #f7f7f7;
 }
 
+<<<<<<< HEAD
+.container-slider .carousel-inner {
+  border-radius: 10px;
+}
+
+<<<<<<< HEAD
+.container-slider .carousel-inner img {
+  height: 500px;
+=======
+.carousel-inner img {
+  height: 200px;
+>>>>>>> main
+=======
 .bg-bronzo {
   background-image: linear-gradient(to bottom right, #CD7F32, #F3A960);
 }
@@ -12696,8 +12709,33 @@ table .tabella .testa-tabella th {
 
 .carousel-inner img {
   height: 200px;
+>>>>>>> main
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+.container-slider .anteprima-img {
+  margin: 20px 0;
+}
+
+.container-slider .anteprima-img .box-img {
+  display: flex;
+}
+
+.container-slider .anteprima-img .box-img img {
+  width: 25%;
+  border-radius: 15px;
+  padding: 2.5px;
+}
+
+.container-slider .title-address {
+  border-bottom: 1px solid #004C99;
+}
+
+=======
+>>>>>>> main
+=======
+>>>>>>> main
