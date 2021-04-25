@@ -96,15 +96,14 @@ var app = new Vue({
 
 
                         console.log("update");
-                        console.log(this.finalApartments);
                         this.finalApartments.forEach(element => {
 
-                            this.posizioni.push({
-                                'lat': element.latitude,
-                                'lng': element.longitude
-                            });
-
-
+                            if (!this.posizioni.some(p => p.lat == element.latitude && p.lng == element.longitude)) {
+                                this.posizioni.push({
+                                    'lat': element.latitude,
+                                    'lng': element.longitude
+                                });
+                            }
 
                         });
                         console.log(this.posizioni);
