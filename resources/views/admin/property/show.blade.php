@@ -82,20 +82,6 @@
       </div>
       @endif
 
-    <ul>
-      <li>Nome: {{ $property->title }}</li>
-      <li>Stanze: {{ $property->rooms_number }}</li>
-      <li>Letti: {{ $property->beds_number }}</li>
-      <li>Bagni: {{ $property->bathrooms_number }}</li>
-      <li>Mq: {{ $property->sqm_number }}</li>
-      <li>Indirizzo: {{ $property->address }}</li>
-      <li>Foto: 
-        <img src="{{ asset('storage/'.$property->image)  }}" alt=""> </li>
-      <li>{{ $property->visible }}</li>
-      <li>Prezzo: {{ $property->price_per_night }}</li>
-      <li>Descrizione: {{ $property->description }}</li>
-    </ul> --}}
-
     {{-- <div class="buttons">
       <button style="margin-top:20px" type="submit" class="bottone padding-btn">Modifica</button>
       <form action="" class="d-inline-block" method="post">
