@@ -13,6 +13,7 @@ var app = new Vue({
         coordsResult: '',
         apartmentsList : '',
         finalApartments: [],
+        amenityList: '',
         copunt: '',
         posizioni: [],
         storagePath: 'storage/'
@@ -25,6 +26,13 @@ var app = new Vue({
             console.log('Lista Originale:');
             console.log(this.apartmentsList);
         });
+
+        axios
+            .get('http://127.0.0.1:8000/api/amenity')
+            .then((result) => {
+                this.amenityList = result.data.response;
+                console.log(this.amenityList);
+            });
         
         const Honolulu = { lng: 12.674297, lat: 42.6384261 };
 

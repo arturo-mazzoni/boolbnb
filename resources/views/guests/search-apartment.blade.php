@@ -27,7 +27,7 @@
         <div class="wrap">
           
           <a href="{{ url('/') }}">
-            <img src="https://assets.jobs.bg/assets/logo/2014-04-29/b_04743888ac08f85b45b4c476c7941c6f.jpg" style="width:200px;" alt="Logo Airbnb">
+            <img src="https://assets.jobs.bg/assets/logo/2014-04-29/b_04743888ac08f85b45b4c476c7941c6f.jpg" style="width:170px;" alt="Logo Airbnb">
           </a>
 
         </div>
@@ -55,10 +55,7 @@
             <div class="left-box-top">
                 <h2>Soggiorni nell'area selezionata della mappa</h2>
                 <div class="filters">
-                    <span>filtro1</span>
-                    <span>filtro2</span>
-                    <span>filtro3</span>
-                    <span>filtro4</span>
+                    <span v-for="amenity in amenityList">@{{amenity['service']}}</span>
                 </div>
             </div>
     
@@ -73,7 +70,9 @@
                         <div class="info-top">
                             <h3>@{{apartment.title}}</h3>
                             <div class="apartment-amenities">
-                              <span v-for="amenity in apartment.amenity">@{{amenity['service']}}, </span>
+                              <span v-for="(amenity, index) in apartment.amenity">
+                                @{{(index > 0) ? '&sdot;' : ''}} @{{amenity.service}}
+                              </span>
                             </div>
                         </div>
                         <div class="info-bottom">@{{apartment.price_per_night}}</div>
