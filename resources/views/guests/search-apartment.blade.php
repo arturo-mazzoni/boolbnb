@@ -85,45 +85,7 @@
         <div class="right-box">
         <!-- TOM TOM mappa-->
           <div style="width:100%;height:100%" id="map-div"></div>
- <script>
-   $(document).ready(function(){
-    const Honolulu = {lng: -157.970000, lat: 21.4525000};
 
-        var map = tt.map({
-          key: 'QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp',
-          container: 'map-div',
-          center: Honolulu,
-          zoom: 9.3
-        });
-        
-      // scheletro di come mettere il marker attraverso la posizione (latitudine e longitudine)
-      // ( var marker = new tt.Marker().setLngLat(HQ).addTo(map);
-      // per ora è una lista con latitudine e longitudine inventate
-            var posizioni = [
-                { lat: 21.4000000, lng: -157.975000 },
-                { lat: 21.4500000, lng: -157.985000 },
-                { lat: 21.4900000, lng: -157.995000 },
-                { lat: 21.5500000, lng: -157.999990 }
-            ];
-        //  contatore per ciclarli 
-            count = 1;
-
-        // crea maker per ogni posizioni (latitudine e longitudine)
-            posizioni.forEach(posizione => {
-
-        // Casella di testo
-            var popup = new tt.Popup({ anchor: 'top' }).setText('nome appartamento');
-        
-            var marker = new tt.Marker().setLngLat(posizione).addTo(map);
-
-        // makers
-            marker.setPopup(popup).togglePopup();
-            count++;
-        
-        });   
-        
-});
-</script>  
         <!-- FINE TOM TOM mappa-->
         </div>
     </main>

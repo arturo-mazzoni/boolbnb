@@ -1,4 +1,5 @@
 import axios from 'axios';
+var map;
 var app = new Vue({
     el: '#root',
     data: {
@@ -9,10 +10,11 @@ var app = new Vue({
         lat:0,
         lon:0,
         checked:true,
-        apartmentsResult: '',
+        coordsResult: '',
         apartmentsList : '',
-        finalCoords: [],
         finalApartments: [],
+        copunt: '',
+        posizioni: [],
         storagePath: 'storage/'
     },
     mounted() {
@@ -20,8 +22,18 @@ var app = new Vue({
         .get('http://127.0.0.1:8000/api/property')
         .then((result) => {
             this.apartmentsList = result.data.response;
+            console.log('Lista Originale:');
             console.log(this.apartmentsList);
-        });       
+        });
+        
+        const Honolulu = { lng: 12.674297, lat: 42.6384261 };
+
+        map = tt.map({
+            key: 'QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp',
+            container: 'map-div',
+            center: Honolulu,
+            zoom: 9.3
+        });
     },
     methods:{
         
@@ -55,36 +67,70 @@ var app = new Vue({
             console.log(this.lat);
             console.log(this.lon);
         },
+        distanceCalc(){
+            this.finalApartments.forEach(e => {
+                e.distance = (e.latitude - this.lat) * (e.latitude - this.lat) + (e.longitude - this.lon) * (e.longitude - this.lon);
+            });
+        },
         searchApartment() {
             this.apartmentsList.forEach(e => {
                 axios
                     .get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + this.lat + '&lon=' + this.lon + '&radius=2000' + '&key=' + this.tomTomKey)
                     .then((result) => {
-                        this.apartmentsResult = result.data.results;
-                        this.apartmentsResult.forEach(r => {
-                            this.finalCoords.push({
-                                'lat': r.position.lat + '000',
-                                'lon': r.position.lon + '000',
-                            });
-                                
-                        });
-                        console.log(this.finalCoords);
-
-                        this.finalCoords.forEach(c => {
-                            
-                            if (c.lat == e.latitude && c.lon == e.longitude) {
+                        this.coordsResult = result.data.results;
+                        this.coordsResult.forEach(c => {
+                            if (c.position.lat == e.latitude && c.position.lon == e.longitude) {
                                 if (!this.finalApartments.includes(e)) {
                                     this.finalApartments.push(e);
                                 }
-                                
+
                             }
                         });
+
+                        this.distanceCalc();
+                        this.finalApartments.sort(function (a, b) {
+                            return a.distance - b.distance;
+                        });
+                        console.log('Lista Finale Ordinata');
                         console.log(this.finalApartments);
+
+
+                        console.log("update");
+                        console.log(this.finalApartments);
+                        this.finalApartments.forEach(element => {
+
+                            this.posizioni.push({
+                                'lat': element.latitude,
+                                'lng': element.longitude
+                            });
+
+
+
+                        });
+                        console.log(this.posizioni);
+
+                        //  contatore per ciclarli 
+                        this.count = 1;
+
+                        // crea maker per ogni posizioni (latitudine e longitudine)
+                        this.posizioni.forEach(posizione => {
+
+                            // Casella di testo
+                            var popup = new tt.Popup({ anchor: 'top' }).setText('nome appartamento');
+
+                            var marker = new tt.Marker().setLngLat(posizione).addTo(map);
+
+                            // makers
+                            marker.setPopup(popup).togglePopup();
+                            this.count++;
+
+                        });
                     });
-                this.finalApartments = [];
-                this.finalCoords = [];
-                this.apartmentsResult = [];
-                });
+            });
+
+            this.finalApartments = [];
+            this.finalCoords = [];
+            this.coordsResult = [];
         },
     }
 
