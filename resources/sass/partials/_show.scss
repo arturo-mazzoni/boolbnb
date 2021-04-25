@@ -1,44 +1,7 @@
-.container-slider {
-
-<<<<<<< HEAD
-  .carousel-inner {
-    border-radius: 10px;
-  
-      
-    img {
-      height: 500px;
-      width: 100%;
-      object-fit: cover;
+.list-group{
+  div{
+    i{
+      color: $aloha-blue;
     }
   }
-  
-  .anteprima-img {
-    margin: 20px 0;;
-
-    .box-img {
-      display: flex;
-        
-      img {
-        width:25%;
-        border-radius: 15px;  
-        padding: 2.5px;      
-      }
-    }
-  }
-
-  .title-address {
-    border-bottom: 1px solid $aloha-blue;
-  }
 }
-
-
-
-=======
-    
-  img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-  }
-}
->>>>>>> main
