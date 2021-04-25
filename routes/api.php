@@ -22,4 +22,6 @@ Route::get('/property','Api\PropertyController@index')->middleware('api_token');
 
 Route::get('/views','Api\ViewController@index');
 
+Route::get('/amenity','Api\AmenityController@index');
+
 

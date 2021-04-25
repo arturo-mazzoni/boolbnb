@@ -26,8 +26,10 @@
       <div id="my-header-search">
         <div class="wrap">
           
-          <img src="https://assets.jobs.bg/assets/logo/2014-04-29/b_04743888ac08f85b45b4c476c7941c6f.jpg" style="width:200px;" alt="Logo Airbnb">
-          
+          <a href="{{ url('/') }}">
+            <img src="https://assets.jobs.bg/assets/logo/2014-04-29/b_04743888ac08f85b45b4c476c7941c6f.jpg" style="width:170px;" alt="Logo Airbnb">
+          </a>
+
         </div>
         
         <div id="my-search-bar" class="header-form">
@@ -53,10 +55,7 @@
             <div class="left-box-top">
                 <h2>Soggiorni nell'area selezionata della mappa</h2>
                 <div class="filters">
-                    <span>filtro1</span>
-                    <span>filtro2</span>
-                    <span>filtro3</span>
-                    <span>filtro4</span>
+                    <span v-for="amenity in amenityList">@{{amenity['service']}}</span>
                 </div>
             </div>
     
@@ -71,7 +70,9 @@
                         <div class="info-top">
                             <h3>@{{apartment.title}}</h3>
                             <div class="apartment-amenities">
-                              <span v-for="amenity in apartment.amenity">@{{amenity['service']}}, </span>
+                              <span v-for="(amenity, index) in apartment.amenity">
+                                @{{(index > 0) ? '&sdot;' : ''}} @{{amenity.service}}
+                              </span>
                             </div>
                         </div>
                         <div class="info-bottom">@{{apartment.price_per_night}}</div>
@@ -85,45 +86,7 @@
         <div class="right-box">
         <!-- TOM TOM mappa-->
           <div style="width:100%;height:100%" id="map-div"></div>
- <script>
-   $(document).ready(function(){
-    const Honolulu = {lng: -157.970000, lat: 21.4525000};
 
-        var map = tt.map({
-          key: 'QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp',
-          container: 'map-div',
-          center: Honolulu,
-          zoom: 9.3
-        });
-        
-      // scheletro di come mettere il marker attraverso la posizione (latitudine e longitudine)
-      // ( var marker = new tt.Marker().setLngLat(HQ).addTo(map);
-      // per ora è una lista con latitudine e longitudine inventate
-            var posizioni = [
-                { lat: 21.4000000, lng: -157.975000 },
-                { lat: 21.4500000, lng: -157.985000 },
-                { lat: 21.4900000, lng: -157.995000 },
-                { lat: 21.5500000, lng: -157.999990 }
-            ];
-        //  contatore per ciclarli 
-            count = 1;
-
-        // crea maker per ogni posizioni (latitudine e longitudine)
-            posizioni.forEach(posizione => {
-
-        // Casella di testo
-            var popup = new tt.Popup({ anchor: 'top' }).setText('nome appartamento');
-        
-            var marker = new tt.Marker().setLngLat(posizione).addTo(map);
-
-        // makers
-            marker.setPopup(popup).togglePopup();
-            count++;
-        
-        });   
-        
-});
-</script>  
         <!-- FINE TOM TOM mappa-->
         </div>
     </main>

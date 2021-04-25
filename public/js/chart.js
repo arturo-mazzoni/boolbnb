@@ -14794,7 +14794,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\coding\bc\mamp_public\esercizi\progetto-finale\boolbnb\resources\js\chart.js */"./resources/js/chart.js");
+module.exports = __webpack_require__(/*! C:\Boolean\mamp_public\boolbnb\resources\js\chart.js */"./resources/js/chart.js");
 
 
 /***/ })
