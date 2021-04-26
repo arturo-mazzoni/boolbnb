@@ -21,9 +21,9 @@
       <div class="footer-section">
         <h6 class="mb-4">Implementazioni</h6>
         <ul>
-          <li><a href="https://www.braintreepayments.com/">BrainTree</a></li>
-          <li><a href="https://developer.tomtom.com/">TomTom</a></li>
-          <li><a href="">Statistics</a></li>
+          <li><a target="_blank" href="https://www.braintreepayments.com/">BrainTree</a></li>
+          <li><a target="_blank" href="https://developer.tomtom.com/">TomTom</a></li>
+          <li><a target="_blank" href="https://www.chartjs.org/">Chart.js</a></li>
           
         </ul>
       </div>
