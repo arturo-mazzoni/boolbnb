@@ -1,5 +1,5 @@
-<header id="header">
-  <div class="wrap">
+<header>
+  <div id="header" class="wrap">
     <div id="hamburger" v-on:click="display_menu()">
       <span></span>
       <span></span>
@@ -39,11 +39,17 @@
         @endguest
     </nav>
   </div>
-      <form class="bottone-speciale" action="#">
-        <label :data-state="state" for="search">
-          <input type="text" placeholder="Ricerca.." @click="state = 'opan'" @blur="state='close'"/>
-          <i class="fa fa-search" @click="" aria-hidden="true"></i>
-        </label>
-      </form>
+  <div id="root">
+    <form class="bottone-speciale" action="{{route('search-apartment')}}">
+          <label :data-state="state" for="search">
+              <input type="text" v-model="query"  @keyup="searchadrres" name="address" id="address" placeholder="Ricerca.."/>
+              <div v-if="searchElement && query != 0" class="drop-home">
+                                <ul v-if="checked" class="list-group">
+                                  <li v-for="(item,index) in searchElement"  @click="setstreets(item['address'].freeformAddress,index)" class="list-group-item "><i class="fas fa-map-marker-alt pr-2"></i>@{{item['address'].freeformAddress}}</li>
+                                </ul> 
+                            </div>
+              <i class="fa fa-search" @click="searchApartment" aria-hidden="true"></i>
+          </label></form>
+  </div>
 </header>
 	

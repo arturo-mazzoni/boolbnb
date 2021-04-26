@@ -1,6 +1,6 @@
 header {
 	display: flex;
-	z-index: 99;
+	z-index: 9;
 	padding: 10px 0;
 	background-color: white;
 	position: fixed;
@@ -127,6 +127,14 @@ header #hamburger span {
 			-webkit-appearance:none
 			} 
 		}
+	}
+	.drop-home {
+		position: absolute;
+		top: 42px;
+		left: 0;
+		height: 400px;
+		overflow-y: scroll;
+		width: 100%;
 	}
 }
 
