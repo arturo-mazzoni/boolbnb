@@ -36,7 +36,7 @@
           <form class="bottone-speciale" action="#">
           <label :data-state="state" for="search">
               <input type="text" v-model="query"  @keyup="searchadrres" name="address" id="address" placeholder="Ricerca.."/>
-              <div v-if="searchElement " class="drop">
+              <div v-if="searchElement && query != 0" class="drop">
                                 <ul id="my-ul-search" v-if="checked" class="list-group">
                                   <li id="my-li-search" v-for="(item,index) in searchElement"  @click="setstreets(item['address'].freeformAddress,index)" class="list-group-item "><i class="fas fa-map-marker-alt pr-2"></i>@{{item['address'].freeformAddress}}</li>
                                 </ul> 
