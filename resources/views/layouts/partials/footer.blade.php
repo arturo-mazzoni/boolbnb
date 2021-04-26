@@ -2,72 +2,59 @@
   <div class="my-container">
     <div class="footer-top">
       <div class="footer-section">
-        <h6>Informazioni</h6>
+        <h6 class="mb-4">Informazioni</h6>
         <ul>
-          <li>Come funziona</li>
-          <li>Opportinità di lavoro</li>
-          <li>Newsroom</li>
+          <li><a href="{{ route('search-apartment') }}">Alloggi</a></li>
+          <li><a href="{{ route('become-host') }}">Diventa un Host</a></li>
+          <li><a href="{{ url('/') }}">Torna alla home</a></li>
         </ul>
       </div>  
 
       <div class="footer-section">
-        <h6>Community</h6>
+        <h6 class="mb-4">Librerie usate</h6>
         <ul>
-          <li>AirBnb.org</li>
-          <li>Accessibilità</li>
-          <li>Invitare un ospite</li>
-          <li>Diversità e appartenenza</li>
+          <li>Bootstrap</li>
+          <li>VueJs</li>
         </ul>
       </div>  
 
       <div class="footer-section">
-        <h6>Ospita</h6>
+        <h6 class="mb-4">Implementazioni</h6>
         <ul>
-          <li>Diventa un host</li>
-          <li>Ospitare responsabilmente</li>
-          <li>Centro Risorse</li>
+          <li><a href="https://www.braintreepayments.com/">BrainTree</a></li>
+          <li><a href="https://developer.tomtom.com/">TomTom</a></li>
+          <li><a href="">Statistics</a></li>
+          
         </ul>
       </div>
       
       <div class="footer-section">
-        <h6>Assistenza</h6>
+        <h6 class="mb-4">Realizzatori del sito</h6>
         <ul>
-          <li>Contatti</li>
-          <li>Centro assistenza</li>
-          <li>La nostra risposta all'emergenza COVID-19</li>
-          <li>Affidabilità e sicurezza</li>
-          <li>Opzioni di cancellazione</li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/alessandro-fini-65314993/">Alessandro Fini</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/arturo-mazzoni-69629582/">Arturo Mazzoni</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/federico-crudo-7934211ab/">Federico Crudo</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/raffa-giuseppe/">Giuseppe Raffa</a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/leandro-pessano/">Leandro Andres Pessano</a></li>
+
         </ul>
       </div>
     </div>
     <!-- fine footer-top -->
     <div class="footer-bottom">
       <ul class="div-1">
-        <li>&#xa9;2021 AirBnb, Inc. all rights reserved</li>
-        <li><a href="">Privacy</a></li>
-        <li><a href="">Termini</a></li>
-        <li><a href="">Mappa del sito</a></li>
-        <li><a href="">Dettagli dell'azienda</a></li>
+        <li>&#xa9;2021,Progetto Boolbnb, Gruppo 4 </li>
       </ul>
-      <ul class="div-2">
+      
+      <ul class="div-social">
         <li>
-          <i class="fas fa-globe"></i>
-          <a href="">Italiano(IT)</a>
+        <button type="button" class="btn-social"><i class="icon-size fab fa-facebook-f social-i"></i></button>
         </li>
         <li>
-          &#8364; 
-          <a href="">EUR</a>
-        </li>
-      </ul>
-      <ul class="div-3">
-        <li>
-        <button type="button" class="btn-social"><i class="icon-size fab fa-facebook-f"></i></button>
+          <button type="button" class="btn-social"><i class="icon-size fab fa-twitter social-i"></i></button>
         </li>
         <li>
-          <button type="button" class="btn-social"><i class="icon-size fab fa-twitter"></i></button>
-        </li>
-        <li>
-          <button type="button" class="btn-social"><i class="icon-size fab fa-instagram"></i></button>
+          <button type="button" class="btn-social"><i class="icon-size fab fa-instagram social-i"></i></button>
         </li>
       </ul>
     </div>
