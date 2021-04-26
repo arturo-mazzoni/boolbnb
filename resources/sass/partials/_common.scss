@@ -42,5 +42,24 @@ ul {
 }
 
 .border-radius-20 {
-  border-radius: 20px;
+  border-radius: 40px;
+}
+
+.show-apartment-head {
+  display: flex;
+  margin: 10px 10px 20px;
+  img {
+    margin-right: 20px;
+  }
+  div {
+    h2 {
+      padding-left: 10px;
+    }
+    h5 {
+      padding-left: 10px;
+      &:last-child {
+        padding-left: 8px;
+      }
+    }
+  }
 }

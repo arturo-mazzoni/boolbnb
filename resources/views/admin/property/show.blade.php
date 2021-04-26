@@ -3,11 +3,24 @@
 @section('content')
 <div class="container-fluid">
   {{-- SEZIONE DETTAGLI --}}
+
+    <div class="show-apartment-head">
+
+      <img src="{{ asset('storage/'.$property->image)  }}" alt="" style="width: 400px;">
+
+      <div>
+        <h2>{{-- <i class="fas fa-home"></i> --}} {{ $property->title }} </h2>
+
+        <h5><i class="fas fa-map-marker-alt"></i> {{ $property->address }} </h5>
+
+        <h5><i class="fas fa-info-circle"></i> {{ $property->description }} </h5>
+      </div>
+      
+    </div>
+
     <div class="row">
         <ul class="col-sm-12 col-md-6 ">
-            <li class="list-group-item">
-              <div class="md-v-line d-inline"><i class="fas fa-home mr-4"></i></div ><strong>Nome:</strong> {{ $property->title }} 
-            </li>
+            
             <li class="list-group-item">
               <div class="md-v-line d-inline"><i class="fas fa-door-open mr-4"></i></div><strong>Stanze:</strong> {{ $property->rooms_number }} 
             </li>
@@ -17,23 +30,29 @@
             <li class="list-group-item">
               <div class="md-v-line d-inline"><i class="far fa-square mr-4"> </i></div><strong> Mq:</strong> {{ $property->sqm_number }} 
             </li>
-            <li class="list-group-item">
-              <div class="md-v-line d-inline"><i class="fas fa-map-marker-alt mr-4"></i></div><strong>Indirizzo:</strong> {{ $property->address }} 
-            </li>
+
         </ul>
         <ul class="col-sm-12 col-md-6 ">
             
             <li class="list-group-item">
-              <div class="md-v-line d-inline"><i class="fas fa-images mr-4"></div></i><strong>Foto:</strong> <img src="{{ asset('storage/'.$property->image)  }}" alt=""> </li> 
-            </li>
-            <li class="list-group-item">
-              <div class="md-v-line d-inline"><i class="fas fa-eye mr-4"></i></div><strong>Visibile:</strong> {{ $property->visible }}
+              <div class="md-v-line d-inline"><i class="fas fa-eye mr-4"></i></div><strong>Visibile:</strong> 
+              @if ($property->visible == 1 )
+                sì
+              @else 
+                no
+              @endif
             </li>
             <li class="list-group-item">
               <div class="md-v-line d-inline"><i class="fas fa-money-bill-alt mr-4"></i></div><strong>Prezzo:</strong> {{ $property->price_per_night }}
             </li>
             <li class="list-group-item">
-              <div class="md-v-line d-inline"><i class="fas fa-info-circle mr-4"></i></div><strong> Descrizione:</strong><br> {{ $property->description }}
+              <div class="md-v-line d-inline"><i class="fas fa-couch mr-4"></i></div><strong>Servizi:</strong>
+              @foreach ($property->amenities as $amenity)
+                  {{ $amenity->service }}
+                  @unless ($loop->last)
+                      &sdot;
+                  @endunless
+              @endforeach
             </li>
           </ul>
     </div>
