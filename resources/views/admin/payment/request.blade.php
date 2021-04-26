@@ -1,78 +1,31 @@
-@extends('layouts.app')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <script src="https://js.braintreegateway.com/web/dropin/1.27.0/js/dropin.min.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    {{-- @include('partials.header') --}}
-    <div>
+@extends('layouts.admin')
+@section('content')
+    
+    <div id='sponsor'>
           @if($sponsor) 
-            <div class= "container">
-              <form id="payment-form" action="{{ route("payment.payment", $property->id) }}" method="post">
+            <div class= 'container'>
+              <form id='payment-form' action='{{ route('payment.payment', $property->id) }}' method='post'>
                 @csrf
                 @method('POST')
-                <div class="row col-12">
-                    <div class="contenitore-radiobox col-12">
-                    <h4>Indica l'appartamento che vuoi sponsorizzare!</h4>     
-                    <div class="list-group">
-                    @foreach ($property as $properties)
-                        <input type="radio" name="RadioInputName" value="{{ $property->id }}" id="{{ $property->id }}" />
-                        <label class="list-group-item" for="{{ $property->id }}"> {{ $property->title }}</label>
-                    @endforeach
-
+                <h3>Rendi più visibile il tuo appartamento {{ $property->title }} a {{ $property->address }}</h3>
+                <p>Acquista una delle nostre sponsorizzazioni</p>
+                <div class='layout-cards'>
+                  <div class='card' style='width: 18rem;' v-for='(sponsor, index) in sponsors'>
+                    <div class="card-body center-card"  :class="(counter == index) ? sponsor.title : '' " v-on:click="selection(sponsor, index)">
+                      <h5 class='card-title'>@{{ sponsor.title }}</h5>
+                      <p class='card-text'>@{{ sponsor.duration }} days</p>
+                      <p class='card-text'>@{{ sponsor.amount }}€</p>
+                      {{-- <a href='#' class='btn btn-success'>Acquista</a> --}}
+                      {{-- <input type='checkbox' name='mario' value=''> --}}
                     </div>
-                    </div>
+                  </div>
                 </div>
-
-                <div class="row col-12">
-
-                    <div class="col-sm-12 col-lg-4">
-                    <div class="contenitore-card-sponsor bg-oro">
-                        
-                        <div class="card-body">
-                            <h5 class="card-title">Gold Package</h5>
-                            <p class="card-text">Con questo pacchetto il tuo annuncio sarà in evidenza per ... ore</p>
-                            <a style="text-decoration:none" href="#" class="bottone padding-btn">Attiva</a>
-                        </div>
-                    </div>
-                    </div>
-                    
-                    <div class="col-sm-12 col-lg-4 margin-right-20">
-                    <div class="contenitore-card-sponsor bg-argento">
-                        <div class="card-body ">
-                            <h5 class="card-title">Silver Package</h5>
-                            <p class="card-text">Con questo pacchetto il tuo annuncio sarà in evidenza per ... ore</p>
-                        <a style="text-decoration:none" href="#" class="bottone padding-btn">Attiva</a>
-                        </div>
-                    </div>
-                    </div>
-                
-                    <div class="col-sm-12 col-lg-4">
-                    <div class="contenitore-card-sponsor bg-bronzo">
-                        <div class="card-body">
-                            <h5 class="card-title">Bronze Package</h5>
-                            <p class="card-text">Con questo pacchetto il tuo annuncio sarà in evidenza per ... ore</p>
-                        <a style="text-decoration:none" href="#" class="bottone padding-btn">Attiva</a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                {{-- v-on:mouseenter="enter(index)" v-on:mouseleave="leave(index)" --}}
-                <input type="hidden" id="sel" name="sponsor">
-                <div id="dropin-container"></div>
-                {{-- <input type="number" name="sponsor"> --}}
-                <input type="hidden" id="nonce" name="payment_method_nonce"/>
-                <input type="submit" />
+                {{-- v-on:mouseenter='enter(index)' v-on:mouseleave='leave(index)' --}}
+                <input type='hidden' id='sel' name='sponsor'>
+                <div id='dropin-container'></div>
+                {{-- <input type='number' name='sponsor'> --}}
+                <input type='hidden' id='nonce' name='payment_method_nonce'/>
+                <input id='paga' type='submit' />
                 {{-- 4111 1111 1111 1111 --}}
               </form>
             </div>
@@ -100,13 +53,13 @@
             </script>
           
           @else 
-            <div class="container result">
-              <div class="row d-flex justify-content-center">
+            <div class='container result'>
+              <div class='row d-flex justify-content-center'>
                 <div class="card col-8 pt-3 pb-3">
-                  <div class="card-body d-flex flex-column align-items-center">
+                  <div class='card-body d-flex flex-column align-items-center'>
                       <h2>Sponsorizzazione già attiva</h2>
-                      <div class="check-img">
-                        <img src="https://www.freeiconspng.com/uploads/error-icon-4.png" alt="">
+                      <div class='check-img'>
+                        <img src='https://www.freeiconspng.com/uploads/error-icon-4.png' alt=''>
                       </div>
                   </div>
                 </div>
@@ -114,8 +67,13 @@
           
           @endif
         </div>
-        {{-- @include('partials.footer') --}}
+        
     </div>
-    {{-- <script src="{{ asset('js/sponsor.js') }}"></script> --}}
-</body>
-</html>
+
+@endsection
+@section('script')
+<script src='{{ asset('js/sponsor.js') }}'></script>
+@endsection
+{{-- ● 2,99 € per 24 ore di sponsorizzazione
+● 5.99 € per 72 ore di sponsorizzazione
+● 9.99 € per 144 ore di sponsorizzazione --}}

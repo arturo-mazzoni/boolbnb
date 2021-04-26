@@ -11,7 +11,7 @@ class PaymentController extends Controller
 {
     public function request(Property $property)
     {
-      //  if(Auth::id() == $property->admin_id) {
+        if(Auth::id() == $property->user_id) {
         //gateway
         $gateway = new \Braintree\Gateway([
           'environment' => config('services.braintree.environment'),
@@ -32,8 +32,8 @@ class PaymentController extends Controller
           'sponsor' => $sponsor
         ];
         return view('admin.payment.request', $data);
-      // }
-      // return redirect()->route('home');
+       }
+       return redirect()->route('home');
     }
     public function payment(Request $request, Property $property)
     {

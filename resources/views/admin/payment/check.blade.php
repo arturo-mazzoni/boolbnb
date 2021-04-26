@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
-@include('partials.header')
+
 <div id="check">
   <div class="container result">
     <div class="row d-flex justify-content-center">
