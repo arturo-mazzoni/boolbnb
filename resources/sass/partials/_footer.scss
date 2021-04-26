@@ -10,14 +10,21 @@ footer {
 
     .footer-top {
       @include flex-between;
-
+      
       .footer-section{
-
-        &:not(first-child) {
-          margin-left: 20px;
+        li{
+          transition:0.3s;
+          &:hover {
+          text-decoration: underline;
+          }
+          a{
+          color: $aloha-blue;  
+          }
+          &:not(first-child) {
+            margin-left: 5px;
+          }
         }
-
-
+        
         
         h6 {
           color: $aloha-yellow;
@@ -45,8 +52,10 @@ footer {
         @include flex;
         padding: 20px 0;
   
-        button.btn-social {
+        .btn-social {
+          transition: 0.33s;
           border-radius: 100%;
+          border-color: $aloha-yellow;
           display: inline-flex;
           font-size: 20px;
           width: 40px;
@@ -55,12 +64,14 @@ footer {
           align-items: center;
           background-color: transparent;
           margin: 10px;
-  
+          .social-i {
+          color: $aloha-blue;
+          }
           &:hover {
-            background-color: $white;
+            background-color: $aloha-blue;
             
             i {
-              color: $black;
+              color: $aloha-yellow;
             }
           }
         }
