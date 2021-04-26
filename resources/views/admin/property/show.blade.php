@@ -78,7 +78,7 @@
       </div>
     </div>
 </div>
-
+<a href="{{ route('payment.request', $property->id) }}">CLICCA QUI</a>
 
 
   <div class="row dashboard-table">

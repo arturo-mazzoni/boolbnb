@@ -40,5 +40,9 @@ Route::prefix('admin')
         Route::get('/message', 'MessageController@index')->name('messages');
         Route::get('/sponsor', 'SponsorController@index')->name('sponsors');
         Route::get('/dashboardhome', 'DashboardHomeController@index')->name('dashboardhome');
+        Route::get('/payment/{property}', 'PaymentController@request')->name('payment.request');
+        Route::post('/payment/{property}', 'PaymentController@payment')->name('payment.payment');
+        Route::get('/check', 'PaymentController@check')->name('payment.check');
+
 });
 
