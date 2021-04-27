@@ -21,9 +21,7 @@ Route::get('/search-apartment', function () {
   return view('guests.search-apartment');
 })->name('search-apartment');
 
-Route::get('/apartment-detail', function () {
-  return view('guests.apartment-detail');
-})->name('apartment-detail');
+Route::get('/apartment-detail', 'GuestController@show')->name('apartment-detail');
 
 Route::get('/host', function () {
   return view('guests.become-host');
@@ -45,4 +43,6 @@ Route::prefix('admin')
         Route::get('/check', 'PaymentController@check')->name('payment.check');
 
 });
+
+
 

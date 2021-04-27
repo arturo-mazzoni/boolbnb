@@ -34,7 +34,7 @@
         
         <div id="my-search-bar" class="header-form">
           <form class="bottone-speciale" action="#">
-          <label :data-state="state" for="search">
+          <label for="search">
               <input type="text" v-model="query"  @keyup="searchadrres" name="address" id="address" placeholder="Ricerca.."/>
               <div v-if="searchElement && query != 0" class="drop">
                                 <ul id="my-ul-search" v-if="checked" class="list-group">
@@ -80,7 +80,8 @@
                             </div>
                         </div>
                         <div class="info-bottom">@{{apartment.price_per_night}}</div>
-                    </div>                
+                    </div>     
+                    <a href="{{ route('aparment-detail', $property->id) }}"> dettaglio</a>           
                 </div>
 
             </div>
