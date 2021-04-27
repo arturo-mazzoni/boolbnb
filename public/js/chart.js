@@ -14726,7 +14726,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
       var viewChart = new Chart(myChart, {
         type: 'bar',
         data: {
-          labels: propertyId,
+          labels: ' ',
 
           /* this.properties */
           //visite per id show
