@@ -1,3 +1,16 @@
+.w-100 {
+  width: 100% !important;
+  height: 60vh;
+}
+.carousel-inner{
+  img{
+    object-fit: cover;
+  }
+  h2, h5{
+    color:$white;
+    text-shadow: 1px 2px 1.5px rgba(67, 177, 228, 0.918);
+  }
+}
 .my-jumbotron {
   .jumbo-image {
     margin-top: 120px;
@@ -87,7 +100,9 @@ section {
   justify-content: center;
   img {
     width: 100%;
+    height: 60vh;
     border-radius: 8px;
+    object-fit: cover;
   }
   .become-host-interact {
     width: 25%;
@@ -164,6 +179,17 @@ section {
 
 @media screen and (max-width: 980px) {
 
+  .w-100 {
+  width: 100% !important;
+  height: 40vh;
+}
+  .become-host-home {
+    img {
+      width: 100%;  
+      height: 40vh;
+      border-radius: 8px;
+    }
+  }
   .houses-home {
     .houses-list {
       .houses-object {
@@ -185,7 +211,10 @@ section {
   section {
     width: 95%;
   }
-  
+     .w-100 {
+  width: 100% !important;
+  height: 30vh;
+}
   .explore-home {
     #explore-list {
       .explore-object {
@@ -204,7 +233,8 @@ section {
   }
   .become-host-home {
     img {
-      width: 100%;
+      width: 100%;  
+      height: 30vh;
       border-radius: 8px;
     }
     .become-host-interact {
@@ -248,6 +278,10 @@ section {
 }
 
 @media screen and (max-width: 480px) {
+   .w-100 {
+  width: 100% !important;
+  height: 20vh;
+}
   .houses-home {
     .houses-list {
       .houses-object {

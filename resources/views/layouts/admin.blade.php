@@ -9,6 +9,8 @@
 
     <title>@yield('title')</title>
 
+    <!-- braintree -->
+     <script src="https://js.braintreegateway.com/web/dropin/1.27.0/js/dropin.min.js"></script>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <!-- Fonts -->
@@ -32,5 +34,7 @@
     <script src="{{ asset('js/AddressCheck.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/chart.js') }}"></script>
+    @yield('script')
+
 </body>
 </html>

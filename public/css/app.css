@@ -11718,6 +11718,22 @@ main #img-bottom .content-area h2 {
   }
 }
 
+.w-100 {
+  width: 100% !important;
+  height: 60vh;
+}
+
+.carousel-inner img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel-inner h2,
+.carousel-inner h5 {
+  color: #ffffff;
+  text-shadow: 1px 2px 1.5px rgba(67, 177, 228, 0.918);
+}
+
 .my-jumbotron .jumbo-image {
   margin-top: 120px;
   display: flex;
@@ -11816,7 +11832,10 @@ section div[class$=text] div {
 
 .become-host-home img {
   width: 100%;
+  height: 60vh;
   border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .become-host-home .become-host-interact {
@@ -11896,6 +11915,17 @@ section div[class$=text] div {
 }
 
 @media screen and (max-width: 980px) {
+  .w-100 {
+    width: 100% !important;
+    height: 40vh;
+  }
+
+  .become-host-home img {
+    width: 100%;
+    height: 40vh;
+    border-radius: 8px;
+  }
+
   .houses-home .houses-list .houses-object {
     width: calc(50% - 10px);
   }
@@ -11910,6 +11940,11 @@ section div[class$=text] div {
 @media screen and (max-width: 768px) {
   section {
     width: 95%;
+  }
+
+  .w-100 {
+    width: 100% !important;
+    height: 30vh;
   }
 
   .explore-home #explore-list .explore-object {
@@ -11927,6 +11962,7 @@ section div[class$=text] div {
 
   .become-host-home img {
     width: 100%;
+    height: 30vh;
     border-radius: 8px;
   }
 
@@ -11974,6 +12010,11 @@ section div[class$=text] div {
 }
 
 @media screen and (max-width: 480px) {
+  .w-100 {
+    width: 100% !important;
+    height: 20vh;
+  }
+
   .houses-home .houses-list .houses-object {
     width: calc(100% - 10px);
   }
@@ -12674,19 +12715,6 @@ table .tabella .testa-tabella th {
   background-color: #f7f7f7;
 }
 
-<<<<<<< HEAD
-.container-slider .carousel-inner {
-  border-radius: 10px;
-}
-
-<<<<<<< HEAD
-.container-slider .carousel-inner img {
-  height: 500px;
-=======
-.carousel-inner img {
-  height: 200px;
->>>>>>> main
-=======
 .bg-bronzo {
   background-image: linear-gradient(to bottom right, #CD7F32, #F3A960);
 }
@@ -12703,39 +12731,7 @@ table .tabella .testa-tabella th {
   background-image: linear-gradient(to bottom right, red, yellow);
 }
 
-.carousel-inner {
-  border-radius: 10px;
+.list-group div i {
+  color: #004C99;
 }
 
-.carousel-inner img {
-  height: 200px;
->>>>>>> main
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-.container-slider .anteprima-img {
-  margin: 20px 0;
-}
-
-.container-slider .anteprima-img .box-img {
-  display: flex;
-}
-
-.container-slider .anteprima-img .box-img img {
-  width: 25%;
-  border-radius: 15px;
-  padding: 2.5px;
-}
-
-.container-slider .title-address {
-  border-bottom: 1px solid #004C99;
-}
-
-=======
->>>>>>> main
-=======
->>>>>>> main

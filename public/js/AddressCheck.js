@@ -2153,6 +2153,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
+var map;
 var app = new Vue({
   el: '#root',
   data: {
@@ -2163,10 +2164,11 @@ var app = new Vue({
     lat: 0,
     lon: 0,
     checked: true,
-    apartmentsResult: '',
+    coordsResult: '',
     apartmentsList: '',
-    finalCoords: [],
     finalApartments: [],
+    copunt: '',
+    posizioni: [],
     storagePath: 'storage/'
   },
   mounted: function mounted() {
@@ -2174,7 +2176,18 @@ var app = new Vue({
 
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://127.0.0.1:8000/api/property').then(function (result) {
       _this.apartmentsList = result.data.response;
+      console.log('Lista Originale:');
       console.log(_this.apartmentsList);
+    });
+    var Honolulu = {
+      lng: 12.674297,
+      lat: 42.6384261
+    };
+    map = tt.map({
+      key: 'QsQlPfJNdBRGexsuFkmikA9nQAmoUMRp',
+      container: 'map-div',
+      center: Honolulu,
+      zoom: 9.3
     });
   },
   methods: {
@@ -2204,36 +2217,65 @@ var app = new Vue({
       console.log(this.lat);
       console.log(this.lon);
     },
-    searchApartment: function searchApartment() {
+    distanceCalc: function distanceCalc() {
       var _this4 = this;
 
+      this.finalApartments.forEach(function (e) {
+        e.distance = (e.latitude - _this4.lat) * (e.latitude - _this4.lat) + (e.longitude - _this4.lon) * (e.longitude - _this4.lon);
+      });
+    },
+    searchApartment: function searchApartment() {
+      var _this5 = this;
+
       this.apartmentsList.forEach(function (e) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + _this4.lat + '&lon=' + _this4.lon + '&radius=2000' + '&key=' + _this4.tomTomKey).then(function (result) {
-          _this4.apartmentsResult = result.data.results;
+        axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + _this5.lat + '&lon=' + _this5.lon + '&radius=2000' + '&key=' + _this5.tomTomKey).then(function (result) {
+          _this5.coordsResult = result.data.results;
 
-          _this4.apartmentsResult.forEach(function (r) {
-            _this4.finalCoords.push({
-              'lat': r.position.lat + '000',
-              'lon': r.position.lon + '000'
-            });
-          });
-
-          console.log(_this4.finalCoords);
-
-          _this4.finalCoords.forEach(function (c) {
-            if (c.lat == e.latitude && c.lon == e.longitude) {
-              if (!_this4.finalApartments.includes(e)) {
-                _this4.finalApartments.push(e);
+          _this5.coordsResult.forEach(function (c) {
+            if (c.position.lat == e.latitude && c.position.lon == e.longitude) {
+              if (!_this5.finalApartments.includes(e)) {
+                _this5.finalApartments.push(e);
               }
             }
           });
 
-          console.log(_this4.finalApartments);
+          _this5.distanceCalc();
+
+          _this5.finalApartments.sort(function (a, b) {
+            return a.distance - b.distance;
+          });
+
+          console.log('Lista Finale Ordinata');
+          console.log(_this5.finalApartments);
+          console.log("update");
+          console.log(_this5.finalApartments);
+
+          _this5.finalApartments.forEach(function (element) {
+            _this5.posizioni.push({
+              'lat': element.latitude,
+              'lng': element.longitude
+            });
+          });
+
+          console.log(_this5.posizioni); //  contatore per ciclarli 
+
+          _this5.count = 1; // crea maker per ogni posizioni (latitudine e longitudine)
+
+          _this5.posizioni.forEach(function (posizione) {
+            // Casella di testo
+            var popup = new tt.Popup({
+              anchor: 'top'
+            }).setText('nome appartamento');
+            var marker = new tt.Marker().setLngLat(posizione).addTo(map); // makers
+
+            marker.setPopup(popup).togglePopup();
+            _this5.count++;
+          });
         });
-        _this4.finalApartments = [];
-        _this4.finalCoords = [];
-        _this4.apartmentsResult = [];
       });
+      this.finalApartments = [];
+      this.finalCoords = [];
+      this.coordsResult = [];
     }
   }
 });
@@ -2247,11 +2289,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
-=======
-module.exports = __webpack_require__(/*! D:\coding\bc\mamp_public\esercizi\progetto-finale\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
->>>>>>> main
 
 
 /***/ })

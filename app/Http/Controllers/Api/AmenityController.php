@@ -4,19 +4,17 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Amenity;
 use App\Property;
-class PropertyController extends Controller
+
+class AmenityController extends Controller
 {
     public function index(){
-        $property=Property::all();
-        foreach ($property as $property1) {
-        $servoce=$property1->amenities;
-        $property1['amenity']=$servoce;
-        }
+        $amenity=Amenity::all();
        
         return response()->json([
             'success'=>true,
-            'response'=>$property
+            'response'=>$amenity
         ]);
         
     }

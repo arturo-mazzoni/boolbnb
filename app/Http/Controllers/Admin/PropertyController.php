@@ -9,6 +9,9 @@ use App\Image;
 use App\Amenity;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use App\Sponsor;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 class PropertyController extends Controller
 {
     /**
@@ -103,7 +106,17 @@ class PropertyController extends Controller
      */
     public function show(Property $property)
     {
-      $data = ['property' => $property];
+      $sponsor = DB::table('property_sponsor')->where('property_id', $property->id)->latest('end')->first();
+
+      $data = ['property' => $property, 'sponsor' => $sponsor];
+
+      if($sponsor != null) {
+        ($sponsor->end > Carbon::now()) ? $sponsor = false : $sponsor = true;
+      }
+      else {
+        $sponsor = true;
+      }
+
 
       return view('admin.property.show', $data);
     }
@@ -118,8 +131,10 @@ class PropertyController extends Controller
     {
       if ($property) {
         $tags = Property::all();
+        $amenity=Amenity::all();
         $data = [
-          'property' => $property
+          'property' => $property,
+          'amenity'=> $amenity
         ];
 
         return view('admin.property.edit', $data);
@@ -165,6 +180,8 @@ class PropertyController extends Controller
       
 
       $property->update($data);
+
+      $property->amenities()->sync($data['amenity']);
 
       return redirect()->route('property.show', $property)->with('status', 'Record updated');
     }

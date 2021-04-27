@@ -46,7 +46,7 @@
                     <div class="col-md-6">
                         <label for="address" class="form-label">Indirizzo</label>
                         <input type="text" v-model="query"  @keyup="searchadrres"   name="address" class="form-control" id="address">
-                        <div v-if="searchElement " class="drop">
+                        <div v-if="searchElement && query != 0" class="drop">
                             <ul v-if="checked" class="list-group">
                               <li v-for="(item,index) in searchElement"  @click="setstreets(item['address'].freeformAddress,index)" class="list-group-item "><i class="fas fa-map-marker-alt pr-2"></i>@{{item['address'].freeformAddress}}</li>
                             </ul> 
@@ -104,10 +104,6 @@
                   <label class="form-check-label" for="inlineCheckbox1">{{$item->service}}</label> 
                 </div>
               @endforeach  
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div> 
             
           </div>
           <button style="margin-top:20px" type="submit" class="bottone padding-btn">Submit</button>
