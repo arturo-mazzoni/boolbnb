@@ -19,8 +19,7 @@ class CreatePropertySponsorTable extends Migration
         $table->unsignedBigInteger('sponsor_id');
         $table->foreign('sponsor_id')->references('id')->on('sponsors');
         $table->primary(['property_id','sponsor_id']);
-        $table->boolean('payment_status');
-        $table->date('expiring_date');
+        $table->date('end');
         $table->timestamps();
       });
     }
