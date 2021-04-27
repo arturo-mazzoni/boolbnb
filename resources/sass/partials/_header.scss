@@ -19,6 +19,11 @@ header .wrap {
 }
 header img {
 	width: 100px;
+    transition: 0.33s;
+    &:hover{
+    cursor: pointer;
+    opacity: .5;
+    }
 }
 header #menu {
 	display: flex;
@@ -68,9 +73,10 @@ header #hamburger span {
 	span:nth-child(3) {transform: rotate(45deg) translate(6px, -9px);}
 }
 .bottone-speciale{
+	z-index: 99999;
 	position: absolute;
-	top:50%;
-	left: 37%;
+	top:125%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 		label{
 			position: relative;
@@ -132,9 +138,9 @@ header #hamburger span {
 		position: absolute;
 		top: 42px;
 		left: 0;
-		height: 400px;
+		height: 240px;
 		overflow-y: scroll;
-		width: 100%;
+		width: 150%;
 	}
 }
 

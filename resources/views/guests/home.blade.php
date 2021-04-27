@@ -105,7 +105,7 @@
             <div>
                 <h2>Diventa host</h2>
                 <p>Condividi il tuo spazio per guadagnare qualcosa in più e scoprire nuove opportunità.</p>
-                <a class="my-btn-home" href="">Scopri di più</a>
+                <a class="btn bottoney" href="{{ route('become-host') }}">Clicca e scopri di più</a>
             </div>
         </div>
     </section>

@@ -46,10 +46,10 @@
           <label :data-state="state" for="search">
               <input type="text" v-model="query"  @keyup="searchadrres" name="address" id="address" placeholder="Ricerca.."/>
               <div v-if="searchElement && query != 0" class="drop-home">
-                                <ul v-if="checked" class="list-group">
-                                  <li v-for="(item,index) in searchElement"  @click="setstreets(item['address'].freeformAddress,index)" class="list-group-item "><i class="fas fa-map-marker-alt pr-2"></i>@{{item['address'].freeformAddress}}</li>
-                                </ul> 
-                            </div>
+                <ul v-if="checked" class="list-group">
+                  <li v-for="(item,index) in searchElement"  @click="setstreets(item['address'].freeformAddress,index)" class="list-group-item "><i class="fas fa-map-marker-alt pr-2"></i>@{{item['address'].freeformAddress}}</li>
+                </ul> 
+              </div>
               <i class="fa fa-search" @click="searchApartment" aria-hidden="true"></i>
           </label></form>
   </div>
