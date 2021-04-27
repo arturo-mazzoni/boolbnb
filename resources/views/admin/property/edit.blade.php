@@ -16,8 +16,42 @@
   @method('PUT')
   @csrf
   <div class="form-group">
-    <label for="title" class="form-label">Nome</label>
+
+    <div class="row">
+        <div class="col-md-6">
+          <label for="title" class="form-label">Nome</label>
     <input type="text" name="title" class="form-control" id="title" value="{{ $property->title }}">
+<<<<<<< HEAD
+        </div>
+        <div class="col-md-6">
+          <label for="rooms" class="form-label">Numero Stanze</label>
+          <input type="text" name="rooms_number" class="form-control" id="rooms">
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label for="bathrooms" class="form-label">Bagni</label>
+        <input type="text" name="bathrooms_number" class="form-control" id="bathrooms" value="{{ $property->bathrooms_number }}">
+      </div>
+      <div class="col-md-6">
+        <label for="beds" class="form-label">Letti</label>
+        <input type="text" name="beds_number" class="form-control" id="beds" value="{{ $property->beds_number }}">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label for="mq" class="form-label">Metri Quadrati</label>
+        <input type="text" name="sqm_number" class="form-control" id="mq" value="{{ $property->sqm_number }}">
+      </div>
+      <div class="col-md-6">
+        <label for="address" class="form-label">Indirizzo</label>
+        <input type="text" name="address" class="form-control" id="address" value="{{ $property->address }}">
+      </div>
+    </div>
+    
+=======
   </div>
   <div class="form-group">
     <label for="rooms" class="form-label">Numero Stanze</label>
@@ -49,6 +83,7 @@
 
 
 
+>>>>>>> main
   </div>
   <div class="form-group">
     <label for="exampleFormControlFile1">Carica Immagine</label>
@@ -63,8 +98,7 @@
   <div class="form-group">
   
     <label for="visible" class="form-label">visibilità</label>
-    
-     <div class="form-check form-check-inline">
+    <div class="form-check form-check-inline">
       <input class="form-check-input" type="radio" {{($property->visible==1)?   "checked" :''}}  name="visible" id="inlineRadio1" value="1">
       <label class="form-check-label" for="inlineRadio1">Si</label>
     </div>
@@ -73,18 +107,17 @@
       <label class="form-check-label" for="inlineRadio1">No</label>
     </div>
   
+    <div class="row">
+      <div class="col-md-6">
+        <label for="price" class="form-label">Prezzo</label>
+        <input type="text" name="price_per_night" class="form-control" id="price" value="{{ $property->price_per_night}}">
+      </div>
+      <div class="col-md-6">
+        <label for="floor" class="form-label">Piano</label>
+        <input type="text" name="floor" class="form-control" id="floor" value="{{ $property->floor }}">
+      </div>
+    </div>
   
-  
-  </div>
-  <div class="form-group">
-    <label for="price" class="form-label">Prezzo</label>
-    <input type="text" name="price_per_night" class="form-control" id="price" value="{{ $property->price_per_night}}">
-  </div>
-  <div class="form-group">
-    <label for="floor" class="form-label">Piano</label>
-    <input type="text" name="floor" class="form-control" id="floor" value="{{ $property->floor }}">
-  </div>
-
   <div>
     <div class="form-group">
       <label for="description" class="form-label">Descrizione</label>

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="margin-top: 250px; margin-bottom: 150px">
+<div  class="container" style="height:100vh;background-image: url('https://cdn.wallpapersafari.com/72/45/gHZRTK.jpg');background-repeat:no-repeat;background-size:cover">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div style="margin-top: 90px"class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div  style="color:#F5B964;background-color:#004C99" class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
