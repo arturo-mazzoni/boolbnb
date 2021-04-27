@@ -2167,6 +2167,7 @@ var app = new Vue({
     coordsResult: '',
     apartmentsList: '',
     finalApartments: [],
+    amenityList: '',
     copunt: '',
     posizioni: [],
     storagePath: 'storage/'
@@ -2178,6 +2179,10 @@ var app = new Vue({
       _this.apartmentsList = result.data.response;
       console.log('Lista Originale:');
       console.log(_this.apartmentsList);
+    });
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://127.0.0.1:8000/api/amenity').then(function (result) {
+      _this.amenityList = result.data.response;
+      console.log(_this.amenityList);
     });
     var Honolulu = {
       lng: 12.674297,
@@ -2248,13 +2253,16 @@ var app = new Vue({
           console.log('Lista Finale Ordinata');
           console.log(_this5.finalApartments);
           console.log("update");
-          console.log(_this5.finalApartments);
 
           _this5.finalApartments.forEach(function (element) {
-            _this5.posizioni.push({
-              'lat': element.latitude,
-              'lng': element.longitude
-            });
+            if (!_this5.posizioni.some(function (p) {
+              return p.lat == element.latitude && p.lng == element.longitude;
+            })) {
+              _this5.posizioni.push({
+                'lat': element.latitude,
+                'lng': element.longitude
+              });
+            }
           });
 
           console.log(_this5.posizioni); //  contatore per ciclarli 
@@ -2289,7 +2297,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
+module.exports = __webpack_require__(/*! C:\Arturo\CorsoProgrammazione\corso\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
 
 
 /***/ })
