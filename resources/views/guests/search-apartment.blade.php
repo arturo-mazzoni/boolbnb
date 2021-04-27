@@ -34,7 +34,7 @@
         
         <div id="my-search-bar" class="header-form">
           <form class="bottone-speciale" action="#">
-          <label :data-state="state" for="search">
+          <label for="search">
               <input type="text" v-model="query"  @keyup="searchadrres" name="address" id="address" placeholder="Ricerca.."/>
               <div v-if="searchElement && query != 0" class="drop">
                                 <ul id="my-ul-search" v-if="checked" class="list-group">
@@ -53,15 +53,19 @@
     
         <div class="left-box">
             <div class="left-box-top">
-                <h2>Soggiorni nell'area selezionata della mappa</h2>
+                <div class="left-box-top-head">
+                  <h2>Soggiorni nell'area selezionata della mappa</h2>
+                  <span @click="resetAmenity">Reset</span>
+                </div>
+                
                 <div class="filters">
-                    <span v-for="amenity in amenityList">@{{amenity['service']}}</span>
+                    <span :class="(amenitiesFilterList.includes(amenity.service) && amenitiesFilterList.length != amenityList.length ? 'active' : '')" @click="setAmenity(amenity.service, i)" v-for="(amenity, i) in amenityList">@{{amenity['service']}}</span>
                 </div>
             </div>
     
             <div class="left-box-bottom">
-    
-                <div v-for="apartment in finalApartments" class="apartment">
+
+                <div v-if="amenitiesFilterList.length == amenityList.length || amenitiesFilterList.every(e => apartment.amenityList.includes(e))" v-for="apartment in finalApartments" class="apartment">
                     <div class="apartment-image">
                         <img :src="storagePath + apartment.image" alt="">
                     </div>
@@ -79,7 +83,7 @@
                     </div>     
                     <a href="{{ route('aparment-detail', $property->id) }}"> dettaglio</a>           
                 </div>
-    
+
             </div>
     
         </div>

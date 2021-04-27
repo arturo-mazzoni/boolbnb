@@ -67,13 +67,37 @@ body {
 
         .left-box-top {
             border-bottom: 1px solid lightgrey;
-            h2 {
-                color: $aloha-blue;
+            .left-box-top-head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h2 {
+                    color: $aloha-blue;
+                }
+                span {
+                    padding: 8px 16px;
+                    text-transform: uppercase;
+                    letter-spacing: 2.5px;
+                    font-size: 12px;
+                    color: $aloha-blue;
+                    background-color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                    transition: all 0.3s ease 0s;
+                    cursor: pointer;
+                    outline: none;
+                    &:hover{
+                        background-color: $aloha-blue;
+                        box-shadow: 0px 8px 20px rgba(20, 53, 163, 0.4);
+                        color: $aloha-yellow;
+                    }
+                }
             }
             .filters {
                 display: flex;
                 justify-content: space-around;
-                padding: 12px 0 20px;
+                padding: 20px 0;
                 span {
                     padding: 8px 16px;
                     text-transform: uppercase;
@@ -88,6 +112,11 @@ body {
                     cursor: pointer;
                     outline: none;
                     &:hover{
+                        background-color: $aloha-blue;
+                        box-shadow: 0px 8px 20px rgba(20, 53, 163, 0.4);
+                        color: $aloha-yellow;
+                    }
+                    &.active {
                         background-color: $aloha-blue;
                         box-shadow: 0px 8px 20px rgba(20, 53, 163, 0.4);
                         color: $aloha-yellow;
@@ -169,3 +198,41 @@ body {
 //   background-color: #161718;
 //   border-radius: 20px;
 // }
+
+@media screen and (max-width: 1366px) {
+    #search-main {
+        .left-box {
+            .left-box-top {
+                h2 {
+                font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    #search-main {
+        .left-box {
+            width: 100%;
+            &::-webkit-scrollbar {
+            display: none;
+            }
+        }
+        .right-box {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #search-main {
+        .left-box {
+            .left-box-top {
+                h2 {
+                font-size: 28px;
+                }
+            }
+        }
+    }
+}

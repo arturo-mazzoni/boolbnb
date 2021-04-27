@@ -2157,7 +2157,7 @@ var map;
 var app = new Vue({
   el: '#root',
   data: {
-    tomTomKey: '3FstatXcnIf665Bzhq7IiVthukRLdKkG',
+    tomTomKey: '29Yw3wrtYuBnAQmVSmAdChx2WJIlMBcj',
     query: "",
     searchElement: 0,
     filter: [],
@@ -2170,7 +2170,9 @@ var app = new Vue({
     amenityList: '',
     copunt: '',
     posizioni: [],
-    storagePath: 'storage/'
+    storagePath: 'storage/',
+    clickedAmenity: false,
+    amenitiesFilterList: []
   },
   mounted: function mounted() {
     var _this = this;
@@ -2183,6 +2185,12 @@ var app = new Vue({
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://127.0.0.1:8000/api/amenity').then(function (result) {
       _this.amenityList = result.data.response;
       console.log(_this.amenityList);
+
+      _this.amenityList.forEach(function (amenity) {
+        _this.amenitiesFilterList.push(amenity.service);
+      });
+
+      console.log(_this.amenitiesFilterList);
     });
     var Honolulu = {
       lng: 12.674297,
@@ -2221,6 +2229,31 @@ var app = new Vue({
       this.lon = this.searchElement[index].position.lon;
       console.log(this.lat);
       console.log(this.lon);
+      $('.drop-home').css('overflow-y', 'hidden');
+    },
+    // amenityFilter(r) {
+    //     this.finalApartments.forEach(a => {
+    //         a.amenityList.forEach(amenity => {
+    //             r = amenity;
+    //         });
+    //     });
+    //     return r;
+    // },
+    setAmenity: function setAmenity(amenity, i) {
+      if (this.amenitiesFilterList.length == this.amenityList.length) {
+        this.amenitiesFilterList = [];
+      }
+
+      if (this.amenitiesFilterList.includes(amenity)) {
+        this.amenitiesFilterList.splice(this.amenitiesFilterList.indexOf(amenity), 1);
+      } else {
+        this.amenitiesFilterList.push(amenity);
+      }
+
+      console.log(this.amenitiesFilterList);
+    },
+    resetAmenity: function resetAmenity() {
+      this.amenitiesFilterList = [];
     },
     distanceCalc: function distanceCalc() {
       var _this4 = this;
@@ -2232,6 +2265,7 @@ var app = new Vue({
     searchApartment: function searchApartment() {
       var _this5 = this;
 
+      $('.drop-home').css('overflow-y', 'hidden');
       this.apartmentsList.forEach(function (e) {
         axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + _this5.lat + '&lon=' + _this5.lon + '&radius=2000' + '&key=' + _this5.tomTomKey).then(function (result) {
           _this5.coordsResult = result.data.results;
@@ -2255,6 +2289,11 @@ var app = new Vue({
           console.log("update");
 
           _this5.finalApartments.forEach(function (element) {
+            element.amenityList = [];
+            element.amenities.forEach(function (a) {
+              element.amenityList.push(a.service);
+            });
+
             if (!_this5.posizioni.some(function (p) {
               return p.lat == element.latitude && p.lng == element.longitude;
             })) {
@@ -2265,6 +2304,7 @@ var app = new Vue({
             }
           });
 
+          console.log(_this5.finalApartments);
           console.log(_this5.posizioni); //  contatore per ciclarli 
 
           _this5.count = 1; // crea maker per ogni posizioni (latitudine e longitudine)
@@ -2297,7 +2337,11 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Arturo\CorsoProgrammazione\corso\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
+<<<<<<< HEAD
+module.exports = __webpack_require__(/*! D:\coding\bc\mamp_public\esercizi\progetto-finale\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
+=======
+module.exports = __webpack_require__(/*! C:\Boolean\mamp_public\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
+>>>>>>> main
 
 
 /***/ })

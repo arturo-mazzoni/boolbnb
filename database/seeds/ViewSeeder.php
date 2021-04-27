@@ -14,10 +14,10 @@ class ViewSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-      for ($i = 0; $i < 10; $i++) {
+      for ($i = 0; $i < 200; $i++) {
         $newView = new View();
         $newView->property_id = rand(1,Count(Property::all()->toArray()));
-        $newView->date = $faker->dateTimeBetween('-1 week', '+1 week');
+        $newView->date = $faker->dateTimeBetween('-1 year', '+1 week');
 
         $newView->save();
       }

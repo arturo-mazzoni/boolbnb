@@ -3,7 +3,7 @@ var map;
 var app = new Vue({
     el: '#root',
     data: {
-        tomTomKey: '3FstatXcnIf665Bzhq7IiVthukRLdKkG',
+        tomTomKey: '29Yw3wrtYuBnAQmVSmAdChx2WJIlMBcj',
         query:"",
         searchElement:0,
         filter:[],
@@ -16,7 +16,9 @@ var app = new Vue({
         amenityList: '',
         copunt: '',
         posizioni: [],
-        storagePath: 'storage/'
+        storagePath: 'storage/',
+        clickedAmenity: false,
+        amenitiesFilterList : []
     },
     mounted() {
         axios
@@ -32,6 +34,10 @@ var app = new Vue({
             .then((result) => {
                 this.amenityList = result.data.response;
                 console.log(this.amenityList);
+                this.amenityList.forEach(amenity => {
+                    this.amenitiesFilterList.push(amenity.service)
+                });
+                console.log(this.amenitiesFilterList);
             });
         
         const Honolulu = { lng: 12.674297, lat: 42.6384261 };
@@ -74,6 +80,29 @@ var app = new Vue({
             this.lon=this.searchElement[index].position.lon;
             console.log(this.lat);
             console.log(this.lon);
+            $('.drop-home').css('overflow-y', 'hidden');
+        },
+        // amenityFilter(r) {
+        //     this.finalApartments.forEach(a => {
+        //         a.amenityList.forEach(amenity => {
+        //             r = amenity;
+        //         });
+        //     });
+        //     return r;
+        // },
+        setAmenity(amenity, i){
+            if (this.amenitiesFilterList.length == this.amenityList.length) {
+                this.amenitiesFilterList = [];
+            }
+            if (this.amenitiesFilterList.includes(amenity)) {
+                this.amenitiesFilterList.splice(this.amenitiesFilterList.indexOf(amenity), 1);
+            } else {
+                this.amenitiesFilterList.push(amenity);
+            }
+            console.log(this.amenitiesFilterList);
+        },
+        resetAmenity() {
+            this.amenitiesFilterList = [];
         },
         distanceCalc(){
             this.finalApartments.forEach(e => {
@@ -81,6 +110,7 @@ var app = new Vue({
             });
         },
         searchApartment() {
+            $('.drop-home').css('overflow-y', 'hidden');
             this.apartmentsList.forEach(e => {
                 axios
                     .get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + this.lat + '&lon=' + this.lon + '&radius=2000' + '&key=' + this.tomTomKey)
@@ -105,7 +135,10 @@ var app = new Vue({
 
                         console.log("update");
                         this.finalApartments.forEach(element => {
-
+                            element.amenityList = [];
+                            element.amenities.forEach(a => {
+                                element.amenityList.push(a.service);
+                            });
                             if (!this.posizioni.some(p => p.lat == element.latitude && p.lng == element.longitude)) {
                                 this.posizioni.push({
                                     'lat': element.latitude,
@@ -114,6 +147,7 @@ var app = new Vue({
                             }
 
                         });
+                        console.log(this.finalApartments);
                         console.log(this.posizioni);
 
                         //  contatore per ciclarli 

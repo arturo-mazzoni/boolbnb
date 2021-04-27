@@ -8,7 +8,7 @@ use App\Property;
 class PropertyController extends Controller
 {
     public function index(){
-        $property=Property::all();
+        $property=Property::where('visible', 1)->get();
         foreach ($property as $property1) {
         $servoce=$property1->amenities;
         $property1['amenity']=$servoce;
