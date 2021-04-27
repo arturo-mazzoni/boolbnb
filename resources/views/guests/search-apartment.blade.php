@@ -76,7 +76,8 @@
                             </div>
                         </div>
                         <div class="info-bottom">@{{apartment.price_per_night}}</div>
-                    </div>                
+                    </div>     
+                    <a href="{{ route('aparment-detail', $property->id) }}"> dettaglio</a>           
                 </div>
     
             </div>

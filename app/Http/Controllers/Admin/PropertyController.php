@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Sponsor;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+
 class PropertyController extends Controller
 {
     /**
