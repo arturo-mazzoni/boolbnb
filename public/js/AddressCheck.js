@@ -2157,7 +2157,7 @@ var map;
 var app = new Vue({
   el: '#root',
   data: {
-    tomTomKey: '3FstatXcnIf665Bzhq7IiVthukRLdKkG',
+    tomTomKey: '29Yw3wrtYuBnAQmVSmAdChx2WJIlMBcj',
     query: "",
     searchElement: 0,
     filter: [],
@@ -2337,7 +2337,11 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! D:\coding\bc\mamp_public\esercizi\progetto-finale\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
+=======
+module.exports = __webpack_require__(/*! C:\Boolean\mamp_public\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
+>>>>>>> main
 
 
 /***/ })
