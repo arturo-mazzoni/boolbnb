@@ -2337,11 +2337,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! D:\coding\bc\mamp_public\esercizi\progetto-finale\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
-=======
-module.exports = __webpack_require__(/*! C:\Boolean\mamp_public\boolbnb\resources\js\AddressCheck.js */"./resources/js/AddressCheck.js");
->>>>>>> main
 
 
 /***/ })
