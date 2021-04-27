@@ -17,4 +17,6 @@ class SponsorController extends Controller
       $data = ['properties' => $properties];
         return view('admin.sponsor.index', $data);
     }
+
+    
 }
