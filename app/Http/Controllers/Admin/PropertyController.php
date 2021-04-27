@@ -9,6 +9,9 @@ use App\Image;
 use App\Amenity;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use App\Sponsor;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 class PropertyController extends Controller
 {
     /**
@@ -103,7 +106,17 @@ class PropertyController extends Controller
      */
     public function show(Property $property)
     {
-      $data = ['property' => $property];
+      $sponsor = DB::table('property_sponsor')->where('property_id', $property->id)->latest('end')->first();
+
+      $data = ['property' => $property, 'sponsor' => $sponsor];
+
+      if($sponsor != null) {
+        ($sponsor->end > Carbon::now()) ? $sponsor = false : $sponsor = true;
+      }
+      else {
+        $sponsor = true;
+      }
+
 
       return view('admin.property.show', $data);
     }

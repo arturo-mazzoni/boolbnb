@@ -1,0 +1,48 @@
+ #sponsor{
+    .container{
+        #payment-form{
+            color: $aloha-blue;
+            h4{
+                width: 90%;
+                margin: 0 auto;
+                margin-top: 30px;
+            }
+            p{
+                margin: 30px 0;
+                text-align: center;
+            }
+        }
+
+        .layout-cards{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 30px 0;
+        }
+        .card{
+            border-radius: 20px;
+        }
+        .center-card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .gold{
+            background-image: linear-gradient(to bottom right,#fdb52f, #FCC201);
+            cursor: pointer;
+        }
+        .silver{
+            background-image: linear-gradient(to bottom right, #C0C0C0, #E6E6E6);
+            cursor: pointer;
+        }
+        .bronze{
+            background-image: linear-gradient(to bottom right, #fa7f04, #eeb57c);
+            cursor: pointer;
+        }
+    }
+}

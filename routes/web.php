@@ -21,6 +21,10 @@ Route::get('/search-apartment', function () {
   return view('guests.search-apartment');
 })->name('search-apartment');
 
+Route::get('/apartment-detail', function () {
+  return view('guests.apartment-detail');
+})->name('apartment-detail');
+
 Route::get('/host', function () {
   return view('guests.become-host');
 })->name('become-host');
@@ -36,5 +40,9 @@ Route::prefix('admin')
         Route::get('/message', 'MessageController@index')->name('messages');
         Route::get('/sponsor', 'SponsorController@index')->name('sponsors');
         Route::get('/dashboardhome', 'DashboardHomeController@index')->name('dashboardhome');
+        Route::get('/payment/{property}', 'PaymentController@request')->name('payment.request');
+        Route::post('/payment/{property}', 'PaymentController@payment')->name('payment.payment');
+        Route::get('/check', 'PaymentController@check')->name('payment.check');
+
 });
 
