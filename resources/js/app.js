@@ -34,3 +34,26 @@ function close_all_menu() {
         e.style.marginTop = 0;
     });
 }
+
+
+
+var appp = new Vue ({
+    el: '#appp',
+    data: {
+       counter: 0,
+       title: 0
+    },
+    methods: {
+
+        check(message){
+             this.counter = message;
+             console.log(this.counter);
+         },
+
+        check2(title){
+            this.title = title;
+            console.log(this.title);
+        }
+    },
+
+});

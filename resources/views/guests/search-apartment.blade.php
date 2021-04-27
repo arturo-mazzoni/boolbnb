@@ -53,15 +53,19 @@
     
         <div class="left-box">
             <div class="left-box-top">
-                <h2>Soggiorni nell'area selezionata della mappa</h2>
+                <div class="left-box-top-head">
+                  <h2>Soggiorni nell'area selezionata della mappa</h2>
+                  <span @click="resetAmenity">Reset</span>
+                </div>
+                
                 <div class="filters">
-                    <span v-for="amenity in amenityList">@{{amenity['service']}}</span>
+                    <span :class="(amenitiesFilterList.includes(amenity.service) && amenitiesFilterList.length != amenityList.length ? 'active' : '')" @click="setAmenity(amenity.service, i)" v-for="(amenity, i) in amenityList">@{{amenity['service']}}</span>
                 </div>
             </div>
     
             <div class="left-box-bottom">
-    
-                <div v-for="apartment in finalApartments" class="apartment">
+
+                <div v-if="amenitiesFilterList.length == amenityList.length || amenitiesFilterList.every(e => apartment.amenityList.includes(e))" v-for="apartment in finalApartments" class="apartment">
                     <div class="apartment-image">
                         <img :src="storagePath + apartment.image" alt="">
                     </div>
@@ -78,7 +82,7 @@
                         <div class="info-bottom">@{{apartment.price_per_night}}</div>
                     </div>                
                 </div>
-    
+
             </div>
     
         </div>

@@ -11237,10 +11237,6 @@ header #hamburger span:nth-child(3) {
 }
 
 @media screen and (max-width: 660px) {
-  body {
-    padding-top: 70px;
-  }
-
   header .wrap {
     justify-content: center;
     align-items: center;
@@ -12812,15 +12808,15 @@ footer .my-container .footer-bottom ul li i.icon-size {
   margin: 0 auto;
 }
 
-.my-navbar {
-  background-color: #004C99;
-  height: 90px;
-  margin-bottom: 80px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.chat-space .active {
+  display: inline-block;
 }
 
-.my-navbar #aaa {
-  color: #F5B964;
+.my-navbar {
+  background-color: #004C99;
+  height: 100px;
+  margin-bottom: 80px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .my-navbar #navbarDropdown {

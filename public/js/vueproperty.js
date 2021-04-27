@@ -2185,7 +2185,11 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\Users\Giuseppe\Desktop\quotidiano\progetto-airbnb-finale\boolbnb\resources\js\vueproperty.js */"./resources/js/vueproperty.js");
+=======
+module.exports = __webpack_require__(/*! C:\Arturo\CorsoProgrammazione\corso\boolbnb\resources\js\vueproperty.js */"./resources/js/vueproperty.js");
+>>>>>>> main
 
 
 /***/ })
