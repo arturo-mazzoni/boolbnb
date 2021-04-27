@@ -56,7 +56,8 @@
             </li>
           </ul>
     </div>
-    {{-- SEZIONE IMMAGINI --}}
+    {{-- Bottone sponsorizza --}}
+    <a href="{{ route('payment.request', $property->id) }}" class="btn bottone border-radius-20">>> Sponsorizza il tuo appartamento! <<</a>
   
       
 
@@ -78,8 +79,6 @@
       </div>
     </div>
 </div>
-<a href="{{ route('payment.request', $property->id) }}">CLICCA QUI</a>
-
 
   <div class="row dashboard-table">
     {{-- <h2>{{ $property->title }}</h2> --}}

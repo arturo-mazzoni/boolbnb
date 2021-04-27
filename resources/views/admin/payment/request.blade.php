@@ -1,20 +1,21 @@
 @extends('layouts.admin')
 @section('content')
-    
+  
     <div id='sponsor'>
           @if($sponsor) 
             <div class= 'container'>
               <form id='payment-form' action='{{ route('payment.payment', $property->id) }}' method='post'>
                 @csrf
                 @method('POST')
-                <h3>Rendi più visibile il tuo appartamento {{ $property->title }} a {{ $property->address }}</h3>
-                <p>Acquista una delle nostre sponsorizzazioni</p>
+                <h4>Hai selezionato l'appartamento: <strong>{{ $property->title }}</strong><br> Sito presso: <strong>{{ $property->address }}</strong>{{ $property->address }}</h4>
+                <p><em>...ora scegli il pacchetto sponsor più adatto a te ! </em></p>
                 <div class='layout-cards'>
-                  <div class='card' style='width: 18rem;' v-for='(sponsor, index) in sponsors'>
+                  <div class='card box-shadow-card ' style='width: 18rem;' v-for='(sponsor, index) in sponsors'>
                     <div class="card-body center-card"  :class="(counter == index) ? sponsor.title : '' " v-on:click="selection(sponsor, index)">
-                      <h5 class='card-title'>@{{ sponsor.title }}</h5>
-                      <p class='card-text'>@{{ sponsor.duration }} days</p>
-                      <p class='card-text'>@{{ sponsor.amount }}€</p>
+                      <h5 style="text-transform:capitalize" class='card-title '><strong>@{{ sponsor.title }} package</strong></h5>
+                      
+                      <p class='card-text'><span>Con questo pacchetto il tuo annuncio sarà in evidenza per</span> <strong>@{{ sponsor.duration }} giorni </strong></p>
+                      <p class='card-text'> <i class="fas fa-coins"></i> @{{ sponsor.amount }}€</p>
                       {{-- <a href='#' class='btn btn-success'>Acquista</a> --}}
                       {{-- <input type='checkbox' name='mario' value=''> --}}
                     </div>
@@ -25,7 +26,7 @@
                 <div id='dropin-container'></div>
                 {{-- <input type='number' name='sponsor'> --}}
                 <input type='hidden' id='nonce' name='payment_method_nonce'/>
-                <input id='paga' type='submit' />
+                <input class="btn bottone border-radius-20" id='paga' type='submit' />
                 {{-- 4111 1111 1111 1111 --}}
               </form>
             </div>
@@ -70,10 +71,8 @@
         
     </div>
 
-@endsection
-@section('script')
+
+
 <script src='{{ asset('js/sponsor.js') }}'></script>
+
 @endsection
-{{-- ● 2,99 € per 24 ore di sponsorizzazione
-● 5.99 € per 72 ore di sponsorizzazione
-● 9.99 € per 144 ore di sponsorizzazione --}}
