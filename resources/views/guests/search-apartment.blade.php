@@ -50,6 +50,13 @@
     </header>
 
     <main id="search-main">
+
+      @if(isset($indirizzo) && ($indirizzo!==null))
+          
+       <p  style="display:none"id="data">{{ $indirizzo['data'] }}</p> 
+         
+      @endif
+
     
         <div class="left-box">
             <div class="left-box-top">
@@ -66,8 +73,10 @@
             <div class="left-box-bottom">
 
                 <div v-if="amenitiesFilterList.length == amenityList.length || amenitiesFilterList.every(e => apartment.amenityList.includes(e))" v-for="apartment in finalApartments" class="apartment">
+                  <a :href=" 'http://127.0.0.1:8000/apartment-detail/' + apartment.id ">
                     <div class="apartment-image">
-                        <img :src="storagePath + apartment.image" alt="">
+                        <img v-if="apartment.image.includes('http')" :src="apartment.image" alt="">
+                        <img v-else :src="storagePath + apartment.image" alt="">
                     </div>
                     
                     <div class="apartment-info">
@@ -80,8 +89,10 @@
                             </div>
                         </div>
                         <div class="info-bottom">@{{apartment.price_per_night}}</div>
-                    </div>     
-                    <a href="{{ route('aparment-detail', $property->id) }}"> dettaglio</a>           
+                    </div>
+                  </a>
+                     
+                  
                 </div>
 
             </div>

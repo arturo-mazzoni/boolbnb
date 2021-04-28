@@ -21,6 +21,9 @@
             }
         }
         .contact-list{
+            height: 600px;
+            overflow-y: scroll;
+
                 li{
                     border-bottom: 1px solid $dark-white;
                     transition: 0.3s;

@@ -42,7 +42,9 @@
     </nav>
   </div>
   <div id="root">
-    <form class="bottone-speciale" action="{{route('search-apartment')}}">
+    <form class="bottone-speciale" id="formsearch" action="{{route('search-params')}}" method="POST">
+      @csrf
+      @method('POST')
           <label :data-state="state" for="search">
               <input type="text" v-model="query"  @keyup="searchadrres" name="address" id="address" placeholder="Ricerca.."/>
               <div v-if="searchElement && query != 0" class="drop-home">
@@ -51,7 +53,12 @@
                 </ul> 
               </div>
               <i class="fa fa-search" @click="searchApartment" aria-hidden="true"></i>
-          </label></form>
+          </label>
+          <textarea style="display:none" name="data" id="data"  cols="30" rows="10">
+
+            @{{finalApartments}}
+      </textarea>
+</form>
   </div>
 </header>
 	

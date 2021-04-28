@@ -231,7 +231,7 @@ var app = new Vue({
         let viewChart = new Chart(myChart, {
           type: 'bar',
           data: {
-            labels: propertyId,   /* this.properties */   //visite per id show
+            labels: ' ',   /* this.properties */   //visite per id show
             datasets: [{
               label: 'Visite' + ' ' + propertyName,   //visite per id show
               data: [

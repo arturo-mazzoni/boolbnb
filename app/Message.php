@@ -15,7 +15,6 @@ class Message extends Model
         'email',
         'name',
         'content',
-        'date',
         'property_id'
       ];
 }

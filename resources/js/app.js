@@ -45,8 +45,8 @@ var appp = new Vue ({
     },
     methods: {
 
-        check(message){
-             this.counter = message;
+        check(k){
+             this.counter = k;
              console.log(this.counter);
          },
 

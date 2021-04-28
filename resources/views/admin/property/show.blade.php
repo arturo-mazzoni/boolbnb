@@ -6,6 +6,7 @@
 
     <div class="show-apartment-head">
 
+
       @if (str_contains($property->image, 'http'))
       <img src="{{ $property->image  }}" alt="" style="width: 400px;">
       @else
