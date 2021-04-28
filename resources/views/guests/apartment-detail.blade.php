@@ -52,80 +52,98 @@
     {{-- titolo + container imgs --}}
     <section class="detail-imgs">
         <div class="titolo-via">
-            <h3 class="title-details">Appartamento di honolulu top quality</h3>
-            <h5> Via Waikiki 15500 United States of America</h5>
+           <h3 class="title-details">{{ $property->title }}</h3>
+            <h5> <i class="fas fa-map-marker-alt"> </i> {{ $property->address }}</h5>
         </div>
         <div class="container-detail-imgs">
             <div class="img-principale">
-                <img src="https://a0.muscache.com/im/pictures/4c8a8bba-3cf6-4b85-b695-84253102a280.jpg?im_w=960" alt="">
+                @if (str_contains($property->image, 'http'))
+                <img src="{{ $property->image  }}" alt="" style="object-fit:cover">
+                @else
+                <img src="{{ asset('storage/'.$property->image)  }}" alt="" style="object-fit:cover">          
+                @endif
             </div>
             <div class="altre-imgs">
-                <div class="img-secondaria-1"><img src="https://a0.muscache.com/im/pictures/77482d7f-3d2d-4f86-ba61-53dd8c7df353.jpg?im_w=720" alt=""></div>
-                <div class="img-secondaria-2"><img src="https://a0.muscache.com/im/pictures/77482d7f-3d2d-4f86-ba61-53dd8c7df353.jpg?im_w=720" alt=""></div>
-                <div class="img-secondaria-3"><img src="https://a0.muscache.com/im/pictures/77482d7f-3d2d-4f86-ba61-53dd8c7df353.jpg?im_w=720" alt=""></div>
-                <div class="img-secondaria-4"><img src="https://a0.muscache.com/im/pictures/77482d7f-3d2d-4f86-ba61-53dd8c7df353.jpg?im_w=720" alt=""></div>
+                @foreach ($property->images as $key=>$item)
+                <div class="img-secondaria-1" :class="({{ $key }} == 1) ? 'img-secondaria-2' : ({{ $key }} == 3) ? 'img-secondaria-4' : '' "><img src="{{ asset('storage/'.$item->image)  }}" alt="" style="object-fit:cover"></div>
+                @endforeach
             </div>
         </div>
+
     </section>
     {{-- FINE titolo + container imgs --}}
-
     {{-- dettagli appartamneto + contatta host--}}
     <section class="dettagli-contatta-host">
-        <div class="dettagli-appartamento">
-            <div class="row">
-                <ul class="col-sm-12 col-md-6 ">
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="fas fa-home mr-4"></i></div ><strong>Nome:</strong>  
-                    </li>
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="fas fa-door-open mr-4"></i></div><strong>Stanze:</strong> 
-                    </li>
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="fas fa-bed mr-4"></i></div><strong>Letti:</strong>  
-                    </li>
-                </ul>
-                <ul class="col-sm-12 col-md-6 ">
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="far fa-square mr-4"> </i></div><strong> Mq:</strong>  
-                    </li>
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="fas fa-money-bill-alt mr-4"></i></div><strong>Prezzo:</strong> 
-                    </li>
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="fas fa-map-marker-alt mr-4"></i></div><strong>Indirizzo:</strong>  
-                    </li>
-                </ul>
-                <ul class="col-sm-12">
-                    <li class="list-group-item">
-                        <div class="md-v-line d-inline"><i class="fas fa-info-circle mr-4"></i></div><strong> Descrizione:</strong><br> 
-                    </li>
-                </ul>   
+    <div class="row">
+        <div class="col-md-6">
+            <div class="dettagli-appartamento">
+                <div class="row">
+                    <ul class="col-6">
+                        <li class="list-group-item">
+                            <div class="md-v-line d-inline"><i class="fas fa-door-open mr-4"></i></div><strong>Stanze: {{ $property->rooms_number }}
+
+</strong> 
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line d-inline"><i class="fas fa-bed mr-4"></i></div><strong>Letti: {{ $property->beds_number }}
+</strong>  
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line d-inline"><i class="fas fa-bath mr-4"></i></i></div><strong>Bagni: {{ $property->bathrooms_number }}</strong>  
+                        </li>
+                    </ul>
+                    <ul class="col-6">
+                        <li class="list-group-item">
+                            <div class="md-v-line d-inline"><i class="far fa-square mr-4"> </i></div><strong> Mq: {{ $property->sqm_number }}
+</strong>  
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line d-inline"><i class="fas fa-building mr-4"></i></i></div><strong>Piano: {{ $property->floor }}</strong> 
+                        </li>
+                        <li class="list-group-item">
+                            <div class="md-v-line d-inline"><i class="fas fa-money-bill-alt mr-4"></i></div><strong>Prezzo: {{ $property->price_per_night }}</strong> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul class="col-12">
+                        <li class="list-group-item">
+                            <div><i class="fas fa-info-circle mr-4"></i><strong> Descrizione: </strong>{{ $property->description }}</div>
+                        </li>
+                    </ul>   
+                </div>
             </div>
         </div>
-        <div class="contatta-host">
-            <div class="container-contatta"> 
-                <div class="form-box">
-                <h4>Contatta l'host</h4>
-                <form action="">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input class="form-control" id="name" type="text" name="Name">
+        <div class="col-md-6">
+            <div class="contatta-host">
+                
+                    <div class="container-contatta"> 
+                        <div class="form-box">
+                        <h4>Contatta l'host</h4>
+                        <form action="">
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input class="form-control" id="name" type="text" name="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input class="form-control" id="email" type="email" name="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Messaggio</label>
+                                <textarea class="form-control" id="message" name="Message"></textarea>
+                            </div>
+                                <input style="width: 100%;" class="btn bottone border-radius-20" type="submit" value="Submit" />
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input class="form-control" id="email" type="email" name="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Messaggio</label>
-                        <textarea class="form-control" id="message" name="Message"></textarea>
-                    </div>
-                        <input style="width: 100%;" class="btn bottone border-radius-20" type="submit" value="Submit" />
-                    </div>
-                    </div>
-                </form>
-                </div>               
-            </div>
+                
+            </div>        
         </div>
+    </div>
+
+    
+        
     </section>
 
     <section class="mappa-dettaglio"> 
