@@ -33,10 +33,19 @@
   }
   
   .controls-top{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+    display: relative;
+    .sinistra{
+      position: absolute;
+      left:-20px;
+      top:50%;
+	    transform: translate(-50%, -50%);
+    }
+    .destra{
+      position: absolute;
+      right:-110px;
+      top:50%;
+	    transform: translate(-50%, -50%);
+    }
   }
   .controls-bottom{
     display: flex;
