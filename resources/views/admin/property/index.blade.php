@@ -7,9 +7,9 @@
         <table class="table tabella table-striped col-11">
                 <thead style="text-align:center" class="testa-tabella">
                     <tr>
-                    <th scope="col" class="d-none d-lg-block">Immagine</th>
-                        <th scope="col">Nome Appartamento</th>
-                        <th scope="col">Operazioni</th>
+                    <th scope="col" style="border:none" class="d-none d-lg-block">Immagine</th>
+                        <th style="border:none" scope="col">Nome Appartamento</th>
+                        <th style="border:none" scope="col">Operazioni</th>
                     </tr>
                 </thead>
                 <tbody style="text-align:center" >

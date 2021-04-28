@@ -88,6 +88,7 @@
                 @endforeach
             </div>
         </div>
+
     </section>
     {{-- FINE titolo + container imgs --}}
     {{-- dettagli appartamneto + contatta host--}}
