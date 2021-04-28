@@ -45,15 +45,17 @@ var appp = new Vue ({
     },
     methods: {
 
-        check(k){
-             this.counter = k;
+        check(message,element){
+             this.counter = message;
+             this.title=element.title;
              console.log(this.counter);
+             console.log(this.title);
          },
 
-        check2(title){
-            this.title = title;
-            console.log(this.title);
-        }
+        
     },
 
 });
+
+
+

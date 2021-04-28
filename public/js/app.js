@@ -49698,12 +49698,10 @@ var appp = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     title: 0
   },
   methods: {
-    check: function check(k) {
-      this.counter = k;
+    check: function check(message, element) {
+      this.counter = message;
+      this.title = element.title;
       console.log(this.counter);
-    },
-    check2: function check2(title) {
-      this.title = title;
       console.log(this.title);
     }
   }

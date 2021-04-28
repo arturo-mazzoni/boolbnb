@@ -13,9 +13,9 @@
             <li>
                 <a href="{{ route("property.create") }}"><i class="far fa-plus-square"></i>Crea nuovo</a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="{{ route("sponsors") }}"><i class="far fa-credit-card"></i>Sponsors</a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </div>
@@ -35,9 +35,9 @@
             <li>
                 <a href="{{ route("property.create") }}"> <i class="special-icon far fa-plus-square"></i></a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="{{ route("sponsors") }}"><i class="far fa-credit-card"></i></a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </div>

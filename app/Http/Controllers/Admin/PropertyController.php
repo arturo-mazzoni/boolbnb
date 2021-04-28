@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Property;
 use App\Image;
 use App\Amenity;
+use App\Message;
+use App\View;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use App\Sponsor;
@@ -196,10 +198,40 @@ class PropertyController extends Controller
     public function destroy(Property $property)
     {
       $image= Image::where('property_id',$property->id);
+      $view= View::where('property_id',$property->id);
+      $message= Message::where('property_id',$property->id);
       
       $image->delete();
+      $view->delete();
+      $message->delete();
+      $property->amenities()->sync([]);
+      $property->sponsors()->sync([]);
+
       $property->delete();
 
       return redirect()->route('property.index');
     }
+
+
+    // public function destroy(Apartment $apartment)
+    // {
+    //     $messages = Message::where('apartment_id', $apartment->id)->get();
+    //     $images = Image::where('apartment_id', $apartment->id)->get();
+
+    //     foreach ($messages as $message) {
+    //       $message->delete();
+    //     }
+
+    //     foreach ($images as $image) {
+    //       $image->delete();
+    //     }
+
+    //     $apartment->sponsors()->sync([]);
+    //     $apartment->services()->sync([]);
+
+    //     $apartment->delete();
+
+    //     return redirect()->route('apartment.index');
+    // }
+
 }

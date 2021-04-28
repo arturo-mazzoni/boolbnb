@@ -45,7 +45,7 @@
     <form class="bottone-speciale" id="formsearch" action="{{route('search-params')}}" method="POST">
       @csrf
       @method('POST')
-          <label :data-state="state" for="search">
+          <label for="search">
               <input type="text" v-model="query"  @keyup="searchadrres" name="address" id="address" placeholder="Ricerca.."/>
               <div v-if="searchElement && query != 0" class="drop-home">
                 <ul v-if="checked" class="list-group">

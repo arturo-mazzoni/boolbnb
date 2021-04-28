@@ -15,7 +15,13 @@
                 <tbody style="text-align:center" >
                     @foreach ($properties as $property)
                     <tr>
-                        <td class="d-none d-lg-block"> <img src="{{ asset('storage/'.$property->image)  }}" alt=""></td>
+                        <td class="d-none d-lg-block"> 
+                            @if (str_contains($property->image, 'http'))
+                            <img src="{{ $property->image  }}" alt="">
+                            @else
+                            <img src="{{ asset('storage/'.$property->image)  }}" alt="">          
+                            @endif
+                        </td>
                         <td>{{ $property->title }}</td>
                   
                         

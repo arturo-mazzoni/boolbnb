@@ -10975,6 +10975,16 @@ ul {
   color: #808080;
 }
 
+.bottoney {
+  background-color: #F5B964;
+  color: #004C99;
+  font-weight: bolder;
+}
+
+.bottoney:hover {
+  color: #808080;
+}
+
 .bottone-rosso {
   background-color: red;
   color: #F5B964;
@@ -11073,6 +11083,12 @@ header .wrap {
 
 header img {
   width: 100px;
+  transition: 0.33s;
+}
+
+header img:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 header #menu {
@@ -11148,9 +11164,10 @@ header #hamburger span:nth-child(3) {
 }
 
 .bottone-speciale {
+  z-index: 99999;
   position: absolute;
-  top: 50%;
-  left: 37%;
+  top: 125%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -11222,9 +11239,9 @@ header #hamburger span:nth-child(3) {
   position: absolute;
   top: 42px;
   left: 0;
-  height: 400px;
+  height: 240px;
   overflow-y: scroll;
-  width: 100%;
+  width: 150%;
 }
 
 @media screen and (max-width: 980px) {
@@ -11854,14 +11871,26 @@ section div[class$=text] div {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 
 .become-host-home img {
+  transform: scale(1);
+  -webkit-transform: scale(1);
   width: 100%;
   height: 60vh;
-  border-radius: 8px;
+  border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+
+.become-host-home img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 .become-host-home .become-host-interact {
@@ -12459,13 +12488,14 @@ body {
   margin-bottom: 20px;
 }
 
-img {
+.detail-imgs img {
   transition: 0.33s;
   width: 100%;
   height: 100%;
 }
 
-img:hover {
+.detail-imgs img:hover {
+  cursor: pointer;
   opacity: 0.5;
 }
 
@@ -12530,28 +12560,15 @@ img:hover {
   border-radius: 0 0 30px 0;
 }
 
-.dettagli-contatta-host {
-  margin: 0 auto;
-  display: flex;
-}
-
-.dettagli-contatta-host .dettagli-appartamento {
-  width: 50%;
-}
-
-.dettagli-contatta-host .contatta-host {
-  width: 50%;
-}
-
-.dettagli-contatta-host .contatta-host .container-contatta {
+.contatta-host .container-contatta {
   padding: 10px 10px;
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
   border-radius: 30px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.dettagli-contatta-host .contatta-host .container-contatta h4 {
+.contatta-host .container-contatta h4 {
   text-align: center;
 }
 
@@ -12773,6 +12790,7 @@ footer .my-container .footer-bottom ul li i.icon-size {
 .chat-container .colonna-sx .contact-list {
   height: 600px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .chat-container .colonna-sx .contact-list li {

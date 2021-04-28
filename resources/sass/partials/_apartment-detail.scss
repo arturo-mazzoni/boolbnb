@@ -13,7 +13,6 @@
         }
 }
 }
-
 .container-detail-imgs{
     margin: 0 auto;
     display:flex;
@@ -63,26 +62,17 @@
             }
         }
     }
-    
 }
-.dettagli-contatta-host{
-    margin: 0 auto;
-    display: flex;
-    .dettagli-appartamento{
-        width: 50%;
-    }
-    .contatta-host{
-        width: 50%;
-        .container-contatta{
-            padding: 10px 10px;
-            h4{
-            text-align: center;
-            }
-            width: 60%;
-            margin: 0 auto;
-            border-radius: 30px;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
+.contatta-host{
+    .container-contatta{
+        padding: 10px 10px;
+        h4{
+        text-align: center;
         }
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 30px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
     }
 }
 .mappa-dettaglio{
@@ -93,9 +83,7 @@
         margin-bottom: 20px;
     }
 }
-
 @media screen and (max-width: 980px) {
-    
     .container-detail-imgs{
     .img-principale{
         width: 50%;
@@ -118,6 +106,3 @@
     }
 }
 }
-
-
-

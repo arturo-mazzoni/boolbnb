@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Property;
+use App\View;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class GuestController extends Controller
@@ -58,6 +60,12 @@ class GuestController extends Controller
     public function show(Property $id)
     {
         $auth=Auth::user();
+    
+        $newView = new View();
+        $newView->property_id = $id->id;
+        $newView->date = Carbon::now();
+
+        $newView->save();
 
         $data = [
             'property' => $id, 
