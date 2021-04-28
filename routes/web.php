@@ -17,11 +17,10 @@ Route::get('/', function () {
     return view('guests.home');
 });
 
-Route::get('/search-apartment', function () {
-  return view('guests.search-apartment');
-})->name('search-apartment');
+Route::get('/search-apartment', 'GuestController@index')->name('search-apartment');
+Route::post('/search-apartament', 'GuestController@info')->name('search-params');
 
-Route::get('/apartment-detail', 'GuestController@show')->name('apartment-detail');
+Route::get('/apartment-detail/{id}', 'GuestController@show')->name('apartment-detail');
 
 Route::get('/host', function () {
   return view('guests.become-host');
@@ -36,6 +35,7 @@ Route::prefix('admin')
         Route::resource('property', 'PropertyController');
         Route::resource('message', 'MessageController');
         Route::get('/message', 'MessageController@index')->name('messages');
+        Route::post('/message', 'MessageController@store')->name('messages.store');
         Route::get('/sponsor', 'SponsorController@index')->name('sponsors');
         Route::get('/dashboardhome', 'DashboardHomeController@index')->name('dashboardhome');
         Route::get('/payment/{property}', 'PaymentController@request')->name('payment.request');

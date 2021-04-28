@@ -14,9 +14,9 @@
         <div class="contact-list">
             <div class="scrolling-list">
                 <ul>
-@foreach ($messages as $message)
+@foreach ($messages as $k=>$message)
 
-                    <li @click="check( {{ $message }})" @click="check2( {{ $message->property->title }} )">
+                    <li @click="check( {{ $k }})">
                         <img class="chat-avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
                         <div>
 
@@ -26,14 +26,15 @@
                             {{-- <small>{ Orario di invio del messaggio }</small> --}}
                         </div>
                     </li>
-@endforeach
+
 
                     <div class="chat-space d-lg-none">
                             <div class="message received">
                                 <p>@{{ counter.content }}</p>
-                                <p>@{{ title }}</p>
+                                <p>{{ $messages[1]->property->title }}</p>
                             </div>
                     </div>
+@endforeach
                     
                 </ul>
             </div>

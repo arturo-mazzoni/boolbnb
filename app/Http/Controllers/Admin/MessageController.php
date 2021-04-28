@@ -19,4 +19,17 @@ class MessageController extends Controller
         return view('admin.message.index', $data);
     }
 
+    public function store(Request $request)
+    {
+        $data = $request->all();
+
+        $newMessage = new Message();
+
+        $newMessage->fill($data);
+        
+        $newMessage->save();
+
+        return redirect()->route('apartment-detail', $newMessage->property_id)->with('status','messaggio inviato');
+    }
+
 }

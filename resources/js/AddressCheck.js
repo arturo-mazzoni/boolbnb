@@ -48,6 +48,50 @@ var app = new Vue({
             center: Honolulu,
             zoom: 9.3
         });
+       
+        console.log(this.appartamentHome);
+        var string=$('#data').text();
+        $('#data').text("");
+        var convert=JSON.parse( string );
+       
+        this.finalApartments=convert;
+
+        if(this.finalApartments!=0){
+            console.log(this.finalApartments);
+        console.log("update");
+        this.finalApartments.forEach(element => {
+
+            if (!this.posizioni.some(p => p.lat == element.latitude && p.lng == element.longitude)) {
+                this.posizioni.push({
+                    'lat': element.latitude,
+                    'lng': element.longitude
+                });
+            }
+
+        });
+        console.log(this.posizioni);
+
+        //  contatore per ciclarli 
+        this.count = 1;
+        
+        // crea maker per ogni posizioni (latitudine e longitudine)
+        this.posizioni.forEach(posizione => {
+            
+            this.finalApartments.forEach(element => {
+               
+             var  popup = new tt.Popup({ anchor: 'top' }).setHTML("<b>"+element.title+"</b><br/>"+element.address);
+            var marker = new tt.Marker().setLngLat(posizione).addTo(map);
+
+            // makers
+            marker.setPopup(popup).togglePopup();
+            this.count++; 
+            });
+              
+
+           
+
+        });}
+        
     },
     methods:{
         
@@ -110,10 +154,15 @@ var app = new Vue({
             });
         },
         searchApartment() {
+            var marker=0;
+            var popup=0;
+            setTimeout( function () { 
+                $('#formsearch').submit();
+            }, 300);
             $('.drop-home').css('overflow-y', 'hidden');
             this.apartmentsList.forEach(e => {
                 axios
-                    .get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + this.lat + '&lon=' + this.lon + '&radius=2000' + '&key=' + this.tomTomKey)
+                    .get('https://api.tomtom.com/search/2/search/' + e.address + '.json?' + 'lat=' + this.lat + '&lon=' + this.lon + '&radius=20000' + '&key=' + this.tomTomKey)
                     .then((result) => {
                         this.coordsResult = result.data.results;
                         this.coordsResult.forEach(c => {
@@ -157,9 +206,9 @@ var app = new Vue({
                         this.posizioni.forEach(posizione => {
 
                             // Casella di testo
-                            var popup = new tt.Popup({ anchor: 'top' }).setText('nome appartamento');
+                             popup = new tt.Popup({ anchor: 'top' }).setText('nome appartamento');
 
-                            var marker = new tt.Marker().setLngLat(posizione).addTo(map);
+                             marker = new tt.Marker().setLngLat(posizione).addTo(map);
 
                             // makers
                             marker.setPopup(popup).togglePopup();
@@ -168,13 +217,17 @@ var app = new Vue({
                         });
                     });
             });
-
+          
+            
+            
             this.finalApartments = [];
             this.finalCoords = [];
             this.coordsResult = [];
         },
+        getdata(data){
+            console.log(data);
+        }
+        
     }
 
 });
-
-

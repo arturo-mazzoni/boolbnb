@@ -1,4 +1,3 @@
-Da Arturo Mazzoni a tutti:  10:49 PM
 <?php
 
 use Illuminate\Database\Seeder;
@@ -20,7 +19,6 @@ class MessageSeeder extends Seeder
             $newMessage->email = $faker->word();
             $newMessage->name = $faker->word();
             $newMessage->content = $faker->paragraph();
-            $newMessage->date = $faker->date();
     
             $newMessage->property_id = rand(1,Count(Property::all()->toArray()));
     

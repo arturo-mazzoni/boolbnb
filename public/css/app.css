@@ -12770,6 +12770,11 @@ footer .my-container .footer-bottom ul li i.icon-size {
   outline: none;
 }
 
+.chat-container .colonna-sx .contact-list {
+  height: 600px;
+  overflow-y: scroll;
+}
+
 .chat-container .colonna-sx .contact-list li {
   border-bottom: 1px solid #d3d3d3;
   transition: 0.3s;

@@ -6,7 +6,12 @@
 
     <div class="show-apartment-head">
 
-      <img src="{{ asset('storage/'.$property->image)  }}" alt="" style="width: 400px;">
+
+      @if (str_contains($property->image, 'http'))
+      <img src="{{ $property->image  }}" alt="" style="width: 400px;">
+      @else
+      <img src="{{ asset('storage/'.$property->image)  }}" alt="" style="width: 400px;">          
+      @endif
 
       <div>
         <h2>{{-- <i class="fas fa-home"></i> --}} {{ $property->title }} </h2>

@@ -98,6 +98,8 @@
             </div>
         </div>
     </section>
+
+
     
     <section class="become-host-home">
         <img src="https://cdn.pixabay.com/photo/2017/02/08/08/07/sunrise-2048060_960_720.jpg" alt="become-host">
