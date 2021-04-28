@@ -28,6 +28,14 @@ ul {
     color: $light-black;
   }
 }
+.bottoney {
+  background-color: $aloha-yellow;
+  color: $aloha-blue;
+  font-weight: bolder;
+  &:hover {
+    color: $light-black;
+  }
+}
 .bottone-rosso {
   background-color: red;
   color: $aloha-yellow;

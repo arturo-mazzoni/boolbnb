@@ -23,7 +23,7 @@
           <div class="card-body">
             <h5 class="card-title">Gold Package</h5>
             <p class="card-text">Con questo pacchetto il tuo annuncio sarà in evidenza per ... ore</p>
-            <a style="text-decoration:none" href="#" class="bottone padding-btn">Attiva</a>
+            <a style="text-decoration:none" href="{{ route('payment.request', $property->id) }}" class="bottone padding-btn">Sponsorizza</a>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
         <div class="card-body ">
             <h5 class="card-title">Silver Package</h5>
             <p class="card-text">Con questo pacchetto il tuo annuncio sarà in evidenza per ... ore</p>
-          <a style="text-decoration:none" href="#" class="bottone padding-btn">Attiva</a>
+          <a style="text-decoration:none" href="{{ route('payment.request', $property->id) }}" class="bottone padding-btn">Sponsorizza</a>
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@
           <div class="card-body">
             <h5 class="card-title">Bronze Package</h5>
             <p class="card-text">Con questo pacchetto il tuo annuncio sarà in evidenza per ... ore</p>
-          <a style="text-decoration:none" href="#" class="bottone padding-btn">Attiva</a>
+          <a style="text-decoration:none" href="{{ route('payment.request', $property->id) }}" class="bottone padding-btn">Sponsorizza</a>
         </div>
       </div>
     </div>

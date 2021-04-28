@@ -7,7 +7,7 @@
               <form id='payment-form' action='{{ route('payment.payment', $property->id) }}' method='post'>
                 @csrf
                 @method('POST')
-                <h4>Hai selezionato l'appartamento: <strong>{{ $property->title }}</strong><br> Sito presso: <strong>{{ $property->address }}</strong>{{ $property->address }}</h4>
+                <h4>Hai selezionato l'appartamento: <strong>{{ $property->title }}</strong><br> Sito presso: <strong>{{ $property->address }}</strong></h4>
                 <p><em>...ora scegli il pacchetto sponsor più adatto a te ! </em></p>
                 <div class='layout-cards'>
                   <div class='card box-shadow-card ' style='width: 18rem;' v-for='(sponsor, index) in sponsors'>
