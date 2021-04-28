@@ -55,15 +55,8 @@
     {{-- titolo + container imgs --}}
     <section class="detail-imgs">
         <div class="titolo-via">
-<<<<<<< HEAD
            <h3 class="title-details">{{ $property->title }}</h3>
             <h5> <i class="fas fa-map-marker-alt"> </i> {{ $property->address }}</h5>
-=======
-           
-            <h3 class="title-details">{{ $property->title }}</h3>
-            <h5> {{ $property->address }}</h5>
-            
->>>>>>> main
         </div>
         <div class="container-detail-imgs">
             <div class="img-principale">
@@ -84,20 +77,16 @@
     {{-- FINE titolo + container imgs --}}
     {{-- dettagli appartamneto + contatta host--}}
     <section class="dettagli-contatta-host">
-<<<<<<< HEAD
     <div class="row">
         <div class="col-md-6">
             <div class="dettagli-appartamento">
                 <div class="row">
                     <ul class="col-6">
                         <li class="list-group-item">
-                            <div class="md-v-line d-inline"><i class="fas fa-door-open mr-4"></i></div><strong>Stanze: {{ $property->rooms_number }}
-
-</strong> 
+                            <div class="md-v-line d-inline"><i class="fas fa-door-open mr-4"></i></div><strong>Stanze: {{ $property->rooms_number }}</strong> 
                         </li>
                         <li class="list-group-item">
-                            <div class="md-v-line d-inline"><i class="fas fa-bed mr-4"></i></div><strong>Letti: {{ $property->beds_number }}
-</strong>  
+                            <div class="md-v-line d-inline"><i class="fas fa-bed mr-4"></i></div><strong>Letti: {{ $property->beds_number }}</strong>  
                         </li>
                         <li class="list-group-item">
                             <div class="md-v-line d-inline"><i class="fas fa-bath mr-4"></i></i></div><strong>Bagni: {{ $property->bathrooms_number }}</strong>  
@@ -105,8 +94,7 @@
                     </ul>
                     <ul class="col-6">
                         <li class="list-group-item">
-                            <div class="md-v-line d-inline"><i class="far fa-square mr-4"> </i></div><strong> Mq: {{ $property->sqm_number }}
-</strong>  
+                            <div class="md-v-line d-inline"><i class="far fa-square mr-4"> </i></div><strong> Mq: {{ $property->sqm_number }}</strong>  
                         </li>
                         <li class="list-group-item">
                             <div class="md-v-line d-inline"><i class="fas fa-building mr-4"></i></i></div><strong>Piano: {{ $property->floor }}</strong> 
@@ -147,70 +135,6 @@
                                 <input style="width: 100%;" class="btn bottone border-radius-20" type="submit" value="Submit" />
                             </div>
                         </form>
-=======
-        <div class="dettagli-appartamento">
-            <div class="row">
-                <ul class="col-sm-12 col-md-6 ">
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="fas fa-home mr-4"></i></div ><strong>Nome: {{ $property->title }}</strong>  
-                    </li>
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="fas fa-door-open mr-4"></i></div><strong>Stanze: {{ $property->rooms_number }}</strong> 
-                    </li>
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="fas fa-bed mr-4"></i></div><strong>Letti: {{ $property->beds_number }}</strong>  
-                    </li>
-                </ul>
-                <ul class="col-sm-12 col-md-6 ">
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="far fa-square mr-4"> </i></div><strong> Mq: {{ $property->sqm_number }}</strong>  
-                    </li>
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="fas fa-money-bill-alt mr-4"></i></div><strong>Prezzo: {{ $property->price_per_night }}</strong> 
-                    </li>
-                    <li class="list-group-item">
-                    <div class="md-v-line d-inline"><i class="fas fa-map-marker-alt mr-4"></i></div><strong>Indirizzo: {{ $property->address }}</strong>  
-                    </li>
-                </ul>
-                <ul class="col-sm-12">
-                    <li class="list-group-item">
-                        <div class="md-v-line d-inline"><i class="fas fa-info-circle mr-4"></i></div><strong> Descrizione: {{ $property->description }}</strong><br> 
-                    </li>
-                </ul>   
-            </div>
-        </div>
-        <div class="contatta-host">
-            <div class="container-contatta"> 
-                <div class="form-box">
-                 
-                <h4>Contatta l'host</h4>
-                @if (session('status'))
-                <div class="alert alert-success">
-                    {{ session('status') }}
-                </div>
-              @endif
-                <form action="{{ route('messages.store') }}" method="POST">
-                    @csrf
-                    @method('POST')
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input class="form-control" id="name" value="{{ $auth->name }}" type="text" name="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input class="form-control" id="email" value="{{ $auth->email }}" type="email" name="email">
-                    </div>
-                    <div class="form-group d-none" >
-                        <label for="email">Email</label>
-                        <input class="form-control" id="id" value="{{ $property->id }}" type="text" name="property_id">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Messaggio</label>
-                        <textarea class="form-control" id="message" name="content"></textarea>
-                    </div>
-                        <input style="width: 100%;" class="btn bottone border-radius-20" type="submit" value="Submit" />
-                    </div>
->>>>>>> main
                     </div>
                 
             </div>        
