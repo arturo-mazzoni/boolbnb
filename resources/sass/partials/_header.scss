@@ -97,7 +97,7 @@ header #hamburger span {
 		input{
 			transition: width 1s ease, opacity 0.5s ease 0.5s;
 			opacity: 1;
-			width: 240px;
+			width: 340px;
 			height: 33px;
 			border: 0;
 			outline: none;
@@ -138,14 +138,15 @@ header #hamburger span {
 		position: absolute;
 		top: 42px;
 		left: 0;
-		height:  300px;
+		right:0;
+		max-height:  300px;
 		overflow-y: scroll;
-		width: 150%;
+		// width: 100%;
 	}
 }
 
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1366px) {
     .bottone-speciale{
 	position: absolute;
 	top:130%;

@@ -49769,6 +49769,8 @@ __webpack_require__.r(__webpack_exports__);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#roothome',
   data: {
+    apartmentsHome: '',
+    storagePath: 'storage/',
     explorePlaces: [{
       img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-Hawaii.jpg',
       name: 'Liliuokalani Botanical Gardens',
@@ -49818,6 +49820,15 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       address: '2335 Kalakaua Ave Ste 116, Honolulu, Oahu, HI 96815-2941',
       link: 'http://www.dukeswaikiki.com/'
     }]
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('http://127.0.0.1:8000/api/property').then(function (result) {
+      _this.apartmentsHome = result.data.response;
+      console.log('Lista Originale:');
+      console.log(_this.apartmentsList);
+    });
   }
 });
 

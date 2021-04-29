@@ -3,6 +3,8 @@ import Vue from 'vue';
 var app = new Vue({
     el: '#roothome',
     data: {
+        apartmentsHome: '',
+        storagePath: 'storage/',
         explorePlaces : [
             {
                 img: 'https://www.viaggi-usa.it/wp-content/uploads/2017/04/Cosa-vedere-a-Honolulu-Hawaii.jpg',
@@ -66,4 +68,14 @@ var app = new Vue({
             }
         ]
     },
+    mounted() {
+        axios
+            .get('http://127.0.0.1:8000/api/property')
+            .then((result) => {
+                this.apartmentsHome = result.data.response;
+                console.log('Lista Originale:');
+                console.log(this.apartmentsList);
+            });
+    }
+
 });
